@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+$mainClr: #FFE474;
+$txtClr: white;
+$background: #202124;
+$gradient: linear-gradient(to bottom, #FFD700 0%, rgba(235, 229, 199, 0.95) 53.13%, #FFD700 99.48%);
+$fontFam: 'Montserrat', sans-serif;
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 28px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $fontFam;
     background-color: #202124;
+    color: $txtClr;
+}
+
+a {
+    text-decoration: none;
+    color: $txtClr;
 }

@@ -5,7 +5,13 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 28px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #202124;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 /*# sourceMappingURL=body.css.map */
