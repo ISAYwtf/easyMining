@@ -114,6 +114,14 @@
 
 header {
   width: 100%;
+  height: 166px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #202124;
+  z-index: 15;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 header .header--wrap {
@@ -123,7 +131,7 @@ header .header--wrap {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 166px;
+  height: 100%;
 }
 
 header .header--wrap .logo {

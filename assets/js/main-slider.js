@@ -22,21 +22,6 @@ document.addEventListener('DOMContentLoaded', function(){
                     disableOnInteraction: true
                 }
             });
-
-            // let fadeTxt = index => {
-            //     let slideAbout = document.querySelectorAll(".slider-about__wrap");
-
-            //     slideAbout.forEach(item => {
-            //         item.classList.remove("slider-about__wrap--active");
-            //         item.classList.remove("animate__animated", "animate__fadeInUp");
-            //     });
-            //     slideAbout[index].classList.add("animate__animated", "animate__fadeInUp");
-            //     slideAbout[index].classList.add("slider-about__wrap--active");
-            // };
-
-            // mySwiper.on('slideChange', function() {
-            //     fadeTxt(mySwiper.activeIndex);
-            // });
         });
     }
 });
