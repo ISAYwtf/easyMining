@@ -44,6 +44,7 @@ $fontFam: 'Montserrat', sans-serif;
     }
 
     & &__search {
+        position: relative;
         display: flex;
         width: 250px;
         height: 100%;
@@ -67,24 +68,23 @@ $fontFam: 'Montserrat', sans-serif;
             &::placeholder {
                 color: $txtClr;
             }
-
-            &::-ms-clear,
-            &::-ms-reveal {
-                display: none;
-                width : 0;
-                height: 0;
-            }
         }
 
         & button {
-            width: 30px;
-            background: none;
+            position: absolute;
+            right: 0;
+            height: 110%;
+            background: transparent;
             border: none;
-            margin-left: -30px;
             cursor: pointer;
 
             &:focus {
                 outline: none;
+            }
+
+            & svg {
+                width: 25px;
+                height: 25px;
             }
         }
     }
