@@ -1,0 +1,84 @@
+$mainClr: #FFE474;
+$txtClr: white;
+$background: #202124;
+$gradient: linear-gradient(to bottom, #FFD700 0%, rgba(235, 229, 199, 0.95) 53.13%, #FFD700 99.48%);
+$fontFam: 'Montserrat', sans-serif;
+
+.form {
+    padding: 110px 0 200px 0;
+
+    &__wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        h5 {
+            margin-top: 10px;
+            font-size: 22px;
+            font-weight: 300;
+            color: #F9F9F9;
+        }
+    }
+
+    form {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        position: relative;
+        width: 775px;
+        height: 95px;
+        display: flex;
+        align-items: center;
+        background-color: rgba(76, 77, 82, 0.3);
+        border: 1px solid rgba(255, 227, 116, 0.2);
+
+        input {
+            font-family: $fontFam;
+            font-size: 28px;
+            font-weight: 300;
+            color: $mainClr;
+            width: 50%;
+            height: 100%;
+            padding-left: 30px;
+            background: none;
+            border: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        button {
+            position: absolute;
+            right: 4px;
+            height: 87px;
+            width: 323px;
+            background-color: rgba(255, 227, 116, 0.2);
+            border: none;
+            color: $mainClr;
+            font-size: 28px;
+            font-weight: 500;
+            font-family: $fontFam;
+            letter-spacing: 0.065em;
+            cursor: pointer;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    p {
+        text-align: center;
+        width: 38%;
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 0.065em;
+        line-height: 174.19%;
+
+        a {
+            color: $mainClr;
+            text-decoration: underline;
+        }
+    }
+}
