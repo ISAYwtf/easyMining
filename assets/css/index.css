@@ -95,8 +95,8 @@
           justify-content: center;
   width: 100%;
   height: 100%;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   border: 1px solid #FFE474;
 }
 
@@ -111,8 +111,136 @@
   font-size: 30px;
 }
 
+.title,
 .title h2 {
+  text-align: center;
   font-size: 50px;
   font-weight: 500;
+}
+
+.advant {
+  padding: 50px 0;
+}
+
+.advant .advant__wrap {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.advant .advant__blocks {
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.advant .advant__blocks .advant__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+.advant .advant__blocks .advant__col .advant__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 95%;
+}
+
+.advant .advant__blocks .advant__col .advant__field .advant__svg {
+  width: 70px;
+  height: 70px;
+  margin-right: 40px;
+}
+
+.advant .advant__blocks .advant__col .advant__field .advant__svg svg {
+  height: 100%;
+  width: auto;
+}
+
+.advant__button {
+  margin-top: 30px;
+  max-width: 400px;
+}
+
+.advant__button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFE474;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.advant__button a:hover {
+  color: white;
+}
+
+.advant__button a:hover svg {
+  -webkit-animation-name: advant-arrow;
+          animation-name: advant-arrow;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.advant__button a svg {
+  margin-right: 20px;
+}
+
+@-webkit-keyframes advant-arrow {
+  60% {
+    fill: white;
+    width: 70px;
+  }
+}
+
+@keyframes advant-arrow {
+  60% {
+    fill: white;
+    width: 70px;
+  }
+}
+
+.feedback {
+  padding: 50px 0 100px 0;
+}
+
+.feedback .feedback__wrap {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 50px;
+}
+
+.feedback .feedback__wrap a {
+  color: #FFE474;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.feedback .feedback__wrap a:hover {
+  color: white;
 }
 /*# sourceMappingURL=index.css.map */

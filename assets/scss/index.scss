@@ -73,7 +73,7 @@ $fontFam: 'Montserrat', sans-serif;
             justify-content: center;
             width: 100%;
             height: 100%;
-            transition: 0.2s;
+            transition: 0.4s;
             border: 1px solid $mainClr;
 
             &:hover {
@@ -90,7 +90,99 @@ $fontFam: 'Montserrat', sans-serif;
     }
 }
 
+.title,
 .title h2 {
+    text-align: center;
     font-size: 50px;
     font-weight: 500;
+}
+
+.advant {
+    padding: 50px 0;
+
+    & &__wrap {
+        flex-direction: column;
+    }
+
+    & &__blocks {
+        padding-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+
+        & .advant__col {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+
+            & .advant__field {
+                display: flex;
+                margin: 30px 0;
+                align-items: center;
+                max-width: 95%;
+
+                & .advant__svg {
+                    width: 70px;
+                    height: 70px;
+                    margin-right: 40px;
+
+                    & svg {
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    &__button {
+        margin-top: 30px;
+        max-width: 400px;
+        & a {
+            display: flex;
+            align-items: center;
+            color: $mainClr;
+            transition: 0.4s;
+
+            &:hover {
+                color: white;
+
+                & svg {
+                    animation-name: advant-arrow;
+                    animation-duration: 1.4s;
+                    animation-iteration-count: infinite;
+                }
+            }
+
+            & svg {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+@keyframes advant-arrow {
+    60% {
+        fill: white;
+        width: 70px;
+    }
+}
+
+.feedback {
+    padding: 50px 0 100px 0;
+
+    & &__wrap {
+        justify-content: space-between;
+        margin-top: 50px;
+
+        & a {
+            color: $mainClr;
+            transition: 0.4s;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
 }
