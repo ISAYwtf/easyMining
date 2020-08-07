@@ -1,8 +1,4 @@
-$mainClr: #FFE474;
-$txtClr: white;
-$background: #202124;
-$gradient: linear-gradient(to bottom, #FFD700 0%, rgba(235, 229, 199, 0.95) 53.13%, #FFD700 99.48%);
-$fontFam: 'Montserrat', sans-serif;
+@import 'var';
 
 .wrap {
     display: flex;
@@ -103,30 +99,30 @@ header {
         justify-content: space-between;
         align-items: center;
         height: 100%;
+    }
+}
 
-        & .logo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: $mainClr;
-            font-weight: 500;
-            font-size: 30px;
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $mainClr;
+    font-weight: 500;
+    font-size: 30px;
 
-            & p {
-                margin: 0;
-                background: $gradient;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
+    & p {
+        margin: 0;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
-            & span {
-                height: 70px;
-                font-size: 70px;
-                background: $gradient;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                text-transform: uppercase;
-            }
-        }
+    & span {
+        height: 70px;
+        font-size: 70px;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
     }
 }

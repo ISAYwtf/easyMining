@@ -134,7 +134,7 @@ header .header--wrap {
   height: 100%;
 }
 
-header .header--wrap .logo {
+.logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,7 +150,7 @@ header .header--wrap .logo {
   font-size: 30px;
 }
 
-header .header--wrap .logo p {
+.logo p {
   margin: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#FFD700), color-stop(53.13%, rgba(235, 229, 199, 0.95)), color-stop(99.48%, #FFD700));
   background: linear-gradient(to bottom, #FFD700 0%, rgba(235, 229, 199, 0.95) 53.13%, #FFD700 99.48%);
@@ -158,7 +158,7 @@ header .header--wrap .logo p {
   -webkit-text-fill-color: transparent;
 }
 
-header .header--wrap .logo span {
+.logo span {
   height: 70px;
   font-size: 70px;
   background: -webkit-gradient(linear, left top, left bottom, from(#FFD700), color-stop(53.13%, rgba(235, 229, 199, 0.95)), color-stop(99.48%, #FFD700));

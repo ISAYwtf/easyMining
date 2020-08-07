@@ -1,9 +1,4 @@
-$mainClr: #FFE474;
-$txtClr: white;
-$background: #202124;
-$gradient: linear-gradient(to bottom, #FFD700 0%, rgba(235, 229, 199, 0.95) 53.13%, #FFD700 99.48%);
-$fontFam: 'Montserrat', sans-serif;
-
+@import 'var';
 
 .best-offer {
     padding: 100px 0 50px 0;
@@ -192,7 +187,7 @@ $fontFam: 'Montserrat', sans-serif;
     padding-top: 45px;
     padding-bottom: 75px;
     background-color: rgba(255, 228, 116, 0.5);
-    // color: black;
+    font-weight: 300;
 
     .advant__blocks {
         padding-top: 10px;

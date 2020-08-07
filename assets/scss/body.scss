@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
-$mainClr: #FFE474;
-$txtClr: white;
-$background: #202124;
-$gradient: linear-gradient(to bottom, #FFD700 0%, rgba(235, 229, 199, 0.95) 53.13%, #FFD700 99.48%);
-$fontFam: 'Montserrat', sans-serif;
+@import 'var';
 
 body {
     margin: 0;
@@ -23,4 +19,18 @@ a {
 p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
+}
+
+input {
+    padding-left: 10px;
+    font-family: $fontFam;
+    font-size: 28px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+button {
+    border: none;
 }
