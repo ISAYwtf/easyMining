@@ -32,7 +32,7 @@
           transform: scale(0.9);
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  background: tomato;
+  background: #1c1c1c;
 }
 
 .swiper-slide-active {

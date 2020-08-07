@@ -2,7 +2,7 @@
   padding: 100px 0 50px 0;
 }
 
-.best-offer .best-offer__wrap {
+.best-offer__wrap {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -12,7 +12,7 @@
           align-items: center;
 }
 
-.best-offer .best-offer__goods {
+.best-offer__goods {
   width: 100%;
   margin: 40px;
   display: -webkit-box;
@@ -23,7 +23,7 @@
           justify-content: space-between;
 }
 
-.best-offer .best-offer__good {
+.best-offer__good {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,37 +36,37 @@
   cursor: pointer;
 }
 
-.best-offer .best-offer__good img {
+.best-offer__good img {
   width: 100%;
   max-height: 380px;
 }
 
-.best-offer .best-offer__good h5 {
+.best-offer__good h5 {
   margin-top: 40px;
   font-size: 28px;
   font-weight: 500;
 }
 
-.best-offer .best-offer__good p {
+.best-offer__good p {
   font-weight: 300;
   margin-bottom: 20px;
 }
 
-.best-offer .best-offer__good b {
+.best-offer__good b {
   color: #FFE474;
 }
 
-.best-offer .best-offer__good .good__price {
+.best-offer__good .good__price {
   color: #FFE474;
   font-weight: 500;
 }
 
-.best-offer .best-offer__good .good__stock {
+.best-offer__good .good__stock {
   display: none;
   font-weight: 500;
 }
 
-.best-offer .best-offer__button {
+.button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,7 +83,7 @@
   cursor: pointer;
 }
 
-.best-offer .best-offer__button .button__wrap {
+.button .button__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,13 +100,13 @@
   border: 1px solid #FFE474;
 }
 
-.best-offer .best-offer__button .button__wrap:hover {
+.button .button__wrap:hover {
   width: 337px;
   height: 121px;
   border-width: 2px;
 }
 
-.best-offer .best-offer__button a {
+.button a {
   color: #FFE474;
   font-size: 30px;
 }
@@ -122,38 +122,7 @@
   padding: 50px 0;
 }
 
-.advant .advant__wrap {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.advant .advant__blocks {
-  padding-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.advant .advant__blocks .advant__col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 50%;
-}
-
-.advant .advant__blocks .advant__col .advant__field {
+.advant__field {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,13 +133,13 @@
   max-width: 95%;
 }
 
-.advant .advant__blocks .advant__col .advant__field .advant__svg {
+.advant__field .advant__svg {
   width: 70px;
   height: 70px;
   margin-right: 40px;
 }
 
-.advant .advant__blocks .advant__col .advant__field .advant__svg svg {
+.advant__field .advant__svg svg {
   height: 100%;
   width: auto;
 }
@@ -209,6 +178,37 @@
   margin-right: 20px;
 }
 
+.advant__blocks {
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.advant__wrap {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.advant__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
 @-webkit-keyframes advant-arrow {
   60% {
     fill: white;
@@ -227,20 +227,81 @@
   padding: 50px 0 100px 0;
 }
 
-.feedback .feedback__wrap {
+.feedback__wrap {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 50px;
 }
 
-.feedback .feedback__wrap a {
+.feedback__wrap a {
   color: #FFE474;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
-.feedback .feedback__wrap a:hover {
+.feedback__wrap a:hover {
   color: white;
+}
+
+.advantage {
+  padding-top: 45px;
+  padding-bottom: 75px;
+  background-color: rgba(255, 228, 116, 0.5);
+}
+
+.advantage .advant__blocks {
+  padding-top: 10px;
+}
+
+.advantage .advant__svg {
+  width: 90px;
+  height: 90px;
+}
+
+.advantage .advant__col {
+  width: 47%;
+}
+
+.advantage .advant__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  -ms-flex-item-align: center;
+      align-self: center;
+  max-width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+.advantage .advant__button p {
+  margin-right: 12px;
+}
+
+.advantage .advant__button .button {
+  width: 480px;
+  margin-top: 0;
+  border-width: 1px;
+}
+
+.advantage .advant__button .button:hover a {
+  color: white;
+}
+
+.advantage .advant__button .button__wrap {
+  border-width: 1px;
+}
+
+.advantage .advant__button .button__wrap:hover {
+  width: 450px;
+  height: 120px;
+}
+
+.advantage .advant__button .button__wrap a {
+  text-transform: uppercase;
+  font-weight: 500;
 }
 /*# sourceMappingURL=index.css.map */
