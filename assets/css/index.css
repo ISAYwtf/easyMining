@@ -305,4 +305,15 @@
   text-transform: uppercase;
   font-weight: 500;
 }
+
+.bg-polygon {
+  position: absolute;
+  top: 90%;
+}
+
+.bg-polygon-2 {
+  position: absolute;
+  top: 140%;
+  right: 0;
+}
 /*# sourceMappingURL=index.css.map */

@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -32,5 +37,50 @@ input:focus {
 
 button {
   border: none;
+}
+
+.hoisting {
+  display: none;
+  position: fixed;
+  text-align: center;
+  right: 5%;
+  bottom: 5%;
+  width: 50px;
+  height: 70px;
+  color: #FFE474;
+  font-size: 22px;
+  font-weight: 300;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.hoisting svg {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.hoisting:hover {
+  -webkit-animation-name: arrow-hoisting;
+          animation-name: arrow-hoisting;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.hoisting:hover svg {
+  fill: white;
+}
+
+@-webkit-keyframes arrow-hoisting {
+  60% {
+    height: 80px;
+  }
+}
+
+@keyframes arrow-hoisting {
+  60% {
+    height: 80px;
+  }
 }
 /*# sourceMappingURL=body.css.map */
