@@ -1,0 +1,244 @@
+.host {
+  padding-top: 100px;
+}
+
+.host__wrap {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.host__title {
+  color: #FFE474;
+}
+
+.host__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 55px;
+  padding-bottom: 80px;
+}
+
+.host__txt {
+  width: 60%;
+}
+
+.host__block {
+  padding-bottom: 40px;
+  width: 95%;
+}
+
+.host__block h5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.host__block h5 span {
+  color: #FFE474;
+  margin-right: 20px;
+  font-size: 40px;
+}
+
+.host__block p {
+  margin-top: 30px;
+  margin-left: 105px;
+  font-weight: 300;
+  color: #FFE474;
+}
+
+.host__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 500px;
+  height: 349px;
+  background-color: rgba(196, 196, 196, 0.3);
+}
+
+.host__img img {
+  width: 30%;
+}
+
+.big-form {
+  padding: 100px 0 50px 0;
+}
+
+.big-form__wrap {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.big-form__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.big-form__title h3 {
+  margin-top: 20px;
+  color: #FFE474;
+  font-size: 40px;
+  font-weight: 400;
+  max-width: 620px;
+}
+
+.big-form span {
+  color: #FFE474;
+}
+
+.big-form p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  max-width: 370px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.065em;
+  line-height: 174.19%;
+  color: #F9F9F9;
+}
+
+.big-form p a {
+  color: #FFE474;
+  text-decoration: underline;
+}
+
+.big-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.big-form form h6 {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 45px;
+}
+
+.big-form form h6 span {
+  font-size: 30px;
+}
+
+.big-form form p {
+  font-size: 28px;
+  font-weight: 400;
+  text-align: unset;
+  -ms-flex-item-align: unset;
+      -ms-grid-row-align: unset;
+      align-self: unset;
+}
+
+.big-form form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.big-form form .big-form__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.big-form form input {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  padding-left: 20px;
+  width: 520px;
+  height: 90px;
+  background-color: rgba(255, 227, 116, 0.4);
+  color: white;
+}
+
+.big-form form input::-webkit-input-placeholder {
+  color: #FFE474;
+  opacity: 0.63;
+}
+
+.big-form form input:-ms-input-placeholder {
+  color: #FFE474;
+  opacity: 0.63;
+}
+
+.big-form form input::-ms-input-placeholder {
+  color: #FFE474;
+  opacity: 0.63;
+}
+
+.big-form form input::placeholder {
+  color: #FFE474;
+  opacity: 0.63;
+}
+
+.big-form form .big-form__button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 296px;
+  height: 90px;
+  border-width: 1px;
+  margin: 0;
+}
+
+.big-form form .big-form__button input.button__wrap {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  color: #FFE474;
+  cursor: pointer;
+}
+
+.big-form form .big-form__button:hover .button__wrap {
+  width: 90%;
+  height: 140%;
+  border-width: 1px;
+}
+
+.bg-polygon-4 {
+  right: 0;
+  top: 60%;
+}
+
+.bg-polygon-5 {
+  top: 300%;
+}
+/*# sourceMappingURL=hosting.css.map */
