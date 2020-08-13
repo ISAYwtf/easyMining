@@ -1,0 +1,218 @@
+@import 'var';
+
+.brands {
+    padding-top: 80px;
+    font-weight: 300;
+}
+
+.catalog {
+
+    &__wrap {
+        height: 100%;
+    }
+
+    &__filter {
+        margin-top: 60px;
+        height: 100%;
+        width: 340px;
+
+        .filter__wrap {
+            position: sticky;
+            top: 130px;
+            width: 100%;
+            background: rgba(227, 205, 106, 0.2);
+            z-index: 5;
+        }
+
+        .filter__item {
+            border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+            padding: 0 15px;
+
+            .filter-item {
+                &__title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 60px;
+                cursor: pointer;
+
+                    h5 {
+                        font-size: 22px;
+                        font-weight: 400;
+                    }
+
+                    img {
+                        transition: 0.4s;
+                    }
+                }
+
+                &__val {
+                    display: none;
+                    flex-direction: column;
+                    transition: 0.4s;
+                    padding: 15px 0 30px 0;
+
+                    label {
+                        display: flex;
+                        margin: 7.5px 0;
+                        font-size: 20px;
+                        cursor: pointer;
+
+                        input {
+                            margin-right: 20px;
+
+                            &[type='checkbox'] {
+                                display: none;
+                            }
+                        }
+
+                        div {
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 20px;
+                            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.809018 29.5L15 1.11803L29.191 29.5H0.809018Z' fill='none' stroke='%23FFE474'/%3E%3C/svg%3E%0A");
+                        }
+
+                        input:checked+div {
+                            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.809018 29.5L15 1.11803L29.191 29.5H0.809018Z' fill='%23FFE474' stroke='%23FFE474'/%3E%3C/svg%3E%0A");
+                        }
+                    }
+                }
+            }
+
+            &--active {
+                .filter-item {
+                    &__title {
+                        img {
+                            transform: rotate(180deg);
+                        }
+                    }
+
+                    &__val {
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        .filter__price {
+            .filter__input {
+                display: flex;
+                justify-content: space-between;
+                label {
+                    input {
+                        width: 80px;
+                        height: 30px;
+                        background: $background;
+                        color: $txtClr;
+                        font-size: 14px;
+                        font-weight: 300;
+                        margin-left: 10px;
+                    }
+                }
+
+                &--range {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .noUi-horizontal {
+                    border: none;
+                    height: 1px;
+                    margin-top: 35px;
+                    margin-bottom: 15px;
+                    width: 90%;
+                }
+
+                .noUi-horizontal .noUi-handle {
+                    height: 18px;
+                    top: -10px;
+                }
+
+                .noUi-connect {
+                    background: $mainClr;
+                }
+
+                .noUi-handle {
+                    border-radius: 0;
+                    border: none;
+                    box-shadow: none;
+                    background: none;
+                    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.809018 29.5L15 1.11803L29.191 29.5H0.809018Z' fill='%23FFE474' stroke='%23FFE474'/%3E%3C/svg%3E%0A");
+                    background-repeat: no-repeat;
+                }
+
+                .noUi-handle:after, .noUi-handle:before {
+                    display: none;
+                }
+
+                .noUi-touch-area:focus,
+                .noUi-horizontal .noUi-handle:focus {
+                    outline: none;
+                }
+            }
+
+            .filter__min-max {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 30px;
+
+                small {
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .filter__buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            button,
+            input {
+                background: none;
+                cursor: pointer;
+            }
+
+            .filter__apply {
+                margin: 40px 0;
+                width: 215px;
+                height: 65px;
+                border: 1px solid $mainClr;
+                color: $mainClr;
+                transition: 0.4s;
+
+                &:hover {
+                    background: $mainClr;
+                    color: black;
+                }
+            }
+
+            .filter__clear {
+                display: flex;
+                align-items: center;
+                margin-bottom: 35px;
+
+                input {
+                    color: $txtClr;
+                    font-size: 22px;
+                    font-weight: 300;
+                }
+
+                img {
+                    margin-right: 25px;
+                }
+            }
+        }
+    }
+}
+
+.bg-polygon-10 {
+    top: 20%;
+}
+
+.bg-polygon-11 {
+    right: 0;
+    top: 80%;
+}

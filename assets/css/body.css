@@ -38,6 +38,8 @@ input:focus {
 
 button {
   border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
 }
 
 .title,

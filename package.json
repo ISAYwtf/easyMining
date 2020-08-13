@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ISAYwtf/easymining#readme",
   "dependencies": {
+    "nouislider": "^14.6.0",
     "swiper": "^6.1.1"
   }
 }

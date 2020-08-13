@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EASY Mining - Хостинг</title>
+    <title>EASY Mining - О компании</title>
+    <link rel="stylesheet" href="node_modules/nouislider/distribute/nouislider.min.css">
     <link rel="stylesheet" href="assets/css/body.css">
     <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/hosting.css">
+    <link rel="stylesheet" href="assets/css/catalog.css">
     <link rel="stylesheet" href="assets/css/form.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
@@ -203,141 +204,122 @@
         </div>
     </header>
 
-    <section class="host">
-        <div class="wrap host__wrap">
-            <div class="title host__title">
-                <h2>Хостинг</h2>
-            </div>
-            <div class="host__info">
-                <div class="host__txt">
-                    <div class="host__block">
-                        <h5><span>&#x2713;</span>Делаем майнинг простым для Вас</h5>
-                        <p>
-                            Кратко в чем это проявлется
-                            Мы открываем доступ к майнингу всем желающим. текст текст текст текст текст
-                        </p>
-                    </div>
-                    <div class="host__block">
-                        <h5><span>&#x2713;</span>Вам не нужно разбираться в тонкостях работы</h5>
-                        <p>
-                            Кратко почему?
-                            Наши специалисты сделали всю работу за вас, создав самые эффективные системы майнинга.
-                        </p>
-                    </div>
-                    <div class="host__block">
-                        <h5><span>&#x2713;</span>Вам не требуется искать квалифицированных работников</h5>
-                        <p>
-                            Наши услуги объединяют в себе все ключевые аспекты эффективного майнинга криптовалют: от
-                            создания высокоэффективных центров обработки данных до предоставления нашим пользователям
-                            оптимизированной системы майнинга.
-                        </p>
-                    </div>
-                    <div class="host__block">
-                        <h5><span>&#x2713;</span>Избавим Вас от поиска помещения</h5>
-                        <p>
-                            Кратко о помещениях (где, как и тд)
-                            текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
-                            текст
-                        </p>
-                    </div>
-                </div>
-                <div class="host__img">
-                    <img src="assets/img/author.png" alt="hosting">
-                </div>
-            </div>
+    <section class="brands">
+        <div class="wrap brands__wrap">
+            <p>
+                Кратко об оборудовании ( перечислить бренды, может какие то отличительные черты)
+                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+            </p>
         </div>
     </section>
 
-    <section class="advantage">
-        <div class="wrap advant__wrap">
-            <div class="title advant__title">
-                <h2>Наши клиенты получают</h2>
+    <section class="catalog">
+        <div class="wrap catalog__wrap">
+            <div class="catalog__filter">
+                <form class="filter__wrap">
+                    <div class="filter__item filter__brand">
+                        <div class="filter-item__title">
+                            <h5>Производитель</h5>
+                            <img src="assets/img/arrow.png" alt="arrow" class="filter-arrow">
+                        </div>
+                        <div class="filter-item__val">
+                            <label><input type="checkbox" name="brand" id="brand" value="Aixin"><div></div>Aixin</label>
+                            <label><input type="checkbox" name="brand" id="brand" value="Bitfury"><div></div>Bitfury</label>
+                            <label><input type="checkbox" name="brand" id="brand" value="Bitmain"><div></div>Bitmain</label>
+                            <label><input type="checkbox" name="brand" id="brand" value="Canaan"><div></div>Canaan</label>
+                            <label><input type="checkbox" name="brand" id="brand" value="Cheetah"><div></div>Cheetah</label>
+                            <label><input type="checkbox" name="brand" id="brand" value="Dragonmint"><div></div>Dragonmint</label>
+                        </div>
+                    </div>
+                    <div class="filter__item filter__price">
+                        <div class="filter-item__title">
+                            <h5>Цена</h5>
+                            <img src="assets/img/arrow.png" alt="arrow">
+                        </div>
+                        <div class="filter-item__val">
+                            <div class="filter__input">
+                                <label>От<input type="number" name="min" id="min"></label>
+                                <label>До<input type="number" name="max" id="max"></label>
+                            </div>
+                            <div class="filter__input filter__input--range">
+                                <div id="priceRange"></div>
+                            </div>
+                            <div class="filter__min-max">
+                                <small>20 000</small>
+                                <small>100 000</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter__item">
+                        <div class="filter-item__title">
+                            <h5>Энергопотребление</h5>
+                            <img src="assets/img/arrow.png" alt="arrow">
+                        </div>
+                        <div class="filter-item__val">
+                            <label><input type="checkbox" name="energy" id="energy" value="700"><div></div>700 W</label>
+                            <label><input type="checkbox" name="energy" id="energy" value="800"><div></div>800 W</label>
+                            <label><input type="checkbox" name="energy" id="energy" value="1000"><div></div>1000 W</label>
+                            <label><input type="checkbox" name="energy" id="energy" value="1120"><div></div>1120 W</label>
+                            <label><input type="checkbox" name="energy" id="energy" value="2000"><div></div>2000 W</label>
+                            <label><input type="checkbox" name="energy" id="energy" value="2820"><div></div>2820 W</label>
+                        </div>
+                    </div>
+                    <div class="filter__item">
+                        <div class="filter-item__title">
+                            <h5>Алгоритм хэширования</h5>
+                            <img src="assets/img/arrow.png" alt="arrow">
+                        </div>
+                        <div class="filter-item__val">
+                            <label><input type="checkbox" name="algorithm" id="algorithm" value="Blake2B+SHA3"><div></div>Blake2B+SHA3</label>
+                            <label><input type="checkbox" name="algorithm" id="algorithm" value="Eaglesong"><div></div>Eaglesong</label>
+                            <label><input type="checkbox" name="algorithm" id="algorithm" value="Equihash"><div></div>Equihash </label>
+                            <label><input type="checkbox" name="algorithm" id="algorithm" value="Lyra2REv2"><div></div>Lyra2REv2</label>
+                            <label><input type="checkbox" name="algorithm" id="algorithm" value="Scrypt "><div></div>Scrypt</label>
+                            <label><input type="checkbox" name="algorithm" id="algorithm" value="SHA-256"><div></div>SHA-256</label>
+                        </div>
+                    </div>
+                    <div class="filter__item">
+                        <div class="filter-item__title">
+                            <h5>Криптовалюта</h5>
+                            <img src="assets/img/arrow.png" alt="arrow">
+                        </div>
+                        <div class="filter-item__val">
+                            <label><input type="checkbox" name="crypto" id="crypto" value="Bitcoin"><div></div>Bitcoin</label>
+                            <label><input type="checkbox" name="crypto" id="crypto" value="CKB"><div></div>CKB</label>
+                            <label><input type="checkbox" name="crypto" id="crypto" value="Dash"><div></div>Dash </label>
+                            <label><input type="checkbox" name="crypto" id="crypto" value="ETH"><div></div>ETH</label>
+                            <label><input type="checkbox" name="crypto" id="crypto" value="Grin-CT31 "><div></div>Grin-CT31</label>
+                            <label><input type="checkbox" name="crypto" id="crypto" value="Litecoin"><div></div>Litecoin</label>
+                        </div>
+                    </div>
+                    <!-- <div class="filter__item">
+                        <div class="filter-item__title">
+                            <h5>Хэшрейт</h5>
+                            <img src="assets/img/arrow.png" alt="arrow">
+                        </div>
+                        <div class="filter-item__val">
+                            <label><input type="checkbox" name="hash" id="hash" value="10k">10k Sol/s</label>
+                            <label><input type="checkbox" name="hash" id="hash" value="11">CKB</label>
+                            <label><input type="checkbox" name="hash" id="hash" value="Dash">Dash </label>
+                            <label><input type="checkbox" name="hash" id="hash" value="ETH">ETH</label>
+                            <label><input type="checkbox" name="hash" id="hash" value="Grin-CT31 ">Grin-CT31</label>
+                            <label><input type="checkbox" name="hash" id="hash" value="Litecoin">Litecoin</label>
+                        </div>
+                    </div> -->
+                    <div class="filter__buttons">
+                        <button class="filter__apply">Применить</button>
+                        <div class="filter__clear">
+                            <img src="assets/img/clear.png" alt="clear">
+                            <input type="reset" value="Очистить">
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="advant__blocks">
-                <div class="advant__col">
-                    <div class="advant__field">
-                        <div class="advant__svg">
-                            <img src="assets/img/personal.svg" alt="advantages">
-                        </div>
-                        <p>Квалифицированный персонал</p>
-                    </div>
-                    <div class="advant__field">
-                        <div class="advant__svg">
-                            <img src="assets/img/location.svg" alt="advantages">
-                        </div>
-                        <p>Выгодные условия размещения</p>
-                    </div>
-                    <div class="advant__field">
-                        <div class="advant__svg">
-                            <img src="assets/img/hours.svg" alt="advantages">
-                        </div>
-                        <p>Антивандальная и противопожарная охрана 24/7</p>
-                    </div>
-                </div>
-                <div class="advant__col">
-                    <div class="advant__field">
-                        <div class="advant__svg">
-                            <img src="assets/img/support.svg" alt="advantages">
-                        </div>
-                        <p>Быстрая и профессиональная сервисная помощь</p>
-                    </div>
-                    <div class="advant__field">
-                        <div class="advant__svg">
-                            <img src="assets/img/digital.svg" alt="advantages">
-                        </div>
-                        <p>Стабильный высокоскоростной интернет</p>
-                    </div>
-                    <div class="advant__field">
-                        <div class="advant__svg">
-                            <img src="assets/img/contract.svg" alt="advantages">
-                        </div>
-                        <p>Юридическая чистота</p>
-                    </div>
-                </div>
-            </div>
-            <div class="advant__button">
-                <p>Все что Вам нужно для майнинга —</p>
-                <div class="button">
-                    <div class="button__wrap">
-                        <a href="#">стать нашим клиентом</a>
-                    </div>
-                </div>
-            </div>
+            <div class="catalog__goods"></div>
         </div>
     </section>
-
-    <div class="big-form">
-        <div class="wrap big-form__wrap">
-            <div class="title big-form__title">
-                <h2>Как стать нашим клиентом?</h2>
-                <h3>Заполните анкету для заявки и мы свяжемся с Вами!</h3>
-            </div>
-            <form>
-                <h6><span>*</span> поля для обязательного заполнения</h6>
-                <div class="big-form__name">
-                    <label>
-                        <p>Ваше имя <span>*</span></p>
-                        <input type="text" name="name" id="name" placeholder="Иван">
-                    </label>
-                    <label>
-                        Ваша фамилия
-                        <input type="text" name="lastName" id="lastName" placeholder="Иванов">
-                    </label>
-                </div>
-                <label><p>Номер телефона <span>*</span></p>
-                    <input type="tel" name="phone" id="phone" placeholder="+7 (___) ___ __ __">
-                </label>
-                <label>
-                    E-mail
-                    <input type="email" name="email" id="email" placeholder="easy@mining.com">
-                </label>
-                <div class="button big-form__button">
-                    <input type="submit" class="button__wrap" name="submit" value="Отправить">
-                </div>
-            </form>
-            <p>Нажимая вы соглашаетесь с <a href="#">пользовательским соглашением</a></p>
-        </div>
-    </div>
 
     <section class="form">
         <div class="wrap form__wrap">
@@ -412,11 +394,11 @@
         </div>
     </footer>
 
-    <div class="bg-polygon bg-polygon-4">
-        <img src="assets/img/polygon4.png" alt="polygon">
+    <div class="bg-polygon bg-polygon-10">
+        <img src="assets/img/polygon10.png" alt="polygon">
     </div>
-    <div class="bg-polygon bg-polygon-5">
-        <img src="assets/img/polygon5.png" alt="polygon">
+    <div class="bg-polygon bg-polygon-11">
+        <img src="assets/img/polygon11.png" alt="polygon">
     </div>
 
     <a href="#" class="hoisting">
@@ -426,10 +408,10 @@
         </svg>
     </a>
 
-    <script src="node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="node_modules/nouislider/distribute/nouislider.min.js"></script>
     <script src="assets/js/body.js"></script>
-    <script src="assets/js/main-slider.js"></script>
-    <script src="assets/js/index.js"></script>
+    <script src="assets/js/range.js"></script>
+    <script src="assets/js/catalog.js"></script>
 </body>
 
 </html>
