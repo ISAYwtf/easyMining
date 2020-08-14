@@ -51,6 +51,16 @@
             display: none;
             font-weight: 500;
         }
+
+        &:hover {
+            .good__price {
+                display: none;
+            }
+
+            .good__stock {
+                display: unset;
+            }
+        }
     }
 }
 

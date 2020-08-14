@@ -66,6 +66,14 @@
   font-weight: 500;
 }
 
+.best-offer__good:hover .good__price {
+  display: none;
+}
+
+.best-offer__good:hover .good__stock {
+  display: unset;
+}
+
 .feedback {
   padding: 50px 0 100px 0;
 }
