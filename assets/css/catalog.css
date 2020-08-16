@@ -22,6 +22,7 @@
   top: 130px;
   width: 100%;
   background: rgba(227, 205, 106, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   z-index: 5;
 }
 
@@ -46,7 +47,7 @@
 
 .catalog__filter .filter__item .filter-item__title h5 {
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .catalog__filter .filter__item .filter-item__title img {
@@ -71,6 +72,7 @@
   display: flex;
   margin: 7.5px 0;
   font-size: 20px;
+  font-weight: 300;
   cursor: pointer;
 }
 
@@ -238,7 +240,8 @@
 }
 
 .catalog__goods {
-  max-width: 74%;
+  width: 74%;
+  max-width: 960px;
 }
 
 .catalog__goods .goods__wrap {
@@ -251,6 +254,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
 }
 
 .catalog__goods .goods__wrap .goods__item {

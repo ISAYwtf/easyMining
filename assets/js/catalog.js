@@ -19,7 +19,7 @@ let pagination = document.querySelector('.pagination__num'),
     goods = document.querySelectorAll('.goods__item'),
     goodsContainer = document.querySelector('.goods__wrap'),
     size = 6,
-    pageCount = Math.round(goods.length / size),
+    pageCount = Math.ceil(goods.length / size),
     pages = [];
 
 for (let i = 1; i <= pageCount; i++) {
@@ -78,6 +78,7 @@ function togglePagination(prev, next) {
     prev.classList.remove('pagination__active');
     next.classList.add('pagination__active');
     goodShow(pages[count - 1]);
+    window.scrollTo(0, 0);
 }
 
 function goodShow(page) {

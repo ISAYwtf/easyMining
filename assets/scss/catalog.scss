@@ -21,11 +21,12 @@
             top: 130px;
             width: 100%;
             background: rgba(227, 205, 106, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             z-index: 5;
         }
 
         .filter__item {
-            border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
             padding: 0 15px;
 
             .filter-item {
@@ -38,7 +39,7 @@
 
                     h5 {
                         font-size: 22px;
-                        font-weight: 400;
+                        font-weight: 300;
                     }
 
                     img {
@@ -56,6 +57,7 @@
                         display: flex;
                         margin: 7.5px 0;
                         font-size: 20px;
+                        font-weight: 300;
                         cursor: pointer;
 
                         input {
@@ -208,13 +210,15 @@
     }
 
     &__goods {
-        max-width: 74%;
+        width: 74%;
+        max-width: 960px;
 
         .goods__wrap {
             padding: 0 70px 50px 150px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            width: 100%;
 
             .goods__item {
                 display: flex;

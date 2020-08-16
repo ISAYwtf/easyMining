@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 @import 'var';
 
-html,
-body {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
+    font-family: $fontFam;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-size: 28px;
-    font-family: $fontFam;
     background-color: #202124;
     color: $txtClr;
 }
@@ -21,25 +24,14 @@ a {
     color: $txtClr;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
-}
-
 input {
     padding-left: 10px;
     border: none;
-    font-family: $fontFam;
     font-size: 28px;
-
-    &:focus {
-        outline: none;
-    }
 }
 
 button {
     border: none;
-    font-family: $fontFam;
     font-size: 28px;
 }
 
