@@ -13,7 +13,6 @@
     }
 
     &__filter {
-        height: 100%;
         width: 340px;
 
         .filter__wrap {
@@ -196,6 +195,12 @@
                 align-items: center;
                 margin-bottom: 35px;
 
+                &:hover {
+                    img {
+                        transform: rotate(180deg);
+                    }
+                }
+
                 input {
                     color: $txtClr;
                     font-size: 22px;
@@ -203,7 +208,8 @@
                 }
 
                 img {
-                    margin-right: 25px;
+                    transition: 1s;
+                    margin-right: 10px;
                 }
             }
         }

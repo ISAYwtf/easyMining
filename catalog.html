@@ -218,19 +218,19 @@
     <section class="catalog">
         <div class="wrap catalog__wrap">
             <div class="catalog__filter">
-                <form class="filter__wrap">
+                <form class="filter__wrap" name="filterForm">
                     <div class="filter__item filter__brand">
                         <div class="filter-item__title">
                             <h5>Производитель</h5>
                             <img src="assets/img/arrow.png" alt="arrow" class="filter-arrow">
                         </div>
                         <div class="filter-item__val">
-                            <label><input type="checkbox" name="brand" value="Aixin"><div></div>Aixin</label>
-                            <label><input type="checkbox" name="brand" value="Bitfury"><div></div>Bitfury</label>
-                            <label><input type="checkbox" name="brand" value="Bitmain"><div></div>Bitmain</label>
-                            <label><input type="checkbox" name="brand" value="Canaan"><div></div>Canaan</label>
-                            <label><input type="checkbox" name="brand" value="Cheetah"><div></div>Cheetah</label>
-                            <label><input type="checkbox" name="brand" value="Dragonmint"><div></div>Dragonmint</label>
+                            <label><input type="checkbox" data-target="brand" name="brand" value="Aixin"><div></div>Aixin</label>
+                            <label><input type="checkbox" data-target="brand" name="brand" value="Bitfury"><div></div>Bitfury</label>
+                            <label><input type="checkbox" data-target="brand" name="brand" value="Bitmain"><div></div>Bitmain</label>
+                            <label><input type="checkbox" data-target="brand" name="brand" value="Canaan"><div></div>Canaan</label>
+                            <label><input type="checkbox" data-target="brand" name="brand" value="Cheetah"><div></div>Cheetah</label>
+                            <label><input type="checkbox" data-target="brand" name="brand" value="Dragonmint"><div></div>Dragonmint</label>
                         </div>
                     </div>
                     <div class="filter__item filter__price">
@@ -240,15 +240,15 @@
                         </div>
                         <div class="filter-item__val">
                             <div class="filter__input">
-                                <label>От<input type="number" name="min" id="min"></label>
-                                <label>До<input type="number" name="max" id="max"></label>
+                                <label>От<input type="number" data-target="minPrice" name="min" id="min"></label>
+                                <label>До<input type="number" data-target="maxPrice" name="max" id="max"></label>
                             </div>
                             <div class="filter__input filter__input--range">
                                 <div id="priceRange"></div>
                             </div>
                             <div class="filter__min-max">
                                 <small>20 000</small>
-                                <small>100 000</small>
+                                <small>110 000</small>
                             </div>
                         </div>
                     </div>
@@ -258,12 +258,12 @@
                             <img src="assets/img/arrow.png" alt="arrow">
                         </div>
                         <div class="filter-item__val">
-                            <label><input type="checkbox" name="energy" value="700"><div></div>700 W</label>
-                            <label><input type="checkbox" name="energy" value="800"><div></div>800 W</label>
-                            <label><input type="checkbox" name="energy" value="1000"><div></div>1000 W</label>
-                            <label><input type="checkbox" name="energy" value="1120"><div></div>1120 W</label>
-                            <label><input type="checkbox" name="energy" value="2000"><div></div>2000 W</label>
-                            <label><input type="checkbox" name="energy" value="2820"><div></div>2820 W</label>
+                            <label><input type="checkbox" data-target="energy" name="energy" value="700"><div></div>700 W</label>
+                            <label><input type="checkbox" data-target="energy" name="energy" value="800"><div></div>800 W</label>
+                            <label><input type="checkbox" data-target="energy" name="energy" value="1000"><div></div>1000 W</label>
+                            <label><input type="checkbox" data-target="energy" name="energy" value="1120"><div></div>1120 W</label>
+                            <label><input type="checkbox" data-target="energy" name="energy" value="2000"><div></div>2000 W</label>
+                            <label><input type="checkbox" data-target="energy" name="energy" value="2820"><div></div>2820 W</label>
                         </div>
                     </div>
                     <div class="filter__item">
@@ -272,12 +272,12 @@
                             <img src="assets/img/arrow.png" alt="arrow">
                         </div>
                         <div class="filter-item__val">
-                            <label><input type="checkbox" name="algorithm" value="Blake2B+SHA3"><div></div>Blake2B+SHA3</label>
-                            <label><input type="checkbox" name="algorithm" value="Eaglesong"><div></div>Eaglesong</label>
-                            <label><input type="checkbox" name="algorithm" value="Equihash"><div></div>Equihash </label>
-                            <label><input type="checkbox" name="algorithm" value="Lyra2REv2"><div></div>Lyra2REv2</label>
-                            <label><input type="checkbox" name="algorithm" value="Scrypt "><div></div>Scrypt</label>
-                            <label><input type="checkbox" name="algorithm" value="SHA-256"><div></div>SHA-256</label>
+                            <label><input type="checkbox" data-target="algorithm" name="algorithm" value="Blake2B+SHA3"><div></div>Blake2B+SHA3</label>
+                            <label><input type="checkbox" data-target="algorithm" name="algorithm" value="Eaglesong"><div></div>Eaglesong</label>
+                            <label><input type="checkbox" data-target="algorithm" name="algorithm" value="Equihash"><div></div>Equihash </label>
+                            <label><input type="checkbox" data-target="algorithm" name="algorithm" value="Lyra2REv2"><div></div>Lyra2REv2</label>
+                            <label><input type="checkbox" data-target="algorithm" name="algorithm" value="Scrypt"><div></div>Scrypt</label>
+                            <label><input type="checkbox" data-target="algorithm" name="algorithm" value="SHA-256"><div></div>SHA-256</label>
                         </div>
                     </div>
                     <div class="filter__item">
@@ -286,12 +286,12 @@
                             <img src="assets/img/arrow.png" alt="arrow">
                         </div>
                         <div class="filter-item__val">
-                            <label><input type="checkbox" name="crypto" value="Bitcoin"><div></div>Bitcoin</label>
-                            <label><input type="checkbox" name="crypto" value="CKB"><div></div>CKB</label>
-                            <label><input type="checkbox" name="crypto" value="Dash"><div></div>Dash </label>
-                            <label><input type="checkbox" name="crypto" value="ETH"><div></div>ETH</label>
-                            <label><input type="checkbox" name="crypto" value="Grin-CT31 "><div></div>Grin-CT31</label>
-                            <label><input type="checkbox" name="crypto" value="Litecoin"><div></div>Litecoin</label>
+                            <label><input type="checkbox" data-target="crypto" name="crypto" value="Bitcoin"><div></div>Bitcoin</label>
+                            <label><input type="checkbox" data-target="crypto" name="crypto" value="CKB"><div></div>CKB</label>
+                            <label><input type="checkbox" data-target="crypto" name="crypto" value="Dash"><div></div>Dash </label>
+                            <label><input type="checkbox" data-target="crypto" name="crypto" value="ETH"><div></div>ETH</label>
+                            <label><input type="checkbox" data-target="crypto" name="crypto" value="Grin-CT31"><div></div>Grin-CT31</label>
+                            <label><input type="checkbox" data-target="crypto" name="crypto" value="Litecoin"><div></div>Litecoin</label>
                         </div>
                     </div>
                     <!-- <div class="filter__item">
@@ -319,109 +319,124 @@
             </div>
             <div class="catalog__goods">
                 <div class="goods__wrap">
-                    <div class="goods__item">
+                    <div class="goods__item" data-brand="Aixin" data-price="34000" data-energy="1000"
+                        data-algorithm="Equihash" data-crypto="Litecoin">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
                         <p>Краткие характеристики</p>
-                        <span class="good__price" data-show="true">1 000 &#8381;</span>
+                        <span class="good__price">34 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item">
-                        <img src="assets/img/assic.png" alt="assic">
-                        <h5>Aixin A1 25T</h5>
-                        <p>Краткие характеристики</p>
-                        <span class="good__price" data-show="true">2 000 &#8381;</span>
-                        <span class="good__stock"><b>&#x2713;</b> В наличии</span>
-                    </div>
-                    <div class="goods__item">
+                    <div class="goods__item" data-brand="Bitfury" data-price="52000" data-energy="2820"
+                        data-algorithm="Blake2B+SHA3" data-crypto="CKB">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
                         <p>Краткие характеристики</p>
-                        <span class="good__price" data-show="true">3 000 &#8381;</span>
+                        <span class="good__price">52 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item">
+                    <div class="goods__item" data-brand="Bitmain" data-price="21000" data-energy="700"
+                        data-algorithm="Scrypt" data-crypto="Dash">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
                         <p>Краткие характеристики</p>
-                        <span class="good__price" data-show="true">4 000 &#8381;</span>
+                        <span class="good__price">21 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item">
-                        <img src="assets/img/assic.png" alt="assic">
-                        <h5>Aixin A1 25T</h5>
-                        <p>Краткие характеристики</p>
-                        <span class="good__price" data-show="true">5 000 &#8381;</span>
-                        <span class="good__stock"><b>&#x2713;</b> В наличии</span>
-                    </div>
-                    <div class="goods__item">
+                    <div class="goods__item" data-brand="Canaan" data-price="50000" data-energy="800"
+                        data-algorithm="Eaglesong" data-crypto="Bitcoin">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
                         <p>Краткие характеристики</p>
-                        <span class="good__price" data-show="true">6 000 &#8381;</span>
+                        <span class="good__price">50 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item">
+                    <div class="goods__item" data-brand="Cheetah" data-price="69000" data-energy="2000"
+                        data-algorithm="SHA-256" data-crypto="Grin-CT31">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
                         <p>Краткие характеристики</p>
-                        <span class="good__price" data-show="true">7 000 &#8381;</span>
+                        <span class="good__price">69 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item">
-                        <img src="assets/img/assic.png" alt="assic">
-                        <h5>Aixin A1 25T</h5>
-                        <p>Краткие характеристики</p>
-                        <span class="good__price" data-show="true">8 000 &#8381;</span>
-                        <span class="good__stock"><b>&#x2713;</b> В наличии</span>
-                    </div>
-                    <div class="goods__item">
+                    <div class="goods__item" data-brand="Dragonmint" data-price="45000" data-energy="1120"
+                        data-algorithm="Lyra2REv2" data-crypto="Grin-CT31">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
                         <p>Краткие характеристики</p>
-                        <span class="good__price" data-show="true">9 000 &#8381;</span>
+                        <span class="good__price">45 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item">
+                    <div class="goods__item" data-brand="Bitmain" data-price="30000" data-energy="800"
+                        data-algorithm="Blake2B+SHA3" data-crypto="Litecoin">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
                         <p>Краткие характеристики</p>
-                        <span class="good__price" data-show="true">10 000 &#8381;</span>
+                        <span class="good__price">30 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item">
-                        <img src="assets/img/assic.png" alt="assic">
-                        <h5>Aixin A1 25T</h5>
-                        <p>Краткие характеристики</p>
-                        <span class="good__price" data-show="true">11 000 &#8381;</span>
-                        <span class="good__stock"><b>&#x2713;</b> В наличии</span>
-                    </div>
-                    <div class="goods__item">
+                    <div class="goods__item" data-brand="Cheetah" data-price="38000" data-energy="700"
+                        data-algorithm="SHA-256" data-crypto="ETH">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
                         <p>Краткие характеристики</p>
-                        <span class="good__price" data-show="true">9 000 &#8381;</span>
+                        <span class="good__price">38 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item">
+                    <div class="goods__item" data-brand="Aixin" data-price="86000" data-energy="2000"
+                        data-algorithm="SHA-256" data-crypto="Grin-CT31">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
                         <p>Краткие характеристики</p>
-                        <span class="good__price" data-show="true">10 000 &#8381;</span>
+                        <span class="good__price">86 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item">
-                        <img src="assets/img/assic.png" alt="assic">
-                        <h5>Aixin A1 25T</h5>
-                        <p>Краткие характеристики</p>
-                        <span class="good__price" data-show="true">11 000 &#8381;</span>
-                        <span class="good__stock"><b>&#x2713;</b> В наличии</span>
-                    </div>
-                    <div class="goods__item">
+                    <div class="goods__item" data-brand="Canaan" data-price="91000" data-energy="800"
+                        data-algorithm="Scrypt" data-crypto="Dash">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
                         <p>Краткие характеристики</p>
-                        <span class="good__price" data-show="true">60 000 &#8381;</span>
+                        <span class="good__price">91 000 &#8381;</span>
+                        <span class="good__stock"><b>&#x2713;</b> В наличии</span>
+                    </div>
+                    <div class="goods__item" data-brand="Bitmain" data-price="93000" data-energy="1120"
+                        data-algorithm="SHA-256" data-crypto="ETH">
+                        <img src="assets/img/assic.png" alt="assic">
+                        <h5>Имя товара</h5>
+                        <p>Краткие характеристики</p>
+                        <span class="good__price">93 000 &#8381;</span>
+                        <span class="good__stock"><b>&#x2713;</b> В наличии</span>
+                    </div>
+                    <div class="goods__item" data-brand="Aixin" data-price="32000" data-energy="700"
+                        data-algorithm="Grin-CT31" data-crypto="Bitcoin">
+                        <img src="assets/img/assic.png" alt="assic">
+                        <h5>Имя товара</h5>
+                        <p>Краткие характеристики</p>
+                        <span class="good__price">32 000 &#8381;</span>
+                        <span class="good__stock"><b>&#x2713;</b> В наличии</span>
+                    </div>
+                    <div class="goods__item" data-brand="Canaan" data-price="39000" data-energy="2000"
+                        data-algorithm="Blake2B+SHA3" data-crypto="Litecoin">
+                        <img src="assets/img/assic.png" alt="assic">
+                        <h5>Имя товара</h5>
+                        <p>Краткие характеристики</p>
+                        <span class="good__price">39 000 &#8381;</span>
+                        <span class="good__stock"><b>&#x2713;</b> В наличии</span>
+                    </div>
+                    <div class="goods__item" data-brand="Aixin" data-price="81000" data-energy="1000"
+                        data-algorithm="Eaglesong" data-crypto="Dash">
+                        <img src="assets/img/assic.png" alt="assic">
+                        <h5>Имя товара</h5>
+                        <p>Краткие характеристики</p>
+                        <span class="good__price">81 000 &#8381;</span>
+                        <span class="good__stock"><b>&#x2713;</b> В наличии</span>
+                    </div>
+                    <div class="goods__item" data-brand="Dragonmint" data-price="92000" data-energy="2000"
+                        data-algorithm="Equihash" data-crypto="Bitcoin">
+                        <img src="assets/img/assic.png" alt="assic">
+                        <h5>Имя товара</h5>
+                        <p>Краткие характеристики</p>
+                        <span class="good__price">92 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
                 </div>

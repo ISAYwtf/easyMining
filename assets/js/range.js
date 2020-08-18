@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const priceSlider = document.querySelector('#priceRange');
 
     noUiSlider.create(priceSlider, {
-        start: [20000, 100000],
+        start: [20000, 110000],
         connect: true,
         range: {
             'min': 20000,
-            'max': 100000
+            'max': 110000
         },
         step: 1,
         format: {
