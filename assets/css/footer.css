@@ -3,12 +3,28 @@ footer {
   font-size: 22px;
 }
 
+@media (max-width: 1500px) {
+  footer {
+    font-size: 16px;
+    padding-bottom: 60px;
+  }
+}
+
 .footer__wrap {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 1318px;
+  width: 1318px;
   height: 200px;
+}
+
+@media (max-width: 1500px) {
+  .footer__wrap {
+    max-width: 1318px;
+    width: 96%;
+    height: 175px;
+    margin: 0 30px;
+  }
 }
 
 .footer__wrap .footer__col {
@@ -26,6 +42,12 @@ footer {
   font-weight: 300;
 }
 
+@media (max-width: 1200px) {
+  .footer__wrap .footer__col {
+    max-width: 205px;
+  }
+}
+
 .footer__wrap .footer__col--logo {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -34,6 +56,14 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer__wrap .footer__col--logo .logo-img {
+  margin-right: 10px;
+}
+
+.footer__wrap .footer__col--menu {
+  padding-left: 10px;
 }
 
 .footer__wrap .footer__col form {
@@ -50,6 +80,12 @@ footer {
   border-radius: 3px;
 }
 
+@media (max-width: 1200px) {
+  .footer__wrap .footer__col form {
+    height: 45px;
+  }
+}
+
 .footer__wrap .footer__col form input {
   width: 75%;
   height: 100%;
@@ -58,6 +94,12 @@ footer {
   border: none;
   font-size: 22px;
   color: white;
+}
+
+@media (max-width: 1200px) {
+  .footer__wrap .footer__col form input {
+    font-size: 16px;
+  }
 }
 
 .footer__wrap .footer__col form input::-webkit-input-placeholder {
@@ -88,6 +130,14 @@ footer {
   cursor: pointer;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+@media (max-width: 1200px) {
+  .footer__wrap .footer__col form button {
+    width: 37px;
+    height: 37px;
+    font-size: 25px;
+  }
 }
 
 .footer__wrap .footer__col form button:hover {

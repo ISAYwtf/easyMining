@@ -10,10 +10,22 @@
   border-color: #FFE474;
 }
 
+@media (max-width: 1024px) {
+  .slider {
+    height: 465px;
+  }
+}
+
 .swiper-container {
   max-width: 1306px;
   height: 599px;
   overflow: visible;
+}
+
+@media (max-width: 1024px) {
+  .swiper-container {
+    height: 400px;
+  }
 }
 
 .swiper-slide {
@@ -45,6 +57,13 @@
 .swiper-button-prev,
 .swiper-button-next {
   color: #FFE474;
+}
+
+@media (max-width: 1024px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
 }
 
 .swiper-pagination-bullet {

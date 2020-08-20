@@ -3,12 +3,24 @@
 footer {
     padding-bottom: 75px;
     font-size: 22px;
+
+    @media (max-width: 1500px) {
+        font-size: 16px;
+        padding-bottom: 60px;
+    }
 }
 
 .footer__wrap {
     justify-content: space-between;
-    max-width: 1318px;
+    width: 1318px;
     height: 200px;
+
+    @media (max-width: 1500px) {
+        max-width: 1318px;
+        width: 96%;
+        height: 175px;
+        margin: 0 30px;
+    }
 
     .footer__col {
         display: flex;
@@ -17,9 +29,21 @@ footer {
         justify-content: space-between;
         font-weight: 300;
 
+        @media (max-width: 1200px) {
+            max-width: 205px;
+        }
+
         &--logo {
             flex-direction: row;
             align-items: center;
+
+            .logo-img {
+                margin-right: 10px;
+            }
+        }
+
+        &--menu {
+            padding-left: 10px;
         }
 
         form {
@@ -31,6 +55,10 @@ footer {
             background: rgba(196, 196, 196, 0.2);
             border-radius: 3px;
 
+            @media (max-width: 1200px) {
+                height: 45px;
+            }
+
             input {
                 width: 75%;
                 height: 100%;
@@ -39,6 +67,10 @@ footer {
                 border: none;
                 font-size: 22px;
                 color: $txtClr;
+
+                @media (max-width: 1200px) {
+                    font-size: 16px;
+                }
 
                 &::placeholder {
                     color: #C4C4C4;
@@ -56,6 +88,12 @@ footer {
                 font-weight: 500;
                 cursor: pointer;
                 transition: 0.2s;
+
+                @media (max-width: 1200px) {
+                    width: 37px;
+                    height: 37px;
+                    font-size: 25px;
+                }
 
                 &:hover {
                     background-color: darken($color: $mainClr, $amount: 30);

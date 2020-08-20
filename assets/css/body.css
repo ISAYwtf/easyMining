@@ -134,6 +134,11 @@ button {
 .bg-polygon {
   position: absolute;
   z-index: -1;
+  width: 25%;
+}
+
+.bg-polygon img {
+  width: 100%;
 }
 
 .advant {
