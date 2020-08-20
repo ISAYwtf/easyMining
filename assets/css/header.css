@@ -20,6 +20,12 @@
   border-bottom: 0.5px solid rgba(239, 219, 106, 0.2);
 }
 
+@media screen and (max-width: 1500px) {
+  .header--up {
+    font-size: 16px;
+  }
+}
+
 .header--up .wrap {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -28,6 +34,26 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   height: 40px;
+}
+
+@media (max-width: 1500px) {
+  .header--up .wrap {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 1500px) and (max-width: 1200px) {
+  .header--up .wrap {
+    max-width: 960px;
+    width: 96%;
+    margin: 0 30px;
+  }
+}
+
+.header--up .wrap .header--up__email {
+  margin-left: 0;
 }
 
 .header--up .wrap a {
@@ -41,18 +67,31 @@
   margin: 0 45px;
 }
 
-.header--up .header--up__ico {
+.header--up__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header--up__ico {
   height: 33px;
   width: 33px;
   margin-right: 10px;
 }
 
-.header--up .header--up__ico svg {
+.header--up__ico svg {
   height: 100%;
   width: 100%;
 }
 
-.header--up .header--up__search {
+@media screen and (max-width: 1500px) {
+  .header--up__ico {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.header--up__search {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -62,7 +101,7 @@
   margin-left: 15px;
 }
 
-.header--up .header--up__search input {
+.header--up__search input {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.2);
@@ -74,40 +113,46 @@
   font-weight: 300;
 }
 
-.header--up .header--up__search input:focus {
+.header--up__search input:focus {
   outline: none;
 }
 
-.header--up .header--up__search input::-webkit-input-placeholder {
+.header--up__search input::-webkit-input-placeholder {
   color: white;
 }
 
-.header--up .header--up__search input:-ms-input-placeholder {
+.header--up__search input:-ms-input-placeholder {
   color: white;
 }
 
-.header--up .header--up__search input::-ms-input-placeholder {
+.header--up__search input::-ms-input-placeholder {
   color: white;
 }
 
-.header--up .header--up__search input::placeholder {
+.header--up__search input::placeholder {
   color: white;
 }
 
-.header--up .header--up__search button {
+@media (max-width: 1500px) {
+  .header--up__search input {
+    font-size: 16px;
+  }
+}
+
+.header--up__search button {
   position: absolute;
-  right: 0;
+  right: 10px;
   height: 110%;
   background: transparent;
   border: none;
   cursor: pointer;
 }
 
-.header--up .header--up__search button:focus {
+.header--up__search button:focus {
   outline: none;
 }
 
-.header--up .header--up__search button svg {
+.header--up__search button svg {
   width: 25px;
   height: 25px;
 }
@@ -134,6 +179,13 @@ header .header--wrap {
   height: 100%;
 }
 
+@media (max-width: 1500px) {
+  header {
+    font-size: 16px;
+    height: 115px;
+  }
+}
+
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,6 +200,12 @@ header .header--wrap {
   color: #FFE474;
   font-weight: 500;
   font-size: 30px;
+}
+
+@media (max-width: 1500px) {
+  .logo {
+    font-size: 20px;
+  }
 }
 
 .logo p {
@@ -166,5 +224,12 @@ header .header--wrap {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
+}
+
+@media (max-width: 1500px) {
+  .logo span {
+    font-size: 50px;
+    height: unset;
+  }
 }
 /*# sourceMappingURL=header.css.map */
