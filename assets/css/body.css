@@ -18,6 +18,12 @@ body {
   color: white;
 }
 
+@media (max-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -39,6 +45,23 @@ button {
   text-align: center;
   font-size: 50px;
   font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .title,
+  .title h2 {
+    font-size: 45px;
+    font-weight: 400;
+  }
+}
+
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1306px;
+  width: 68%;
+  margin: auto auto;
 }
 
 .hoisting {
@@ -131,6 +154,12 @@ button {
   font-size: 30px;
 }
 
+@media (max-width: 1024px) {
+  .button a {
+    font-size: 25px;
+  }
+}
+
 .bg-polygon {
   position: absolute;
   z-index: -1;
@@ -141,8 +170,20 @@ button {
   width: 100%;
 }
 
+@media (max-width: 1024px) {
+  .bg-polygon {
+    display: none;
+  }
+}
+
 .advant {
   padding: 50px 0;
+}
+
+@media (max-width: 1024px) {
+  .advant {
+    padding: 100px 0;
+  }
 }
 
 .advant__field {
@@ -162,9 +203,22 @@ button {
   margin-right: 40px;
 }
 
+@media (max-width: 1500px) {
+  .advant__field .advant__svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .advant__field .advant__svg svg {
   height: 100%;
   width: auto;
+}
+
+@media (max-width: 1500px) {
+  .advant__field p {
+    font-size: 20px;
+  }
 }
 
 .advant__button {
@@ -221,6 +275,13 @@ button {
           flex-direction: column;
 }
 
+@media (max-width: 1024px) {
+  .advant__wrap {
+    max-width: 900px;
+    width: 90%;
+  }
+}
+
 .advant__col {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -262,6 +323,26 @@ button {
   height: 90px;
 }
 
+@media (max-width: 1200px) {
+  .advantage .advant__svg {
+    margin-right: 20px;
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.advantage .advant__svg img {
+  width: 90px;
+  height: 90px;
+}
+
+@media (max-width: 1200px) {
+  .advantage .advant__svg img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 .advantage .advant__col {
   width: 47%;
 }
@@ -284,10 +365,22 @@ button {
   margin-right: 12px;
 }
 
+@media (max-width: 1500px) {
+  .advantage .advant__button p {
+    font-size: 25px;
+  }
+}
+
 .advantage .advant__button .button {
   width: 480px;
   margin-top: 0;
   border-width: 1px;
+}
+
+@media (max-width: 1500px) {
+  .advantage .advant__button .button {
+    width: 390px;
+  }
 }
 
 .advantage .advant__button .button:hover a {
@@ -299,6 +392,13 @@ button {
   height: 120px;
 }
 
+@media (max-width: 1500px) {
+  .advantage .advant__button .button:hover .button__wrap {
+    width: 372px;
+    height: 100px;
+  }
+}
+
 .advantage .advant__button .button__wrap {
   border-width: 1px;
 }
@@ -306,5 +406,11 @@ button {
 .advantage .advant__button .button__wrap a {
   text-transform: uppercase;
   font-weight: 500;
+}
+
+@media (max-width: 1500px) {
+  .advantage .advant__button .button__wrap a {
+    font-size: 25px;
+  }
 }
 /*# sourceMappingURL=body.css.map */

@@ -17,6 +17,10 @@ body {
     font-size: 28px;
     background-color: #202124;
     color: $txtClr;
+
+    @media (max-width: 1024px) {
+        font-size: 20px;
+    }
 }
 
 a {
@@ -40,6 +44,18 @@ button {
     text-align: center;
     font-size: 50px;
     font-weight: 500;
+
+    @media (max-width: 1024px) {
+        font-size: 45px;
+        font-weight: 400;
+    }
+}
+
+.wrap {
+    display: flex;
+    max-width: 1306px;
+    width: 68%;
+    margin: auto auto;
 }
 
 .hoisting {
@@ -107,6 +123,10 @@ button {
     a {
         color: $mainClr;
         font-size: 30px;
+
+        @media (max-width: 1024px) {
+            font-size: 25px;
+        }
     }
 }
 
@@ -118,10 +138,18 @@ button {
     img {
         width: 100%;
     }
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
 }
 
 .advant {
     padding: 50px 0;
+
+    @media (max-width: 1024px) {
+        padding: 100px 0;
+    }
 
     &__field {
         display: flex;
@@ -134,9 +162,20 @@ button {
             height: 70px;
             margin-right: 40px;
 
+            @media (max-width: 1500px) {
+                width: 40px;
+                height: 40px;
+            }
+
             svg {
                 height: 100%;
                 width: auto;
+            }
+        }
+
+        p {
+            @media (max-width: 1500px) {
+                font-size: 20px;
             }
         }
     }
@@ -176,6 +215,11 @@ button {
 
     &__wrap {
         flex-direction: column;
+
+        @media (max-width: 1024px) {
+            max-width: 900px;
+            width: 90%;
+        }
     }
 
     &__col {
@@ -205,6 +249,22 @@ button {
     .advant__svg {
         width: 90px;
         height: 90px;
+
+        @media (max-width: 1200px) {
+            margin-right: 20px;
+            width: 70px;
+            height: 70px;
+        }
+
+        img {
+            width: 90px;
+            height: 90px;
+
+            @media (max-width: 1200px) {
+                width: 70px;
+                height: 70px;
+            }
+        }
     }
 
     .advant__col {
@@ -221,12 +281,20 @@ button {
 
         p {
             margin-right: 12px;
+
+            @media (max-width: 1500px) {
+                font-size: 25px;
+            }
         }
 
         .button {
             width: 480px;
             margin-top: 0;
             border-width: 1px;
+
+            @media (max-width: 1500px) {
+                width: 390px;
+            }
 
             &:hover {
                 a {
@@ -236,6 +304,11 @@ button {
                 .button__wrap {
                     width: 450px;
                     height: 120px;
+
+                    @media (max-width: 1500px) {
+                        width: 372px;
+                        height: 100px;
+                    }
                 }
             }
 
@@ -245,6 +318,10 @@ button {
                 a {
                     text-transform: uppercase;
                     font-weight: 500;
+
+                    @media (max-width: 1500px) {
+                        font-size: 25px;
+                    }
                 }
             }
         }

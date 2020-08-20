@@ -1,12 +1,5 @@
 @import 'var';
 
-.wrap {
-    display: flex;
-    max-width: 1306px;
-    width: 68%;
-    margin: auto auto;
-}
-
 .header--up {
     display: flex;
     height: 70px;
@@ -154,6 +147,7 @@ header {
         margin: 0;
         background: $gradient;
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
@@ -162,6 +156,7 @@ header {
         font-size: 70px;
         background: $gradient;
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         text-transform: uppercase;
 
