@@ -16,6 +16,12 @@
   }
 }
 
+@media (max-width: 1024px) and (max-width: 770px) {
+  .slider {
+    display: none;
+  }
+}
+
 .swiper-container {
   max-width: 1306px;
   height: 599px;
@@ -91,5 +97,12 @@
 .swiper-container-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-custom, .swiper-pagination-fraction {
   bottom: -61px;
+}
+
+@media (max-width: 715px) {
+  .swiper-container-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -56px;
+  }
 }
 /*# sourceMappingURL=main-slider.css.map */

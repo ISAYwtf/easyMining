@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .slider--feedback {
   width: 100%;
   height: 670px;
@@ -6,6 +7,13 @@
 @media (max-width: 1024px) {
   .slider--feedback {
     height: 350px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 715px) {
+  .slider--feedback {
+    display: unset;
+    height: 300px;
   }
 }
 
@@ -19,6 +27,12 @@
   .slider--feedback .swiper-container {
     min-height: unset;
     height: unset;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 715px) {
+  .slider--feedback .swiper-container {
+    height: 100%;
   }
 }
 
@@ -56,6 +70,18 @@
           align-items: center;
 }
 
+@media (max-width: 715px) {
+  .slider--feedback .swiper-slide .author {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .slider--feedback .swiper-slide .author .author__img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,6 +105,14 @@
   }
 }
 
+@media (max-width: 1024px) and (max-width: 715px) {
+  .slider--feedback .swiper-slide .author .author__img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+}
+
 .slider--feedback .swiper-slide .author .author__img img {
   width: 50%;
   height: auto;
@@ -99,9 +133,24 @@
   }
 }
 
+@media (max-width: 1024px) and (max-width: 715px) {
+  .slider--feedback .swiper-slide .author .author__name {
+    font-size: 22px;
+    font-weight: 300;
+  }
+}
+
 .slider--feedback .swiper-slide .feedback__txt {
   max-width: 80%;
   text-align: center;
+}
+
+@media (max-width: 715px) {
+  .slider--feedback .swiper-slide .feedback__txt {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
 }
 
 .slider--feedback .swiper-slide .feedback__txt p {
@@ -112,6 +161,21 @@
   .slider--feedback .swiper-slide .feedback__txt p {
     font-size: 16px;
   }
+}
+
+@media (max-width: 1024px) and (max-width: 715px) {
+  .slider--feedback .swiper-slide .feedback__txt p {
+    line-height: 20px;
+    letter-spacing: 0.065em;
+  }
+}
+
+.slider--feedback .swiper-slide .feedback__txt p::before {
+  content: "\“";
+}
+
+.slider--feedback .swiper-slide .feedback__txt p::after {
+  content: "\”";
 }
 
 .slider--feedback .swiper-button-prev,

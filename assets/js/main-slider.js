@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function(){
-    if (window.screen.width > 768) {
         let sliders = document.querySelectorAll('.swiper-container');
         sliders.forEach(el => {
             let mySwiper = new Swiper(el, {
@@ -23,5 +22,4 @@ document.addEventListener('DOMContentLoaded', function(){
                 }
             });
         });
-    }
 });

@@ -6,6 +6,11 @@
 
     @media (max-width: 1024px) {
         height: 350px;
+
+        @media (max-width: 715px) {
+            display: unset;
+            height: 300px;
+        }
     }
 
     & .swiper-container {
@@ -16,6 +21,11 @@
         @media (max-width: 1024px) {
             min-height: unset;
             height: unset;
+
+            @media (max-width: 715px) {
+                height: 100%;
+                // overflow: hidden;
+            }
         }
     }
 
@@ -33,6 +43,11 @@
             flex-direction: column;
             align-items: center;
 
+            @media (max-width: 715px) {
+                order: 1;
+                flex-direction: row;
+            }
+
             & .author__img {
                 display: flex;
                 align-items: center;
@@ -45,6 +60,12 @@
                 @media (max-width: 1024px) {
                     width: 150px;
                     height: 150px;
+
+                    @media (max-width: 715px) {
+                        width: 50px;
+                        height: 50px;
+                        margin-right: 20px;
+                    }
                 }
 
                 & img {
@@ -63,6 +84,11 @@
                 @media (max-width: 1024px) {
                     font-size: 20px;
                     font-weight: 400;
+
+                    @media (max-width: 715px) {
+                        font-size: 22px;
+                        font-weight: 300;
+                    }
                 }
             }
         }
@@ -71,11 +97,28 @@
             max-width: 80%;
             text-align: center;
 
+            @media (max-width: 715px) {
+                order: -1;
+            }
+
             & p {
                 font-weight: 300;
 
                 @media (max-width: 1024px) {
                     font-size: 16px;
+
+                    @media (max-width: 715px) {
+                        line-height: 20px;
+                        letter-spacing: 0.065em;
+                    }
+                }
+
+                &::before {
+                    content: "\“";
+                }
+
+                &::after {
+                    content: "\”";
                 }
             }
         }

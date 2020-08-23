@@ -2,6 +2,12 @@
   padding: 100px 0 50px 0;
 }
 
+@media (max-width: 715px) {
+  .best-offer {
+    padding: 20px 0 30px;
+  }
+}
+
 .best-offer__wrap {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -37,6 +43,21 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 715px) {
+  .best-offer__goods {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    margin-top: 40px;
+  }
 }
 
 .best-offer__good {
@@ -50,12 +71,18 @@
   max-width: 400px;
   line-height: 34px;
   cursor: pointer;
-  margin: 0 40px;
+  margin: 0 40px 40px 40px;
 }
 
 @media (max-width: 1500px) {
   .best-offer__good {
     max-width: 300px;
+  }
+}
+
+@media (max-width: 1500px) and (max-width: 715px) {
+  .best-offer__good {
+    max-width: 225px;
   }
 }
 
@@ -88,6 +115,12 @@
   }
 }
 
+@media (max-width: 1024px) and (max-width: 715px) {
+  .best-offer__good h5 {
+    margin-top: 20px;
+  }
+}
+
 .best-offer__good p {
   font-weight: 300;
   margin-bottom: 20px;
@@ -96,6 +129,12 @@
 @media (max-width: 1024px) {
   .best-offer__good p {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 715px) {
+  .best-offer__good p {
+    margin-bottom: 15px;
   }
 }
 
@@ -111,6 +150,12 @@
 @media (max-width: 1024px) {
   .best-offer__good .good__price {
     font-size: 25px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 715px) {
+  .best-offer__good .good__price {
+    font-size: 22px;
   }
 }
 
@@ -133,8 +178,24 @@
   display: unset;
 }
 
+@media (max-width: 715px) {
+  .best-offer__button {
+    margin-top: 0;
+    border-width: 1px;
+  }
+  .best-offer__button .button__wrap {
+    border-width: 1px;
+  }
+}
+
 .feedback {
   padding: 50px 0 100px 0;
+}
+
+@media (max-width: 715px) {
+  .feedback {
+    padding: 60px 0;
+  }
 }
 
 .feedback__wrap {
