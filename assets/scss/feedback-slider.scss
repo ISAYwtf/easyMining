@@ -7,7 +7,7 @@
     @media (max-width: 1024px) {
         height: 350px;
 
-        @media (max-width: 715px) {
+        @media (max-width: 770px) {
             display: unset;
             height: 300px;
         }
@@ -24,7 +24,8 @@
 
             @media (max-width: 715px) {
                 height: 100%;
-                // overflow: hidden;
+                overflow: hidden;
+                max-width: 100%;
             }
         }
     }

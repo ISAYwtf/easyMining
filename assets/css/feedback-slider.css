@@ -10,7 +10,7 @@
   }
 }
 
-@media (max-width: 1024px) and (max-width: 715px) {
+@media (max-width: 1024px) and (max-width: 770px) {
   .slider--feedback {
     display: unset;
     height: 300px;
@@ -33,6 +33,8 @@
 @media (max-width: 1024px) and (max-width: 715px) {
   .slider--feedback .swiper-container {
     height: 100%;
+    overflow: hidden;
+    max-width: 100%;
   }
 }
 

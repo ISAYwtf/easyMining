@@ -31,6 +31,12 @@
   }
 }
 
+@media (max-width: 1024px) and (max-width: 414px) {
+  .form__title h5 {
+    font-size: 10px;
+  }
+}
+
 .form form {
   margin-top: 40px;
   margin-bottom: 20px;
@@ -88,7 +94,7 @@
 
 @media (max-width: 1024px) and (max-width: 715px) {
   .form form input {
-    width: 200px;
+    width: 250px;
     height: 40px;
     margin-bottom: 20px;
     background-color: rgba(76, 77, 82, 0.3);
@@ -129,7 +135,7 @@
 @media (max-width: 1024px) and (max-width: 715px) {
   .form form button {
     position: unset;
-    width: 200px;
+    width: 250px;
     height: 40px;
     font-size: 16px;
   }
@@ -152,6 +158,12 @@
   .form p {
     font-size: 10px;
     width: 45%;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 414px) {
+  .form p {
+    width: 100%;
   }
 }
 
