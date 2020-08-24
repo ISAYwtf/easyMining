@@ -2,11 +2,24 @@
   padding-top: 100px;
 }
 
+@media (max-width: 1200px) {
+  .host {
+    padding-top: 50px;
+  }
+}
+
 .host__wrap {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+  .host__wrap {
+    max-width: 960px;
+    width: 94%;
+  }
 }
 
 .host__title {
@@ -25,6 +38,24 @@
   width: 60%;
 }
 
+@media (max-width: 1024px) {
+  .host__txt {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .host__block {
   padding-bottom: 40px;
   width: 95%;
@@ -41,10 +72,22 @@
   font-weight: 400;
 }
 
+@media (max-width: 1024px) {
+  .host__block h5 {
+    font-size: 20px;
+  }
+}
+
 .host__block h5 span {
   color: #FFE474;
   margin-right: 20px;
   font-size: 40px;
+}
+
+@media (max-width: 1024px) {
+  .host__block h5 span {
+    font-size: 25px;
+  }
 }
 
 .host__block p {
@@ -52,6 +95,12 @@
   margin-left: 105px;
   font-weight: 300;
   color: #FFE474;
+}
+
+@media (max-width: 1024px) {
+  .host__block p {
+    display: none;
+  }
 }
 
 .host__img {
@@ -75,6 +124,12 @@
 
 .big-form {
   padding: 100px 0 50px 0;
+}
+
+@media (max-width: 1024px) {
+  .big-form {
+    padding-bottom: 0;
+  }
 }
 
 .big-form__wrap {
@@ -105,6 +160,12 @@
   max-width: 620px;
 }
 
+@media (max-width: 1024px) {
+  .big-form__title h3 {
+    font-size: 30px;
+  }
+}
+
 .big-form span {
   color: #FFE474;
 }
@@ -120,6 +181,13 @@
   letter-spacing: 0.065em;
   line-height: 174.19%;
   color: #F9F9F9;
+}
+
+@media (max-width: 1024px) {
+  .big-form p {
+    font-size: 10px;
+    max-width: 300px;
+  }
 }
 
 .big-form p a {
@@ -145,8 +213,21 @@
   margin-bottom: 45px;
 }
 
+@media (max-width: 1024px) {
+  .big-form form h6 {
+    font-size: 16px;
+  }
+}
+
 .big-form form h6 span {
   font-size: 30px;
+}
+
+@media (max-width: 1024px) {
+  .big-form form h6 span {
+    font-size: 25px;
+    margin-right: 5px;
+  }
 }
 
 .big-form form p {
@@ -158,6 +239,12 @@
       align-self: unset;
 }
 
+@media (max-width: 1024px) {
+  .big-form form p {
+    font-size: 20px;
+  }
+}
+
 .big-form form label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,6 +253,15 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 520px;
+  width: 42%;
+}
+
+@media (max-width: 1024px) {
+  .big-form form label {
+    max-width: 300px;
+    width: 44%;
+  }
 }
 
 .big-form form .big-form__name {
@@ -181,10 +277,19 @@
   margin-top: 20px;
   margin-bottom: 60px;
   padding-left: 20px;
-  width: 520px;
+  width: 100%;
   height: 90px;
   background-color: rgba(255, 227, 116, 0.4);
   color: white;
+}
+
+@media (max-width: 1024px) {
+  .big-form form input {
+    font-size: 16px;
+    height: 50px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
 }
 
 .big-form form input::-webkit-input-placeholder {
@@ -217,6 +322,14 @@
   margin: 0;
 }
 
+@media (max-width: 1024px) {
+  .big-form form .big-form__button {
+    width: 240px;
+    height: 60px;
+    margin-top: 30px;
+  }
+}
+
 .big-form form .big-form__button input.button__wrap {
   margin: 0;
   padding: 0;
@@ -227,10 +340,43 @@
   cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+  .big-form form .big-form__button input.button__wrap {
+    font-size: 25px;
+    -webkit-animation-name: big-form-button;
+            animation-name: big-form-button;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+}
+
 .big-form form .big-form__button:hover .button__wrap {
   width: 90%;
   height: 140%;
   border-width: 1px;
+}
+
+@media (max-width: 1024px) {
+  .big-form form .big-form__button:hover .button__wrap {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes big-form-button {
+  50% {
+    width: 200px;
+    height: 90px;
+  }
+}
+
+@keyframes big-form-button {
+  50% {
+    width: 200px;
+    height: 90px;
+  }
 }
 
 .bg-polygon-4 {

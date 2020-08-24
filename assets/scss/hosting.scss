@@ -3,8 +3,17 @@
 .host {
     padding-top: 100px;
 
+    @media (max-width: 1200px) {
+        padding-top: 50px;
+    }
+
     &__wrap {
         flex-direction: column;
+
+        @media (max-width: 1200px) {
+            max-width: 960px;
+            width: 94%;
+        }
     }
 
     &__title {
@@ -20,6 +29,13 @@
 
     &__txt {
         width: 60%;
+
+        @media (max-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     &__block {
@@ -32,10 +48,18 @@
             font-size: 28px;
             font-weight: 400;
 
+            @media (max-width: 1024px) {
+                font-size: 20px;
+            }
+
             span {
                 color: $mainClr;
                 margin-right: 20px;
                 font-size: 40px;
+
+                @media (max-width: 1024px) {
+                    font-size: 25px;
+                }
             }
         }
 
@@ -44,6 +68,10 @@
             margin-left: 105px;
             font-weight: 300;
             color: $mainClr;
+
+            @media (max-width: 1024px) {
+                display: none;
+            }
         }
     }
 
@@ -64,6 +92,10 @@
 .big-form {
     padding: 100px 0 50px 0;
 
+    @media (max-width: 1024px) {
+        padding-bottom: 0;
+    }
+
     &__wrap {
         flex-direction: column;
     }
@@ -79,6 +111,10 @@
             font-size: 40px;
             font-weight: 400;
             max-width: 620px;
+
+            @media (max-width: 1024px) {
+                font-size: 30px;
+            }
         }
     }
 
@@ -95,6 +131,11 @@
         letter-spacing: 0.065em;
         line-height: 174.19%;
         color: #F9F9F9;
+
+        @media (max-width: 1024px) {
+            font-size: 10px;
+            max-width: 300px;
+        }
 
         a {
             color: $mainClr;
@@ -113,8 +154,17 @@
             font-weight: 300;
             margin-bottom: 45px;
 
+            @media (max-width: 1024px) {
+                font-size: 16px;
+            }
+
             span {
                 font-size: 30px;
+
+                @media (max-width: 1024px) {
+                    font-size: 25px;
+                    margin-right: 5px;
+                }
             }
         }
 
@@ -123,11 +173,22 @@
             font-weight: 400;
             text-align: unset;
             align-self: unset;
+
+            @media (max-width: 1024px) {
+                font-size: 20px;
+            }
         }
 
         label {
             display: flex;
             flex-direction: column;
+            max-width: 520px;
+            width: 42%;
+
+            @media (max-width: 1024px) {
+                max-width: 300px;
+                width: 44%;
+            }
         }
 
         .big-form__name {
@@ -139,10 +200,17 @@
             margin-top: 20px;
             margin-bottom: 60px;
             padding-left: 20px;
-            width: 520px;
+            width: 100%;
             height: 90px;
             background-color: rgba(255, 227, 116, 0.4);
             color: $txtClr;
+
+            @media (max-width: 1024px) {
+                font-size: 16px;
+                height: 50px;
+                margin-top: 15px;
+                margin-bottom: 25px;
+            }
 
             &::placeholder {
                 color: $mainClr;
@@ -157,6 +225,12 @@
             border-width: 1px;
             margin: 0;
 
+            @media (max-width: 1024px) {
+                width: 240px;
+                height: 60px;
+                margin-top: 30px;
+            }
+
             input.button__wrap {
                 margin: 0;
                 padding: 0;
@@ -165,6 +239,13 @@
                 background: none;
                 color: $mainClr;
                 cursor: pointer;
+
+                @media (max-width: 1024px) {
+                    font-size: 25px;
+                    animation-name: big-form-button;
+                    animation-duration: 3s;
+                    animation-iteration-count: infinite;
+                }
             }
 
             &:hover {
@@ -172,9 +253,21 @@
                     width: 90%;
                     height: 140%;
                     border-width: 1px;
+
+                    @media (max-width: 1024px) {
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
             }
         }
+    }
+}
+
+@keyframes big-form-button {
+    50% {
+        width: 200px;
+        height: 90px;
     }
 }
 

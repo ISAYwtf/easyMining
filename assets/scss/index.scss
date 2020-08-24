@@ -222,7 +222,15 @@
         a {
             color: $mainClr;
             transition: 0.4s;
-            font-size: 16px;
+            font-size: 28px;
+
+            @media (max-width: 1024px) {
+                font-size: 20px;
+
+                @media (max-width: 414px) {
+                    font-size: 16px;
+                }
+            }
 
             &:hover {
                 color: $txtClr;
