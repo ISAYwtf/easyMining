@@ -34,6 +34,27 @@
   padding-bottom: 80px;
 }
 
+@media (max-width: 715px) {
+  .host__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 715px) and (max-width: 414px) {
+  .host__info {
+    padding-bottom: 20px;
+  }
+}
+
 .host__txt {
   width: 60%;
 }
@@ -56,6 +77,16 @@
   }
 }
 
+@media (max-width: 1024px) and (max-width: 715px) {
+  .host__txt {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+
 .host__block {
   padding-bottom: 40px;
   width: 95%;
@@ -75,6 +106,12 @@
 @media (max-width: 1024px) {
   .host__block h5 {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 414px) {
+  .host__block h5 {
+    font-size: 16px;
   }
 }
 
@@ -118,6 +155,22 @@
   background-color: rgba(196, 196, 196, 0.3);
 }
 
+@media (max-width: 715px) {
+  .host__img {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 95%;
+  }
+}
+
+@media (max-width: 715px) and (max-width: 414px) {
+  .host__img {
+    max-width: 320px;
+    max-height: 160px;
+  }
+}
+
 .host__img img {
   width: 30%;
 }
@@ -137,6 +190,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (max-width: 414px) {
+  .big-form__wrap {
+    max-width: 330px;
+    width: 83%;
+  }
 }
 
 .big-form__title {
@@ -163,6 +223,12 @@
 @media (max-width: 1024px) {
   .big-form__title h3 {
     font-size: 30px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 715px) {
+  .big-form__title h3 {
+    font-size: 16px;
   }
 }
 
@@ -207,6 +273,12 @@
   padding-bottom: 20px;
 }
 
+@media (max-width: 414px) {
+  .big-form form {
+    padding-top: 20px;
+  }
+}
+
 .big-form form h6 {
   font-size: 28px;
   font-weight: 300;
@@ -216,6 +288,19 @@
 @media (max-width: 1024px) {
   .big-form form h6 {
     font-size: 16px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 414px) {
+  .big-form form h6 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -227,6 +312,14 @@
   .big-form form h6 span {
     font-size: 25px;
     margin-right: 5px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 414px) {
+  .big-form form h6 span {
+    font-size: 22px;
+    margin-right: 10px;
+    line-height: 10px;
   }
 }
 
@@ -242,6 +335,14 @@
 @media (max-width: 1024px) {
   .big-form form p {
     font-size: 20px;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 715px) {
+  .big-form form p {
+    display: none;
+    font-size: 16px;
   }
 }
 
@@ -264,6 +365,43 @@
   }
 }
 
+@media (max-width: 1024px) and (max-width: 715px) {
+  .big-form form label {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    max-width: unset;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 715px) and (max-width: 414px) {
+  .big-form form label {
+    padding-bottom: 25px;
+  }
+}
+
+.big-form form label .big-form--media {
+  display: none;
+}
+
+@media (max-width: 715px) {
+  .big-form form label .big-form--media {
+    display: unset;
+  }
+}
+
+.big-form form label .big-form--media-not {
+  display: unset;
+}
+
 .big-form form .big-form__name {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -271,6 +409,15 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 715px) {
+  .big-form form .big-form__name {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .big-form form input {
@@ -289,6 +436,26 @@
     height: 50px;
     margin-top: 15px;
     margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 715px) {
+  .big-form form input {
+    max-width: 220px;
+    width: 60%;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 715px) and (max-width: 414px) {
+  .big-form form input {
+    max-width: 176px;
+    height: 30px;
+    width: 60%;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0;
+    padding-left: 10px;
   }
 }
 
@@ -312,6 +479,21 @@
   opacity: 0.63;
 }
 
+@media (max-width: 715px) {
+  .big-form form input::-webkit-input-placeholder {
+    font-weight: 300;
+  }
+  .big-form form input:-ms-input-placeholder {
+    font-weight: 300;
+  }
+  .big-form form input::-ms-input-placeholder {
+    font-weight: 300;
+  }
+  .big-form form input::placeholder {
+    font-weight: 300;
+  }
+}
+
 .big-form form .big-form__button {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -330,7 +512,14 @@
   }
 }
 
-.big-form form .big-form__button input.button__wrap {
+@media (max-width: 1024px) and (max-width: 414px) {
+  .big-form form .big-form__button {
+    width: 190px;
+    height: 50px;
+  }
+}
+
+.big-form form .big-form__button .button__wrap {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -341,7 +530,7 @@
 }
 
 @media (max-width: 1024px) {
-  .big-form form .big-form__button input.button__wrap {
+  .big-form form .big-form__button .button__wrap {
     font-size: 25px;
     -webkit-animation-name: big-form-button;
             animation-name: big-form-button;
@@ -349,6 +538,13 @@
             animation-duration: 3s;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
+    max-width: unset;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 414px) {
+  .big-form form .big-form__button .button__wrap {
+    font-size: 22px;
   }
 }
 
@@ -376,6 +572,21 @@
   50% {
     width: 200px;
     height: 90px;
+  }
+}
+
+@media (max-width: 414px) {
+  @-webkit-keyframes big-form-button {
+    50% {
+      width: 157px;
+      height: 74px;
+    }
+  }
+  @keyframes big-form-button {
+    50% {
+      width: 157px;
+      height: 74px;
+    }
   }
 }
 
