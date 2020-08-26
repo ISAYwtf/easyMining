@@ -30,7 +30,7 @@
         top: 120px;
         width: 100%;
         background: rgba(227, 205, 106, 0.42);
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: flex-end;
         min-height: 26px;
@@ -39,6 +39,7 @@
 
         @media (max-width: 770px) {
             top: 70px;
+            display: flex;
         }
 
         svg {
@@ -104,6 +105,10 @@
 
                 @media (max-width: 770px) {
                     padding: 15px 25px;
+
+                    @media (max-width: 414px) {
+                        padding: 10px 25px;
+                    }
                 }
 
                     h5 {
@@ -113,6 +118,10 @@
 
                         @media (max-width: 1024px) {
                             font-size: 20px;
+
+                            @media (max-width: 414px) {
+                                font-size: 16px;
+                            }
                         }
                     }
 
@@ -126,6 +135,10 @@
                     flex-direction: column;
                     transition: 0.4s;
                     padding: 15px 0 30px 0;
+
+                    @media (max-width: 770px) {
+                        padding: 10px 25px 20px 25px;
+                    }
 
                     label {
                         display: flex;
@@ -269,6 +282,13 @@
                 transition: 0.4s;
                 font-size: 25px;
 
+                @media (max-width: 414px) {
+                    font-size: 16px;
+                    width: 150px;
+                    height: 50px;
+                    margin: 20px 0;
+                }
+
                 &:hover {
                     background: $mainClr;
                     color: black;
@@ -293,12 +313,21 @@
 
                     @media (max-width: 1024px) {
                         font-size: 20px;
+
+                        @media (max-width: 414px) {
+                            font-size: 16px;
+                        }
                     }
                 }
 
                 img {
                     transition: 1s;
                     margin-right: 10px;
+
+                    @media (max-width: 414px) {
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
             }
         }
@@ -310,11 +339,18 @@
 
         @media (max-width: 770px) {
             max-width: unset;
+            padding: 0 40px;
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-top: 45px;
+
+            @media (max-width: 414px) {
+                max-width: 305px;
+                margin: 45px auto 0 auto;
+                padding: 0;
+            }
         }
 
         .goods__wrap {
@@ -352,6 +388,12 @@
 
                     @media (max-width: 770px) {
                         max-width: 200px;
+                        width: 140%;
+
+                        @media (max-width: 568px) {
+                            max-width: 200px;
+                            width: 50%;
+                        }
                     }
                 }
 
@@ -541,6 +583,7 @@
 
 .bg-polygon-10 {
     top: 20%;
+    opacity: 0.2;
 }
 
 .bg-polygon-11 {
