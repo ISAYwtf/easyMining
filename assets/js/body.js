@@ -2,7 +2,7 @@ let header = document.querySelector('header'),
     hoisting = document.querySelector('.hoisting');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 40 && window.screen.width > 715) {
+    if (window.scrollY > 40 && window.screen.width > 770) {
         header.style.height = '120px';
 
         if (window.scrollY > window.screen.height) {
@@ -10,7 +10,7 @@ window.addEventListener('scroll', () => {
         } else if (window.scrollY <= window.screen.height) {
             hoisting.style.display = 'none';
         }
-    } else if (window.scrollY <= 40 && window.screen.width > 715) {
+    } else if (window.scrollY <= 40 && window.screen.width > 770) {
         header.style.height = '';
     }
 });

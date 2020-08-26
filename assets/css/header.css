@@ -17,7 +17,7 @@
   }
 }
 
-@media screen and (max-width: 1500px) and (max-width: 715px) {
+@media screen and (max-width: 1500px) and (max-width: 770px) {
   .header--up {
     display: none;
   }
@@ -190,7 +190,7 @@ header .header--wrap {
   height: 100%;
 }
 
-@media (max-width: 715px) {
+@media (max-width: 770px) {
   header .header--wrap {
     position: relative;
     display: none;
@@ -234,7 +234,7 @@ header .header--wrap {
   }
 }
 
-@media (max-width: 1500px) and (max-width: 715px) {
+@media (max-width: 1500px) and (max-width: 770px) {
   header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -312,7 +312,7 @@ header .header--wrap {
   background: #202124;
 }
 
-@media (min-width: 716px) {
+@media (min-width: 771px) {
   .burger {
     display: none;
   }

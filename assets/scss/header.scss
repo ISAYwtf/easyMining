@@ -11,7 +11,7 @@
     @media screen and (max-width: 1500px) {
         font-size: 16px;
 
-        @media (max-width: 715px) {
+        @media (max-width: 770px) {
             display: none;
         }
     }
@@ -140,7 +140,7 @@ header {
         align-items: center;
         height: 100%;
 
-        @media (max-width: 715px) {
+        @media (max-width: 770px) {
             position: relative;
             display: none;
             flex-direction: column;
@@ -176,7 +176,7 @@ header {
         font-size: 16px;
         height: 115px;
 
-        @media (max-width: 715px) {
+        @media (max-width: 770px) {
             display: flex;
             flex-direction: column;
             height: 70px;
@@ -222,7 +222,7 @@ header {
 }
 
 .burger {
-    @media (min-width: 716px) {
+    @media (min-width: 771px) {
         display: none;
     }
 

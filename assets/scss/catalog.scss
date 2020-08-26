@@ -8,12 +8,65 @@
 .catalog {
     padding-top: 70px;
 
+    @media (max-width: 770px) {
+        padding: 0;
+    }
+
     &__wrap {
-        height: 100%;
+        width: 1306px;
+
+        @media (max-width: 1500px) {
+            width: 96%;
+
+            @media (max-width: 770px) {
+                flex-direction: column;
+                width: unset;
+            }
+        }
+    }
+
+    .filter__burger {
+        position: sticky;
+        top: 120px;
+        width: 100%;
+        background: rgba(227, 205, 106, 0.42);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        min-height: 26px;
+        padding: 0 40px;
+        z-index: 6;
+
+        @media (max-width: 770px) {
+            top: 70px;
+        }
+
+        svg {
+            cursor: pointer;
+
+            circle {
+                transition: 0.4s;
+            }
+        }
     }
 
     &__filter {
         width: 340px;
+
+        @media (max-width: 1024px) {
+            width: 290px;
+
+            @media (max-width: 770px) {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                position: sticky;
+                background: rgba(227, 205, 106, 0.42);
+                top: 96px;
+                height: unset;
+                transition: 0.4s;
+            }
+        }
 
         .filter__wrap {
             position: sticky;
@@ -22,6 +75,18 @@
             background: rgba(227, 205, 106, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.3);
             z-index: 5;
+
+            @media (max-width: 770px) {
+                display: none;
+                margin-top: -2000px;
+                position: unset;
+                width: 100%;
+                background: rgba(104, 95, 54, 0.8);
+                // background: none;
+                border: none;
+                animation-duration: 0.4s;
+                animation-iteration-count: infinite;
+            }
         }
 
         .filter__item {
@@ -33,12 +98,22 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                height: 60px;
+                padding: 15px 0;
+                height: unset;
                 cursor: pointer;
+
+                @media (max-width: 770px) {
+                    padding: 15px 25px;
+                }
 
                     h5 {
                         font-size: 22px;
                         font-weight: 300;
+                        max-width: 220px;
+
+                        @media (max-width: 1024px) {
+                            font-size: 20px;
+                        }
                     }
 
                     img {
@@ -54,10 +129,15 @@
 
                     label {
                         display: flex;
+                        align-items: center;
                         margin: 7.5px 0;
                         font-size: 20px;
                         font-weight: 300;
                         cursor: pointer;
+
+                        @media (max-width: 1024px) {
+                            font-size: 16px;
+                        }
 
                         input {
                             margin-right: 20px;
@@ -161,6 +241,10 @@
                 small {
                     font-size: 14px;
                     font-weight: 300;
+
+                    @media (max-width: 1024px) {
+                        font-size: 10px;
+                    }
                 }
             }
         }
@@ -183,6 +267,7 @@
                 border: 1px solid $mainClr;
                 color: $mainClr;
                 transition: 0.4s;
+                font-size: 25px;
 
                 &:hover {
                     background: $mainClr;
@@ -205,6 +290,10 @@
                     color: $txtClr;
                     font-size: 22px;
                     font-weight: 300;
+
+                    @media (max-width: 1024px) {
+                        font-size: 20px;
+                    }
                 }
 
                 img {
@@ -219,20 +308,52 @@
         width: 74%;
         max-width: 960px;
 
+        @media (max-width: 770px) {
+            max-width: unset;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 45px;
+        }
+
         .goods__wrap {
-            padding: 0 70px 50px 150px;
+            padding: 0 0 50px 150px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             width: 100%;
+
+            @media (max-width: 1500px) {
+                padding-left: 100px;
+
+                @media (max-width: 1024px) {
+                    padding-left: 60px;
+                    padding-bottom: 10px;
+
+                    @media (max-width: 770px) {
+                        padding: 0;
+                    }
+                }
+            }
 
             .goods__item {
                 display: flex;
                 flex-direction: column;
                 max-width: 310px;
                 cursor: pointer;
-                margin-bottom: 50px;
                 line-height: 34px;
+                margin-bottom: 50px;
+
+                @media (max-width: 1200px) {
+                    max-width: 260px;
+                    padding: 0 15px;
+                    width: 42%;
+
+                    @media (max-width: 770px) {
+                        max-width: 200px;
+                    }
+                }
 
                 img {
                     width: 100%;
@@ -243,11 +364,32 @@
                     margin-top: 40px;
                     font-size: 28px;
                     font-weight: 500;
+
+                    @media (max-width: 1024px) {
+                        font-size: 25px;
+                        margin-top: 20px;
+
+                        @media (max-width: 770px) {
+                            font-size: 16px;
+                            margin-top: 10px;
+                        }
+                    }
                 }
 
                 p {
                     font-weight: 300;
                     margin-bottom: 20px;
+
+                    @media (max-width: 1024px) {
+                        font-size: 16px;
+                        margin-bottom: 15px;
+                        line-height: 20px;
+
+                        @media (max-width: 770px) {
+                            font-size: 15px;
+                            margin-bottom: 0;
+                        }
+                    }
                 }
 
                 b {
@@ -257,16 +399,37 @@
                 .good__price {
                     color: $mainClr;
                     font-weight: 500;
+
+                    @media (max-width: 1024px) {
+                        font-size: 25px;
+                        margin-bottom: 15px;
+
+                        @media (max-width: 770px) {
+                            font-size: 16px;
+                            margin-bottom: 0;
+                        }
+                    }
                 }
 
                 .good__stock {
                     display: none;
                     font-weight: 500;
+                    font-size: 22px;
+
+                    @media (max-width: 1024px) {
+                        display: unset;
+
+                        @media (max-width: 770px) {
+                            font-size: 15px;
+                        }
+                    }
                 }
 
                 &:hover {
                     .good__price {
-                        display: none;
+                        @media (min-width: 1025px) {
+                            display: none;
+                        }
                     }
 
                     .good__stock {
@@ -281,6 +444,10 @@
         padding-left: 150px;
         display: flex;
         align-items: center;
+
+        @media (max-width: 770px) {
+            padding: 0;
+        }
 
         .pagination__left,
         .pagination__right {
@@ -327,12 +494,42 @@
                 letter-spacing: 0.065em;
                 margin: 0 20px;
                 cursor: pointer;
+
+                @media (max-width: 1024px) {
+                    font-size: 25px;
+                }
             }
 
             .pagination__active {
                 opacity: 1;
             }
         }
+    }
+}
+
+.catalog__filter .filter--active {
+    // display: flex;
+    // height: unset;
+    animation-name: filter-active;
+}
+
+.catalog__filter .paused {
+    animation: none;
+}
+
+.catalog__filter .reverse {
+    animation-name: filter-disable;
+}
+
+@keyframes filter-active {
+    to {
+        margin-top: 0;
+    }
+}
+
+@keyframes filter-disable {
+    to {
+        margin-top: -2000px;
     }
 }
 

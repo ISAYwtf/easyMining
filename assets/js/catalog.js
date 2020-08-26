@@ -186,3 +186,46 @@ function checkPrice(min, max, filterGoods) {
     }
     return new Array(...set);
 }
+
+let filterBurger = document.querySelector('.filter__burger').querySelector('.filter__burger-btn'),
+    catalogFilter = document.querySelector('.catalog__filter'),
+    filterWrap = catalogFilter.querySelector('.filter__wrap');
+
+filterBurger.addEventListener('click', () => {
+    filterWrap.classList.toggle("paused");
+
+    if (filterWrap.classList.contains("filter--active")) {
+        filterWrap.classList.remove("filter--active");
+        filterWrap.classList.add("reverse");
+
+        filterBurger.children[1].setAttribute('cx', '4.5');
+        filterBurger.children[3].setAttribute('cx', '11.5');
+        filterBurger.children[5].setAttribute('cx', '18.5');
+    } else if (filterWrap.classList.contains("reverse")) {
+        filterWrap.classList.remove("reverse");
+        filterWrap.classList.add("filter--active");
+        filterWrap.style.display = 'unset';
+
+        filterBurger.children[1].setAttribute('cx', '14.5');
+        filterBurger.children[3].setAttribute('cx', '18.5');
+        filterBurger.children[5].setAttribute('cx', '4.5');
+    } else {
+        filterWrap.classList.add("filter--active");
+        filterWrap.style.display = 'unset';
+
+        filterBurger.children[1].setAttribute('cx', '14.5');
+        filterBurger.children[3].setAttribute('cx', '18.5');
+        filterBurger.children[5].setAttribute('cx', '4.5');
+    }
+
+    setTimeout(() => {
+        if (filterWrap.classList.contains("filter--active")) {
+            filterWrap.style.marginTop = "0";
+        } else if (filterWrap.classList.contains("reverse")) {
+            filterWrap.style.marginTop = "-2000px";
+            filterWrap.style.display = 'none';
+        }
+
+        filterWrap.classList.toggle("paused");
+    }, 400);
+});
