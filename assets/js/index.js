@@ -1,40 +1,15 @@
-// let goods = document.querySelectorAll('.best-offer__good');
+let advantBtn = document.querySelector('.advantage').querySelector('.button__wrap'),
+    bigForm = document.querySelector('.big-form');
 
-// goods.forEach(item => {
-//     item.addEventListener('mouseenter', () => {
-//         let price = item.querySelector('.good__price'),
-//             stock = item.querySelector('.good__stock'),
-//             dataShow = price.getAttribute('data-show');
+advantBtn.addEventListener('click', (event) => {
+    event.preventDefault();
 
-//         if (dataShow === 'true') {
-//             price.setAttribute('data-show', 'false');
-//             price.style.display = 'none';
-//             stock.setAttribute('data-show', 'true');
-//             stock.style.display = 'unset';
-//         } else if (dataShow === 'false') {
-//             stock.setAttribute('data-show', 'false');
-//             stock.style.display = 'none';
-//             price.setAttribute('data-show', 'true');
-//             price.style.display = 'unset';
-//         }
-//     });
-
-//     item.addEventListener('mouseleave', () => {
-//         let price = item.querySelector('.good__price'),
-//             stock = item.querySelector('.good__stock'),
-//             dataShow = price.getAttribute('data-show');
-
-//         if (dataShow === 'true') {
-//             price.setAttribute('data-show', 'false');
-//             price.style.display = 'none';
-//             stock.setAttribute('data-show', 'true');
-//             stock.style.display = 'unset';
-//         } else if (dataShow === 'false') {
-//             stock.setAttribute('data-show', 'false');
-//             stock.style.display = 'none';
-//             price.setAttribute('data-show', 'true');
-//             price.style.display = 'unset';
-//         }
-//     });
-    
-// });
+    if (bigForm.getAttribute('data-show') === 'false') {
+        bigForm.setAttribute('data-show', 'true');
+        setTimeout(() => bigForm.style.opacity = '1', 300);
+        setTimeout(() => window.scrollTo(0, bigForm.offsetTop - 20), 600);
+    } else if (bigForm.getAttribute('data-show') === 'true') {
+        bigForm.style.opacity = '0';
+        setTimeout(() => bigForm.setAttribute('data-show', 'false'), 400);
+    }
+});

@@ -140,6 +140,10 @@ header {
         align-items: center;
         height: 100%;
 
+        a {
+            display: none;
+        }
+
         @media (max-width: 770px) {
             position: relative;
             display: none;
@@ -157,6 +161,7 @@ header {
             animation-iteration-count: infinite;
 
             a {
+                display: unset;
                 height: 25%;
                 text-align: center;
                 padding: 10px;
@@ -182,6 +187,30 @@ header {
             height: 70px;
             border-bottom: 0.5px solid rgba(239, 219, 106, .2);
         }
+    }
+}
+
+header .header--left,
+header .header--right {
+    display: flex;
+    max-width: 420px;
+    width: 33%;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+        display: unset;
+    }
+
+    @media (max-width: 770px) {
+        display: none;
+    }
+}
+
+header .header--right {
+    @media (max-width: 1024px) {
+        max-width: 240px;
+        width: 38%;
     }
 }
 
@@ -219,6 +248,10 @@ header {
             height: unset;
         }
     }
+}
+
+header a.logo {
+    display: flex;
 }
 
 .burger {
