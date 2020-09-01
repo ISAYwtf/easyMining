@@ -229,3 +229,152 @@ filterBurger.addEventListener('click', () => {
         filterWrap.classList.toggle("paused");
     }, 400);
 });
+
+let orderBtn = document.querySelector('.specif__order'),
+    form = document.querySelector('.modal-good__form'),
+    interval = false;
+
+orderBtn.addEventListener('click', () => {
+    if (interval) return;
+    if (form.getAttribute('data-show') === 'false') {
+        orderBtn.children[1].style.transform = 'rotateX(180deg)';
+        orderBtn.children[1].style.fill = '#FFE474';
+        form.style.marginTop = 'unset';
+
+        setTimeout(() => form.setAttribute('data-show', 'true'), 250);
+        // setTimeout(() => form.style.opacity = '1', 400);
+        // form.setAttribute('data-show', 'true');
+    } else if (form.getAttribute('data-show') === 'true') {
+        form.setAttribute('data-show', 'false');
+        orderBtn.children[1].style.transform = 'none';
+        orderBtn.children[1].style.fill = 'none';
+
+        if (window.screen.width > 1024) {
+            setTimeout(() => form.style.marginTop = '-710px', 250);
+        } else if (window.screen.width <= 1024 && window.screen.width > 770) {
+            setTimeout(() => form.style.marginTop = '-678px', 250);
+        } else if (window.screen.width <= 770 && window.screen.width > 715) {
+            setTimeout(() => form.style.marginTop = '-657px', 250);
+        } else if (window.screen.width <= 715 && window.screen.width > 568) {
+            setTimeout(() => form.style.marginTop = '-788px', 250);
+        } else if (window.screen.width <= 568 && window.screen.width > 414) {
+            setTimeout(() => form.style.marginTop = '-777px', 250);
+        } else if (window.screen.width <= 414) {
+            setTimeout(() => form.style.marginTop = '-650px', 250);
+        }
+    }
+    interval = true;
+    setTimeout(() => interval = false, 410);
+});
+
+let modalClose = document.querySelector('.modal-good__close'),
+    modal = document.querySelector('.modal-good'),
+    backBtn = document.querySelector('.catalog__back');
+
+modalClose.addEventListener('click', () => {
+    modal.setAttribute('data-show', 'false');
+
+    if (window.screen.width <= 770) {
+        document.querySelector('.catalog__goods').style.display = 'flex';
+        backBtn.style.display = 'none';
+        filterBurger.style.display = 'unset';
+        document.querySelector('.filter__burger').style.justifyContent = 'flex-end';
+    } else {
+        document.querySelector('.catalog__wrap').style.opacity = '1';
+        document.querySelector('.catalog__wrap').style.pointerEvents = 'unset';
+    }
+
+    if (window.screen.width <= 1024 && window.screen.width > 770) {
+        document.querySelector('.catalog__wrap').style.display = 'flex';
+    }
+});
+
+backBtn.addEventListener('click', () => {
+    modal.setAttribute('data-show', 'false');
+
+    if (window.screen.width <= 770) {
+        document.querySelector('.catalog__goods').style.display = 'flex';
+        backBtn.style.display = 'none';
+        filterBurger.style.display = 'unset';
+        document.querySelector('.filter__burger').style.justifyContent = 'flex-end';
+    } else {
+        document.querySelector('.catalog__wrap').style.opacity = '1';
+        document.querySelector('.catalog__wrap').style.pointerEvents = 'unset';
+    }
+
+    if (window.screen.width <= 1024 && window.screen.width > 770) {
+        document.querySelector('.catalog__wrap').style.display = 'flex';
+    }
+});
+
+document.addEventListener('click', (event) => {
+    let target = event.path,
+        flag = false;
+
+    for (let i = 0; i < target.length - 1; i++) {
+        if (target[i].isEqualNode(modal)) {
+            flag = true;
+        }
+    }
+
+    if (modal.getAttribute('data-show') === 'true' && window.screen.width > 1024) {
+        if (!flag) {
+            modal.setAttribute('data-show', 'false');
+
+            if (window.screen.width <= 770) {
+                document.querySelector('.catalog__goods').style.display = 'flex';
+                backBtn.style.display = 'none';
+                filterBurger.style.display = 'unset';
+                document.querySelector('.filter__burger').style.justifyContent = 'flex-end';
+            } else {
+                document.querySelector('.catalog__wrap').style.opacity = '1';
+                document.querySelector('.catalog__wrap').style.pointerEvents = 'unset';
+            }
+
+            if (window.screen.width <= 1024 && window.screen.width > 770) {
+                document.querySelector('.catalog__wrap').style.display = 'flex';
+            }
+        } else {
+            return;
+        }
+    } else if (modal.getAttribute('data-show') === 'false') return;
+});
+
+let modalImg = modal.querySelector('.modal-good__img').children[0],
+    modalTitle = modal.querySelector('.modal-good__title').children[0],
+    currency = modal.querySelector('.specif').children[0].querySelector('.specif__info').children[0].children[0],
+    algorithm = modal.querySelector('.specif').children[0].querySelector('.specif__info').children[1].children[0],
+    energy = modal.querySelector('.specif').children[2].querySelector('.specif__info').children[2].children[0],
+    price = modal.querySelector('.specif__price').children[0];
+
+
+goods.forEach(el => {
+    el.addEventListener('click', () => {
+        event.stopPropagation();
+
+        if (window.screen.width <= 770) {
+            document.querySelector('.catalog__goods').style.display = 'none';
+            backBtn.style.display = 'flex';
+            filterBurger.style.display = 'none';
+            document.querySelector('.filter__burger').style.justifyContent = 'flex-start';
+        } else {
+            document.querySelector('.catalog__wrap').style.opacity = '0.2';
+            document.querySelector('.catalog__wrap').style.pointerEvents = 'none';
+        }
+
+        if (window.screen.width <= 1024 && window.screen.width > 770) {
+            document.querySelector('.catalog__wrap').style.display = 'none';
+        }
+
+        modal.setAttribute('data-show', 'true');
+
+        modalTitle.textContent = el.getAttribute('data-brand');
+        currency.textContent = el.getAttribute('data-crypto');
+        algorithm.textContent = el.getAttribute('data-algorithm');
+        energy.textContent = el.getAttribute('data-energy');
+        price.textContent = el.getAttribute('data-price').replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ') + '\u{0020}' + '\u{20BD}';
+        modalImg.setAttribute('src', el.querySelector('img').getAttribute('src'));
+        modalImg.setAttribute('alt', 'assic');
+        setTimeout(() => window.scrollTo(0, modal.offsetTop - 120), 100);
+    });
+});
