@@ -2,13 +2,16 @@ let collapseBtn = document.querySelectorAll('.filter-item__title');
 
 collapseBtn.forEach(item => {
     item.addEventListener('click', () => {
-        let filter = item.parentNode;
+        let filter = item.parentNode,
+            other = document.querySelectorAll('.filter__item');
 
-        if (filter.classList.contains('filter__item--active')) {
-            filter.classList.remove('filter__item--active');
-        } else {
-            filter.classList.add('filter__item--active');
-        }
+        other.forEach(el => {
+            if (el.classList.contains('filter__item--active') && !el.isEqualNode(filter)) {
+                el.classList.remove('filter__item--active');
+            }
+        });
+
+        filter.classList.toggle('filter__item--active');
     });
 });
 

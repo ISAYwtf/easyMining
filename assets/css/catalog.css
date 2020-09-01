@@ -178,7 +178,7 @@
 
 @media (max-width: 1024px) {
   .catalog__filter .filter__item .filter-item__title h5 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -357,6 +357,21 @@
           align-items: center;
 }
 
+@media (max-width: 770px) {
+  .catalog__filter .filter__buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .catalog__filter .filter__buttons button,
 .catalog__filter .filter__buttons input {
   background: none;
@@ -374,7 +389,15 @@
   font-size: 25px;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 1024px) {
+  .catalog__filter .filter__buttons .filter__apply {
+    font-size: 20px;
+    width: 180px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 414px) {
   .catalog__filter .filter__buttons .filter__apply {
     font-size: 16px;
     width: 150px;
@@ -396,6 +419,13 @@
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 35px;
+}
+
+@media (max-width: 770px) {
+  .catalog__filter .filter__buttons .filter__clear {
+    margin-bottom: 0;
+    margin-left: 40px;
+  }
 }
 
 .catalog__filter .filter__buttons .filter__clear:hover img {
