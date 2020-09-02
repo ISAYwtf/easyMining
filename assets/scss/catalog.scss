@@ -42,7 +42,7 @@
             display: flex;
         }
 
-        svg {
+        .svg {
             cursor: pointer;
 
             circle {
@@ -91,6 +91,7 @@
 
             @media (max-width: 770px) {
                 display: none;
+                flex-direction: column;
                 margin-top: -2000px;
                 position: unset;
                 width: 100%;
@@ -465,6 +466,7 @@
 
                 b {
                     color: $mainClr;
+                    margin-right: 10px;
                 }
 
                 .good__price {

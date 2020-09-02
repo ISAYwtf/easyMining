@@ -60,11 +60,11 @@
   }
 }
 
-.catalog .filter__burger svg {
+.catalog .filter__burger .svg {
   cursor: pointer;
 }
 
-.catalog .filter__burger svg circle {
+.catalog .filter__burger .svg circle {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -126,6 +126,10 @@
 @media (max-width: 770px) {
   .catalog__filter .filter__wrap {
     display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: -2000px;
     position: unset;
     width: 100%;
@@ -611,6 +615,7 @@
 
 .catalog__goods .goods__wrap .goods__item b {
   color: #FFE474;
+  margin-right: 10px;
 }
 
 .catalog__goods .goods__wrap .goods__item .good__price {

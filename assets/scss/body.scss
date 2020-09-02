@@ -388,6 +388,9 @@ button {
             }
 
             .button__wrap {
+                width: 100%;
+                height: 100%;
+
                 @media (max-width: 1024px) {
                     animation-name: advantage-button;
                     animation-duration: 3s;

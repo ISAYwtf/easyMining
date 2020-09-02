@@ -13,7 +13,12 @@
 @media (max-width: 1024px) and (max-width: 770px) {
   .slider--feedback {
     display: unset;
-    height: 300px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 770px) and (max-width: 715px) {
+  .slider--feedback {
+    height: 150px;
   }
 }
 

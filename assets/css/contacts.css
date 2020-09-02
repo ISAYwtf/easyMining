@@ -46,8 +46,8 @@
   bottom: 0;
   height: 340px;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(7, 7, 7, 0.6)), color-stop(23.86%, rgba(8, 7, 7, 0.25618)), color-stop(46.16%, rgba(8, 7, 7, 0)), color-stop(76.76%, rgba(8, 8, 8, 0.285437)), color-stop(99.58%, rgba(9, 8, 8, 0.6))), rgba(255, 228, 116, 0.4);
-  background: linear-gradient(90deg, rgba(7, 7, 7, 0.6) 0%, rgba(8, 7, 7, 0.25618) 23.86%, rgba(8, 7, 7, 0) 46.16%, rgba(8, 8, 8, 0.285437) 76.76%, rgba(9, 8, 8, 0.6) 99.58%), rgba(255, 228, 116, 0.4);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(7, 7, 7, 0.6)), color-stop(23.86%, rgba(8, 7, 7, 0.25618)), color-stop(46.16%, rgba(8, 7, 7, 0)), color-stop(76.76%, rgba(8, 8, 8, 0.285437)), color-stop(99.58%, rgba(9, 8, 8, 0.6)));
+  background: linear-gradient(90deg, rgba(7, 7, 7, 0.6) 0%, rgba(8, 7, 7, 0.25618) 23.86%, rgba(8, 7, 7, 0) 46.16%, rgba(8, 8, 8, 0.285437) 76.76%, rgba(9, 8, 8, 0.6) 99.58%);
 }
 
 @media (max-width: 1500px) {

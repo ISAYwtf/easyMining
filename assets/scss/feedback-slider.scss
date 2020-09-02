@@ -9,7 +9,10 @@
 
         @media (max-width: 770px) {
             display: unset;
-            height: 300px;
+
+            @media (max-width: 715px) {
+                height: 150px;
+            }
         }
     }
 

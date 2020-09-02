@@ -2,15 +2,15 @@ let header = document.querySelector('header'),
     hoisting = document.querySelector('.hoisting');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 40 && window.screen.width > 770) {
+    if (window.scrollY > 40 && window.innerWidth > 770) {
         header.style.height = '120px';
 
-        if (window.scrollY > window.screen.height) {
+        if (window.scrollY > window.innerHeight) {
             hoisting.style.display = 'unset';
-        } else if (window.scrollY <= window.screen.height) {
+        } else if (window.scrollY <= window.innerHeight) {
             hoisting.style.display = 'none';
         }
-    } else if (window.scrollY <= 40 && window.screen.width > 770) {
+    } else if (window.scrollY <= 40 && window.innerWidth > 770) {
         header.style.height = '';
     }
 });
