@@ -1082,6 +1082,7 @@
 }
 
 .modal-good__form {
+  position: relative;
   padding: 50px 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1371,6 +1372,43 @@
   color: #FFE474;
 }
 
+.modal-good__form .modal-form__response {
+  position: absolute;
+  width: 40%;
+  height: 300px;
+  left: 30%;
+  top: 25%;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal-good__form .modal-form__response svg {
+  width: 30%;
+  fill: white;
+  -webkit-animation-name: modal-form-response;
+          animation-name: modal-form-response;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.modal-good__form .modal-form__response p {
+  font-size: 30px;
+  font-weight: 500;
+  width: 65%;
+  color: white;
+}
+
 .bg-polygon-10 {
   top: 20%;
   opacity: 0.2;
@@ -1407,6 +1445,52 @@
       width: 175px;
       height: 80px;
     }
+  }
+}
+
+@-webkit-keyframes modal-form-response {
+  10% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  16% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  20% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  23% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  25% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes modal-form-response {
+  10% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  16% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  20% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  23% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  25% {
+    -webkit-transform: none;
+            transform: none;
   }
 }
 /*# sourceMappingURL=catalog.css.map */

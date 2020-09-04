@@ -824,6 +824,7 @@
     }
 
     &__form {
+        position: relative;
         padding: 50px 100px;
         display: flex;
         flex-direction: column;
@@ -1033,6 +1034,33 @@
                 color: $mainClr;
             }
         }
+
+        .modal-form__response {
+            position: absolute;
+            width: 40%;
+            height: 300px;
+            left: 30%;
+            top: 25%;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            svg {
+                width: 30%;
+                fill: white;
+                animation-name: modal-form-response;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+            }
+
+            p {
+                font-size: 30px;
+                font-weight: 500;
+                width: 65%;
+                color: white;
+            }
+        }
     }
 }
 
@@ -1059,5 +1087,23 @@
             width: 175px;
             height: 80px;
         }
+    }
+}
+
+@keyframes modal-form-response {
+    10% {
+        transform: rotate(-20deg);
+    }
+    16% {
+        transform: rotate(15deg);
+    }
+    20% {
+        transform: rotate(-10deg);
+    }
+    23% {
+        transform: rotate(5deg);
+    }
+    25% {
+        transform: none;
     }
 }

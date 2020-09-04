@@ -91,29 +91,101 @@
             width: 323px;
             background-color: rgba(255, 227, 116, 0.2);
             border: none;
-            color: $mainClr;
-            font-size: 28px;
-            font-weight: 500;
-            font-family: $fontFam;
-            letter-spacing: 0.065em;
             cursor: pointer;
+            overflow: hidden;
+
+            p {
+                // display: none;
+                position: absolute;
+                top: 21%;
+                left: 17%;
+                color: $mainClr;
+                font-size: 28px;
+                font-weight: 500;
+                font-family: $fontFam;
+                letter-spacing: 0.065em;
+                animation-duration: 5s;
+                animation-iteration-count: 1;
+
+                @media (max-width: 1024px) {
+                    font-size: 25px;
+                    font-weight: 400;
+
+                    @media (max-width: 715px) {
+                        font-size: 16px;
+                    }
+                }
+            }
 
             @media (max-width: 1024px) {
                 width: 268px;
                 height: 70px;
-                font-size: 25px;
-                font-weight: 400;
 
                 @media (max-width: 715px) {
                     position: unset;
                     width: 250px;
                     height: 40px;
-                    font-size: 16px;
+                }
+            }
+
+            svg {
+                position: absolute;
+                left: 37%;
+                width: 30%;
+                fill: $mainClr;
+                animation-duration: 5s;
+                animation-iteration-count: 1;
+            }
+
+            .success {
+                bottom: -150px;
+            }
+
+            .fail {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                top: -150px;
+                width: 80%;
+                left: 10%;
+                animation-duration: 5s;
+                animation-iteration-count: 1;
+
+                svg {
+                    width: 28px;
+                    position: unset;
+                    animation: none;
+                    margin-right: 20px;
+                }
+
+                p {
+                    display: unset;
+                    position: unset;
                 }
             }
 
             &:focus {
                 outline: none;
+            }
+        }
+
+        button.form-email__response {
+            p {
+                animation-name: email-p-response;
+            }
+
+            svg {
+                animation-name: email-svg-response;
+            }
+        }
+
+        button.form-email__response-fail {
+            p {
+                animation-name: email-p-fail;
+            }
+
+            .fail {
+                animation-name: email-fail;
             }
         }
     }
@@ -139,5 +211,32 @@
             color: $mainClr;
             text-decoration: underline;
         }
+    }
+}
+
+@keyframes email-svg-response {
+    30% {
+        bottom: 0;
+    }
+    70% {
+        bottom: 0;
+    }
+}
+
+@keyframes email-p-response {
+    30%, 70% {
+        top: -150px;
+    }
+}
+
+@keyframes email-p-fail {
+    30%, 70% {
+        top: 150px;
+    }
+}
+
+@keyframes email-fail {
+    30%, 70% {
+        top: 20px;
     }
 }

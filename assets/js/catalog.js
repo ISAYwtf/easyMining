@@ -316,7 +316,8 @@ document.addEventListener('click', (event) => {
 
     // for (let i = 0; i < target.length - 1; i++) {
         if (target.offsetParent != null) {
-            if (target.isEqualNode(modal) || target.offsetParent.isEqualNode(modal)) {
+            if (target.isEqualNode(modal) || target.isEqualNode(modal.querySelector('.modal-good__form')) || target.offsetParent.isEqualNode(modal)
+                || target.offsetParent.isEqualNode(modal.querySelector('.modal-good__form'))) {
                 flag = true;
             }
         } else {
@@ -384,4 +385,47 @@ goods.forEach(el => {
         modalImg.setAttribute('alt', 'assic');
         setTimeout(() => window.scrollTo(0, modal.offsetTop - 120), 100);
     });
+});
+
+let catalogForm = form.querySelector('form'),
+    catalogResponseBlock = document.querySelector('.modal-form__response');
+
+catalogForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    let formData = {
+        modalFormName: catalogForm.elements.modalFormName.value,
+        modalFormLastName: catalogForm.elements.modalFormLastName.value,
+        modalFormPhone: catalogForm.elements.modalFormPhone.value,
+        modalFormSMS: catalogForm.elements.modalFormSMS.value
+    };
+
+    let request = new XMLHttpRequest();
+
+    request.addEventListener('load', () => {
+        console.log(request.response);
+        if (request.response === '1') {
+            catalogResponseBlock.style.display = 'flex';
+            catalogResponseBlock.querySelector('svg').style.display = 'unset';
+            catalogResponseBlock.querySelector('p').textContent = 'Заявка успешно отправлена';
+            catalogResponseBlock.style.justifyContent = 'space-between';
+            catalogForm.elements.modalFormName.value = '';
+            catalogForm.elements.modalFormLastName.value = '';
+            catalogForm.elements.modalFormPhone.value = '';
+            catalogForm.elements.modalFormSMS.value = '';
+        } else  {
+            catalogResponseBlock.style.display = 'flex';
+            catalogResponseBlock.querySelector('svg').style.display = 'none';
+            catalogResponseBlock.querySelector('p').innerHTML = 'Что-то пошло не так:( <br>Повторите попытку';
+            catalogResponseBlock.style.justifyContent = 'center';
+        }
+    });
+
+    request.open('POST', 'assets/catalog_mail.php', true);
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    request.send(`name= ${encodeURIComponent(formData.modalFormName)} &lastName= ${encodeURIComponent(formData.modalFormLastName)} &phone= ${encodeURIComponent(formData.modalFormPhone)} &modalFormSMS= ${encodeURIComponent(formData.modalFormSMS)}`);
+
+    setTimeout(document.body.addEventListener('click', () => {
+        catalogResponseBlock.style.display = 'none';
+    }), 1000);
 });

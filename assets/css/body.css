@@ -657,6 +657,7 @@ button {
   padding: 100px 0 50px 0;
   -webkit-transition: 0.6s;
   transition: 0.6s;
+  position: relative;
 }
 
 .big-form[data-show='false'] {
@@ -1070,6 +1071,48 @@ button {
   }
 }
 
+.big-form__response {
+  position: absolute;
+  width: 40%;
+  height: 300px;
+  left: 30%;
+  top: 40%;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.big-form__response svg {
+  width: 30%;
+  fill: #FFE474;
+  -webkit-animation-name: big-form-response;
+          animation-name: big-form-response;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.big-form__response p {
+  font-size: 30px;
+  font-weight: 500;
+  width: 65%;
+  color: #FFE474;
+}
+
+.big-form iframe {
+  z-index: 0 !important;
+  height: 620px !important;
+}
+
 @-webkit-keyframes big-form-button {
   50% {
     width: 200px;
@@ -1096,6 +1139,52 @@ button {
       width: 157px;
       height: 74px;
     }
+  }
+}
+
+@-webkit-keyframes big-form-response {
+  10% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  16% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  20% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  23% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  25% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes big-form-response {
+  10% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  16% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  20% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  23% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  25% {
+    -webkit-transform: none;
+            transform: none;
   }
 }
 /*# sourceMappingURL=body.css.map */

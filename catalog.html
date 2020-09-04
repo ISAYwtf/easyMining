@@ -608,11 +608,11 @@
             </div>
         </div>
         <div class="modal-good__form" data-show="false">
-            <form>
+            <form method="POST" action="assets/catalog_mail.php">
                 <div class="modal-good__form--name">
                     <label>
                         <p>Ваше имя</p>
-                        <input type="text" name="modalFormName" placeholder="Имя">
+                        <input type="text" name="modalFormName" placeholder="Имя" required>
                     </label>
                     <label>
                         <p>Ваша фамилия</p>
@@ -621,7 +621,7 @@
                 </div>
                 <label>
                     <p>Номер телефона</p>
-                    <input type="text" name="modalFormPhone" placeholder="+7 (___) ___ __ __">
+                    <input type="text" name="modalFormPhone" placeholder="+7 (___) ___ __ __" required>
                 </label>
                 <label class="checkbox">
                     <input type="checkbox" name="modalFormSMS">
@@ -635,6 +635,50 @@
                 </div>
             </form>
             <p>Нажимая вы соглашаетесь с <a href="#">пользовательским соглашением</a></p>
+            <div class="modal-form__response">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511.999 511.999"
+                style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+                <g>
+                    <g>
+                        <path d="M506.231,75.508c-7.689-7.69-20.158-7.69-27.849,0l-319.21,319.211L33.617,269.163c-7.689-7.691-20.158-7.691-27.849,0
+        c-7.69,7.69-7.69,20.158,0,27.849l139.481,139.481c7.687,7.687,20.16,7.689,27.849,0l333.133-333.136
+        C513.921,95.666,513.921,83.198,506.231,75.508z" />
+                    </g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+                <p>Заявка успешно отправлена</p>
+            </div>
         </div>
     </section>
 
@@ -644,9 +688,64 @@
                 <h2>Узнай<br> о выгодных предложениях первым!</h2>
                 <h5>Подписка на email-рассылку «EASY mining»</h5>
             </div>
-            <form>
-                <input type="email" name="email" id="email" placeholder="Ваш e-mail ...">
-                <button type="submit">Подписаться</button>
+            <form method="POST" action="assets/simple_mail.php">
+                <input type="email" name="email" id="email" placeholder="Ваш e-mail ..." required>
+                <button type="submit" name='submit'>
+                    <div class="fail">
+                        <svg viewBox="0 0 329.26933 329" width="329pt" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0" />
+                        </svg>
+                        <p>Ошибка</p>
+                    </div>
+                    <p>Подписаться</p>
+                    <svg class="success" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 495.787 495.787"
+                        style="enable-background:new 0 0 495.787 495.787;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <g>
+                                    <rect x="-9.583" y="294.975"
+                                        transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -96.2081 592.7892)"
+                                        width="168.499" height="42.69" />
+                                    <polygon points="375.147,134.987 344.96,104.8 209.707,240.16 239.893,270.347 			" />
+                                    <polygon
+                                        points="465.707,104.8 239.787,330.613 150.827,241.653 120.64,271.84 239.787,390.987 495.787,134.987 			" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                    </svg>
+                </button>
             </form>
             <p>Нажимая на кнопку «Подписаться» вы соглашаетесь с
                 <a href="#">пользовательским соглашением</a>

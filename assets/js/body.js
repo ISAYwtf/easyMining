@@ -55,3 +55,30 @@ burgerBtn.addEventListener('click', () => {
         headerWrap.classList.toggle("paused");
     }, 400);
 });
+
+let simpleForm = document.querySelector('.form').querySelector('form'),
+    simpleFormBtn = simpleForm.querySelector('button');
+
+simpleForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    let formData = {
+        email: simpleForm.elements.email.value
+    };
+
+    let request = new XMLHttpRequest();
+
+    request.addEventListener('load', () => {
+        console.log(request.response);
+        if (request.response === '1') {
+            simpleFormBtn.classList.add('form-email__response');
+            simpleForm.elements.email.value = '';
+        } else  {
+            simpleFormBtn.classList.add('form-email__response-fail');
+        }
+    });
+
+    request.open('POST', 'assets/simple_mail.php', true);
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    request.send(`email= ${encodeURIComponent(formData.email)}`);
+});
