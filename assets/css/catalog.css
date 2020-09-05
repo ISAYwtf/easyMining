@@ -1402,11 +1402,33 @@
           animation-iteration-count: infinite;
 }
 
+@media (max-width: 770px) {
+  .modal-good__form .modal-form__response svg {
+    width: 50%;
+  }
+}
+
 .modal-good__form .modal-form__response p {
   font-size: 30px;
   font-weight: 500;
   width: 65%;
   color: white;
+}
+
+@media (max-width: 770px) {
+  .modal-good__form .modal-form__response p {
+    font-size: 22px;
+    width: unset;
+  }
+}
+
+@media (max-width: 770px) {
+  .modal-good__form .modal-form__response {
+    top: 35%;
+    left: 20%;
+    height: 240px;
+    width: 60%;
+  }
 }
 
 .bg-polygon-10 {

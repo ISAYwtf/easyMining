@@ -144,6 +144,14 @@
 @media (max-width: 1024px) and (max-width: 715px) {
   .form form button p {
     font-size: 16px;
+    top: 14%;
+    left: 26%;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 715px) and (max-width: 414px) {
+  .form form button p {
+    left: 0;
   }
 }
 
@@ -156,7 +164,8 @@
 
 @media (max-width: 1024px) and (max-width: 715px) {
   .form form button {
-    position: unset;
+    position: relative;
+    right: unset;
     width: 250px;
     height: 40px;
   }
@@ -173,8 +182,21 @@
           animation-iteration-count: 1;
 }
 
+@media (max-width: 715px) {
+  .form form button svg {
+    left: 40%;
+    width: 20%;
+  }
+}
+
 .form form button .success {
   bottom: -150px;
+}
+
+@media (max-width: 715px) {
+  .form form button .success {
+    bottom: -80px;
+  }
 }
 
 .form form button .fail {
@@ -194,12 +216,32 @@
           animation-iteration-count: 1;
 }
 
+@media (max-width: 715px) {
+  .form form button .fail {
+    top: -80px;
+  }
+}
+
+@media (max-width: 715px) and (max-width: 414px) {
+  .form form button .fail {
+    width: 42%;
+    left: 31%;
+  }
+}
+
 .form form button .fail svg {
   width: 28px;
   position: unset;
   -webkit-animation: none;
           animation: none;
   margin-right: 20px;
+}
+
+@media (max-width: 715px) {
+  .form form button .fail svg {
+    width: 15px;
+    margin-right: 0;
+  }
 }
 
 .form form button .fail p {
@@ -259,20 +301,27 @@
 }
 
 @-webkit-keyframes email-svg-response {
-  30% {
-    bottom: 0;
-  }
-  70% {
+  30%, 70% {
     bottom: 0;
   }
 }
 
 @keyframes email-svg-response {
-  30% {
+  30%, 70% {
     bottom: 0;
   }
-  70% {
-    bottom: 0;
+}
+
+@media (max-width: 715px) {
+  @-webkit-keyframes email-svg-response {
+    30%, 70% {
+      bottom: -5px;
+    }
+  }
+  @keyframes email-svg-response {
+    30%, 70% {
+      bottom: -5px;
+    }
   }
 }
 
@@ -309,6 +358,32 @@
 @keyframes email-fail {
   30%, 70% {
     top: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  @-webkit-keyframes email-fail {
+    30%, 70% {
+      top: 15px;
+    }
+  }
+  @keyframes email-fail {
+    30%, 70% {
+      top: 15px;
+    }
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 715px) {
+  @-webkit-keyframes email-fail {
+    30%, 70% {
+      top: 6px;
+    }
+  }
+  @keyframes email-fail {
+    30%, 70% {
+      top: 6px;
+    }
   }
 }
 /*# sourceMappingURL=form.css.map */

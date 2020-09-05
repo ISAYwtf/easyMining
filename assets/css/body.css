@@ -1092,7 +1092,7 @@ button {
 
 .big-form__response svg {
   width: 30%;
-  fill: #FFE474;
+  fill: white;
   -webkit-animation-name: big-form-response;
           animation-name: big-form-response;
   -webkit-animation-duration: 4s;
@@ -1101,11 +1101,33 @@ button {
           animation-iteration-count: infinite;
 }
 
+@media (max-width: 770px) {
+  .big-form__response svg {
+    width: 50%;
+  }
+}
+
 .big-form__response p {
   font-size: 30px;
   font-weight: 500;
   width: 65%;
-  color: #FFE474;
+  color: white;
+}
+
+@media (max-width: 770px) {
+  .big-form__response p {
+    font-size: 22px;
+    width: unset;
+  }
+}
+
+@media (max-width: 770px) {
+  .big-form__response {
+    top: 45%;
+    left: 20%;
+    height: 240px;
+    width: 60%;
+  }
 }
 
 .big-form iframe {

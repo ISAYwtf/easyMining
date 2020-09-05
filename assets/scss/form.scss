@@ -113,6 +113,12 @@
 
                     @media (max-width: 715px) {
                         font-size: 16px;
+                        top: 14%;
+                        left: 26%;
+
+                        @media (max-width: 414px) {
+                            left: 0;
+                        }
                     }
                 }
             }
@@ -122,7 +128,8 @@
                 height: 70px;
 
                 @media (max-width: 715px) {
-                    position: unset;
+                    position: relative;
+                    right: unset;
                     width: 250px;
                     height: 40px;
                 }
@@ -135,10 +142,19 @@
                 fill: $mainClr;
                 animation-duration: 5s;
                 animation-iteration-count: 1;
+
+                @media (max-width: 715px) {
+                    left: 40%;
+                    width: 20%;
+                }
             }
 
             .success {
                 bottom: -150px;
+
+                @media (max-width: 715px) {
+                    bottom: -80px;
+                }
             }
 
             .fail {
@@ -151,11 +167,25 @@
                 animation-duration: 5s;
                 animation-iteration-count: 1;
 
+                @media (max-width: 715px) {
+                    top: -80px;
+
+                    @media (max-width: 414px) {
+                        width: 42%;
+                        left: 31%;
+                    }
+                }
+
                 svg {
                     width: 28px;
                     position: unset;
                     animation: none;
                     margin-right: 20px;
+
+                    @media (max-width: 715px) {
+                        width: 15px;
+                        margin-right: 0;
+                    }
                 }
 
                 p {
@@ -215,11 +245,16 @@
 }
 
 @keyframes email-svg-response {
-    30% {
+    30%, 70% {
         bottom: 0;
     }
-    70% {
-        bottom: 0;
+}
+
+@media (max-width: 715px) {
+    @keyframes email-svg-response {
+        30%, 70% {
+            bottom: -5px;
+        }
     }
 }
 
@@ -238,5 +273,21 @@
 @keyframes email-fail {
     30%, 70% {
         top: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    @keyframes email-fail {
+        30%, 70% {
+            top: 15px;
+        }
+    }
+
+    @media (max-width: 715px) {
+        @keyframes email-fail {
+            30%, 70% {
+                top: 6px;
+            }
+        }
     }
 }

@@ -1052,6 +1052,10 @@
                 animation-name: modal-form-response;
                 animation-duration: 4s;
                 animation-iteration-count: infinite;
+
+                @media (max-width: 770px) {
+                    width: 50%;
+                }
             }
 
             p {
@@ -1059,6 +1063,18 @@
                 font-weight: 500;
                 width: 65%;
                 color: white;
+
+                @media (max-width: 770px) {
+                    font-size: 22px;
+                    width: unset;
+                }
+            }
+
+            @media (max-width: 770px) {
+                top: 35%;
+                left: 20%;
+                height: 240px;
+                width: 60%;
             }
         }
     }

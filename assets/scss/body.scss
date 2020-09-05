@@ -784,17 +784,33 @@ button {
 
         svg {
             width: 30%;
-            fill: $mainClr;
+            fill: white;
             animation-name: big-form-response;
             animation-duration: 4s;
             animation-iteration-count: infinite;
+
+            @media (max-width: 770px) {
+                width: 50%;
+            }
         }
 
         p {
             font-size: 30px;
             font-weight: 500;
             width: 65%;
-            color: $mainClr;
+            color: white;
+
+            @media (max-width: 770px) {
+                font-size: 22px;
+                width: unset;
+            }
+        }
+
+        @media (max-width: 770px) {
+            top: 45%;
+            left: 20%;
+            height: 240px;
+            width: 60%;
         }
     }
 
