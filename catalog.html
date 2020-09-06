@@ -146,7 +146,7 @@
                 </a>
             </div>
             <div class="header--up__search">
-                <input type="text" name="search" id="search" placeholder="Поиск...">
+                <input type="text" name="search" id="search" placeholder="Поиск..." autocomplete="off" pattern="[A\-Za-z0\-9]">
                 <button type="submit">
                     <svg version="1.1" fill="white" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
@@ -193,6 +193,8 @@
                     </svg>
                 </button>
             </div>
+        </div>
+        <div class="wrap search-data" aria-expanded="false">
         </div>
     </section>
 
@@ -363,7 +365,7 @@
             </div>
             <div class="catalog__goods">
                 <div class="goods__wrap">
-                    <div class="goods__item" data-brand="Aixin" data-price="34000" data-energy="1000"
+                    <div class="goods__item" id="goods__item-1" data-brand="Aixin" data-price="34000" data-energy="1000"
                         data-algorithm="Equihash" data-crypto="Litecoin">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
@@ -371,7 +373,7 @@
                         <span class="good__price">34 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item" data-brand="Bitfury" data-price="52000" data-energy="2820"
+                    <div class="goods__item" id="goods__item-2" data-brand="Bitfury" data-price="52000" data-energy="2820"
                         data-algorithm="Blake2B+SHA3" data-crypto="CKB">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
@@ -379,7 +381,7 @@
                         <span class="good__price">52 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item" data-brand="Bitmain" data-price="21000" data-energy="700"
+                    <div class="goods__item" id="goods__item-3" data-brand="Bitmain" data-price="21000" data-energy="700"
                         data-algorithm="Scrypt" data-crypto="Dash">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
@@ -387,7 +389,7 @@
                         <span class="good__price">21 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item" data-brand="Canaan" data-price="50000" data-energy="800"
+                    <div class="goods__item" id="goods__item-4" data-brand="Canaan" data-price="50000" data-energy="800"
                         data-algorithm="Eaglesong" data-crypto="Bitcoin">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
@@ -395,7 +397,7 @@
                         <span class="good__price">50 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item" data-brand="Cheetah" data-price="69000" data-energy="2000"
+                    <div class="goods__item" id="goods__item-5" data-brand="Cheetah" data-price="69000" data-energy="2000"
                         data-algorithm="SHA-256" data-crypto="Grin-CT31">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
@@ -403,7 +405,7 @@
                         <span class="good__price">69 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item" data-brand="Dragonmint" data-price="45000" data-energy="1120"
+                    <div class="goods__item" id="goods__item-6" data-brand="Dragonmint" data-price="45000" data-energy="1120"
                         data-algorithm="Lyra2REv2" data-crypto="Grin-CT31">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
@@ -411,7 +413,7 @@
                         <span class="good__price">45 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item" data-brand="Bitmain" data-price="30000" data-energy="800"
+                    <div class="goods__item" id="goods__item-7" data-brand="Bitmain" data-price="30000" data-energy="800"
                         data-algorithm="Blake2B+SHA3" data-crypto="Litecoin">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
@@ -419,7 +421,7 @@
                         <span class="good__price">30 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item" data-brand="Cheetah" data-price="38000" data-energy="700"
+                    <div class="goods__item" id="goods__item-8" data-brand="Cheetah" data-price="38000" data-energy="700"
                         data-algorithm="SHA-256" data-crypto="ETH">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
@@ -427,7 +429,7 @@
                         <span class="good__price">38 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item" data-brand="Aixin" data-price="86000" data-energy="2000"
+                    <div class="goods__item" id="goods__item-9" data-brand="Aixin" data-price="86000" data-energy="2000"
                         data-algorithm="SHA-256" data-crypto="Grin-CT31">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
@@ -435,7 +437,7 @@
                         <span class="good__price">86 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item" data-brand="Canaan" data-price="91000" data-energy="800"
+                    <div class="goods__item" id="goods__item-10" data-brand="Canaan" data-price="91000" data-energy="800"
                         data-algorithm="Scrypt" data-crypto="Dash">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
@@ -443,7 +445,7 @@
                         <span class="good__price">91 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item" data-brand="Bitmain" data-price="93000" data-energy="1120"
+                    <div class="goods__item" id="goods__item-11" data-brand="Bitmain" data-price="93000" data-energy="1120"
                         data-algorithm="SHA-256" data-crypto="ETH">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
@@ -451,7 +453,7 @@
                         <span class="good__price">93 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item" data-brand="Aixin" data-price="32000" data-energy="700"
+                    <div class="goods__item" id="goods__item-12" data-brand="Aixin" data-price="32000" data-energy="700"
                         data-algorithm="Grin-CT31" data-crypto="Bitcoin">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
@@ -459,7 +461,7 @@
                         <span class="good__price">32 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item" data-brand="Canaan" data-price="39000" data-energy="2000"
+                    <div class="goods__item" id="goods__item-13" data-brand="Canaan" data-price="39000" data-energy="2000"
                         data-algorithm="Blake2B+SHA3" data-crypto="Litecoin">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
@@ -467,7 +469,7 @@
                         <span class="good__price">39 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item" data-brand="Aixin" data-price="81000" data-energy="1000"
+                    <div class="goods__item" id="goods__item-14" data-brand="Aixin" data-price="81000" data-energy="1000"
                         data-algorithm="Eaglesong" data-crypto="Dash">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
@@ -475,7 +477,7 @@
                         <span class="good__price">81 000 &#8381;</span>
                         <span class="good__stock"><b>&#x2713;</b> В наличии</span>
                     </div>
-                    <div class="goods__item" data-brand="Dragonmint" data-price="92000" data-energy="2000"
+                    <div class="goods__item" id="goods__item-15" data-brand="Dragonmint" data-price="92000" data-energy="2000"
                         data-algorithm="Equihash" data-crypto="Bitcoin">
                         <img src="assets/img/assic.png" alt="assic">
                         <h5>Имя товара</h5>
@@ -827,6 +829,7 @@
     <script src="assets/js/body.js"></script>
     <script src="assets/js/range.js"></script>
     <script src="assets/js/catalog.js"></script>
+    <script src="assets/js/search.js"></script>
 </body>
 
 </html>

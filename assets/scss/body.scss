@@ -13,6 +13,22 @@
     }
 }
 
+::-webkit-scrollbar {
+    border: none;
+    width: 10px;
+    transition: 0.4s;
+    background: #282727;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: lighten($color: $background, $amount: 10);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: lighten($color: $background, $amount: 20);
+}
+
 body {
     font-size: 28px;
     background-color: #202124;

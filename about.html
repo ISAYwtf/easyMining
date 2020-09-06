@@ -145,7 +145,7 @@
                 </a>
             </div>
             <div class="header--up__search">
-                <input type="text" name="search" id="search" placeholder="Поиск...">
+                <input type="text" name="search" id="search" placeholder="Поиск..." autocomplete="off" pattern="[A\-Za-z0\-9]">
                 <button type="submit">
                     <svg version="1.1" fill="white" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
@@ -192,6 +192,8 @@
                     </svg>
                 </button>
             </div>
+        </div>
+        <div class="wrap search-data" aria-expanded="false">
         </div>
     </section>
 
@@ -437,6 +439,7 @@
 
     <script src="assets/js/body.js"></script>
     <script src="assets/js/main-slider.js"></script>
+    <script src="assets/js/search.js"></script>
 </body>
 
 </html>

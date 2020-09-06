@@ -48,7 +48,7 @@ paginationRight.addEventListener('click', function(event) {
     togglePagination(paginationActive, paginationActive.nextElementSibling);
 });
 
-function initGoods(goods) {
+function initGoods(goods, startPage = 0) {
     let pageCount = Math.ceil(goods.length / size);
 
     if (!goods.length) {
@@ -71,12 +71,12 @@ function initGoods(goods) {
         }
     }
 
-    goodShow(pages[0]);
+    goodShow(pages[startPage]);
 
-    createPagination(pageCount, pagination);
+    createPagination(pageCount, pagination, startPage);
 }
 
-function createPagination(count, place) {
+function createPagination(count, place, startPage = 0) {
     while (place.firstChild) {
         place.removeChild(place.firstChild);
     }
@@ -85,10 +85,13 @@ function createPagination(count, place) {
         let span = document.createElement('span');
         span.textContent = i;
         span.setAttribute('data-show', i);
+        if (i == startPage + 1) {
+            span.classList.add('pagination__active');
+        }
         place.append(span);
     }
 
-    place.firstChild.classList.add('pagination__active');
+    // place.firstChild.classList.add('pagination__active');
 }
 
 function togglePagination(prev, next) {
@@ -429,3 +432,15 @@ catalogForm.addEventListener('submit', (event) => {
         catalogResponseBlock.style.display = 'none';
     }), 1000);
 });
+
+let urlHash = document.location.hash;
+
+for (let i = 0; i < pages.length; i++) {
+    pages[i].forEach(el => {
+        if (el.id == urlHash.split('#')[1]) {
+            // goodShow(pages[i]);
+            initGoods(goods, i);
+            el.click();
+        }
+    });
+}

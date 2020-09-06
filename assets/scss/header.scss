@@ -1,8 +1,11 @@
 @import 'var';
 
 .header--up {
+    position: relative;
     display: flex;
-    height: 70px;
+    flex-direction: column;
+    // height: 70px;
+    padding: 15px 0;
     font-size: 20px;
     font-weight: 300;
     align-items: center;
@@ -20,6 +23,7 @@
         align-items: center;
         justify-content: flex-end;
         height: 40px;
+        // padding: 15px 0;
 
         @media (max-width: 1500px) {
             justify-content: space-between;
@@ -112,7 +116,6 @@
             height: 110%;
             background: transparent;
             border: none;
-            cursor: pointer;
 
             &:focus {
                 outline: none;
@@ -121,6 +124,87 @@
             svg {
                 width: 25px;
                 height: 25px;
+            }
+        }
+    }
+
+    .search-data {
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        // min-height: 180px;
+        height: 600px;
+        // max-height: 600px;
+        z-index: 16;
+        // transition: 0.4s;
+
+        &[aria-expanded='false'] {
+            z-index: -1;
+            opacity: 0;
+            // height: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ul {
+            position: absolute;
+            width: 500px;
+            height: 100%;
+            // border: 1px solid rgba(255, 255, 255, 0.226);
+            padding: 10px 10px;
+            // border-radius: 4px;
+            right: 0;
+            overflow: overlay;
+            // width: unset;
+
+            a {
+                padding: 40px;
+                border: 1px solid rgba(255, 255, 255, 0.226);
+                // border-radius: 4px;
+                margin: 0 0 10px 0;
+                background: $background;
+                transition: 0.2s;
+                color: white;
+
+                &:hover {
+                    transform: scale(1.02);
+                }
+
+                &[aria-expanded='false'] {
+                    display: none;
+                }
+
+                .goods__item {
+                    display: flex;
+                    align-items: center;
+                    // justify-content: space-between;
+
+                    img {
+                        width: 60px;
+                        margin-right: 30px;
+                    }
+
+                    h5 {
+                        margin-right: 30px;
+                        width: 115px;
+                    }
+
+                    .item-info {
+                        justify-self: flex-end;
+                        display: flex;
+                        flex-direction: column;
+
+                        b {
+                            color: $mainClr;
+                        }
+
+                        .good__stock {
+                            margin-top: 15px;
+                        }
+                    }
+                }
             }
         }
     }
