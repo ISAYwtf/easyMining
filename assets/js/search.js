@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#search').addEventListener('input', function () {
         let val = this.value.trim(),
             searchItems = document.querySelectorAll('.search-data a'),
-            regExp = new RegExp(/[^A-Za-z0-9]/g);
+            regExp = new RegExp(/[^A-Za-z]/g);
 
         val = val.replace(regExp, '');
 
@@ -49,6 +49,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 } else {
                     el.setAttribute('aria-expanded', 'true');
                     document.querySelector('.search-data').setAttribute('aria-expanded', 'true');
+
+                    document.body.style.overflowY = 'hidden';
                 }
 
                 el.addEventListener('click', function() {
@@ -61,10 +63,30 @@ window.addEventListener('DOMContentLoaded', () => {
             });
         } else {
             document.querySelector('.search-data').setAttribute('aria-expanded', 'false');
+            document.body.style.overflowY = 'unset';
         }
     });
 
-    // document.querySelector('.header--up__search').addEventListener('click', () => {
-    //     document.querySelector('.search-data').setAttribute('aria-expanded', 'true');
-    // });
+    document.addEventListener('click', (e) => {
+        let target = e.srcElement,
+            flag = false,
+            searchData = document.querySelector('.search-data');
+
+        if (target.offsetParent != null || target.offsetParent != undefined) {
+            if (target.isEqualNode(searchData.children[0]) || target.isEqualNode(document.querySelector('#search'))) {
+                flag = true;
+            }
+        } else {
+            flag = true;
+        }
+
+        if (searchData.getAttribute('aria-expanded') === 'true' && window.innerWidth > 770) {
+            if (!flag) {
+                searchData.setAttribute('aria-expanded', 'false');
+                document.body.style.overflowY = 'unset';
+            } else {
+                return;
+            }
+        } else return;
+    });
 });

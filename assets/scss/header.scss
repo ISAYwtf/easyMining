@@ -131,9 +131,9 @@
     .search-data {
         position: absolute;
         top: 70px;
-        width: 100%;
+        // width: 68%;
         // min-height: 180px;
-        height: 600px;
+        height: 90vh;
         // max-height: 600px;
         z-index: 16;
         // transition: 0.4s;
@@ -156,7 +156,7 @@
             padding: 10px 10px;
             // border-radius: 4px;
             right: 0;
-            overflow: overlay;
+            overflow-y: scroll;
             // width: unset;
 
             a {
@@ -167,6 +167,7 @@
                 background: $background;
                 transition: 0.2s;
                 color: white;
+                cursor: default;
 
                 &:hover {
                     transform: scale(1.02);

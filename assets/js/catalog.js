@@ -435,12 +435,25 @@ catalogForm.addEventListener('submit', (event) => {
 
 let urlHash = document.location.hash;
 
-for (let i = 0; i < pages.length; i++) {
-    pages[i].forEach(el => {
-        if (el.id == urlHash.split('#')[1]) {
-            // goodShow(pages[i]);
-            initGoods(goods, i);
-            el.click();
-        }
-    });
+window.addEventListener('hashchange', searchGood);
+
+if (urlHash) {
+    searchGood();
+}
+
+function searchGood() {
+    urlHash = document.location.hash;
+
+    for (let i = 0; i < pages.length; i++) {
+        pages[i].forEach(el => {
+            if (el.id == urlHash.split('#')[1]) {
+                // goodShow(pages[i]);
+                initGoods(goods, i);
+                el.click();
+                document.querySelector('#search').value = '';
+                document.querySelector('.search-data').setAttribute('aria-expanded', 'false');
+                document.location.hash = '';
+            }
+        });
+    }
 }
