@@ -1,10 +1,10 @@
 .form {
-  padding: 110px 0 200px 0;
+  padding: 50px 0 150px 0;
 }
 
 @media (max-width: 715px) {
   .form {
-    padding: 80px 0;
+    padding: 50px 0;
   }
 }
 
@@ -19,36 +19,28 @@
 }
 
 .form__title h5 {
+  font-size: 1.2rem;
   margin-top: 10px;
-  font-size: 22px;
   font-weight: 300;
-  color: #F9F9F9;
-}
-
-@media (max-width: 1024px) {
-  .form__title h5 {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 1024px) and (max-width: 414px) {
-  .form__title h5 {
-    font-size: 10px;
-  }
+  color: #f9f9f9;
 }
 
 .form form {
-  margin-top: 40px;
-  margin-bottom: 20px;
   position: relative;
-  width: 775px;
-  height: 95px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 2px;
+  width: 670px;
+  height: 60px;
   background-color: rgba(76, 77, 82, 0.3);
   border: 1px solid rgba(255, 227, 116, 0.2);
 }
@@ -56,7 +48,6 @@
 @media (max-width: 1024px) {
   .form form {
     width: 600px;
-    height: 80px;
   }
 }
 
@@ -75,32 +66,25 @@
 }
 
 .form form input {
-  font-family: "Montserrat", sans-serif;
-  font-size: 28px;
+  font-size: 1.3rem;
   font-weight: 300;
-  color: #FFE474;
-  width: 50%;
+  color: #ffe474;
+  width: 67%;
   height: 100%;
-  padding-left: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
   background: none;
   border: none;
 }
 
-@media (max-width: 1024px) {
-  .form form input {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 1024px) and (max-width: 715px) {
+@media (max-width: 715px) {
   .form form input {
     width: 250px;
     height: 40px;
     margin-bottom: 20px;
+    padding: 0 10px;
     background-color: rgba(76, 77, 82, 0.3);
     border: 1px solid rgba(255, 227, 116, 0.2);
-    padding: 0 10px;
-    font-size: 16px;
   }
 }
 
@@ -109,132 +93,102 @@
 }
 
 .form form button {
-  position: absolute;
-  right: 4px;
-  height: 87px;
-  width: 323px;
+  position: relative;
+  height: 100%;
+  width: 220px;
   background-color: rgba(255, 227, 116, 0.2);
   border: none;
-  cursor: pointer;
   overflow: hidden;
+  cursor: pointer;
 }
 
-.form form button p {
+.form form button .form-response {
   position: absolute;
-  top: 21%;
-  left: 17%;
-  color: #FFE474;
-  font-size: 28px;
-  font-weight: 500;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 0.065em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  left: 0;
+  top: -200%;
+  width: 100%;
+  height: 270px;
   -webkit-animation-duration: 5s;
           animation-duration: 5s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
 
+.form form button .default-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 54px;
+  width: 100%;
+  color: #ffe474;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.065em;
+}
+
 @media (max-width: 1024px) {
-  .form form button p {
-    font-size: 25px;
+  .form form button .default-text {
     font-weight: 400;
   }
 }
 
-@media (max-width: 1024px) and (max-width: 715px) {
-  .form form button p {
-    font-size: 16px;
-    top: 14%;
-    left: 26%;
-  }
-}
-
-@media (max-width: 1024px) and (max-width: 715px) and (max-width: 414px) {
-  .form form button p {
-    left: 0;
-  }
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 715px) {
   .form form button {
-    width: 268px;
-    height: 70px;
-  }
-}
-
-@media (max-width: 1024px) and (max-width: 715px) {
-  .form form button {
-    position: relative;
-    right: unset;
-    width: 250px;
     height: 40px;
   }
 }
 
 .form form button svg {
-  position: absolute;
-  left: 37%;
   width: 30%;
-  fill: #FFE474;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  fill: #ffe474;
 }
 
 @media (max-width: 715px) {
   .form form button svg {
-    left: 40%;
     width: 20%;
   }
 }
 
 .form form button .success {
-  bottom: -150px;
-}
-
-@media (max-width: 715px) {
-  .form form button .success {
-    bottom: -80px;
-  }
+  height: 54px;
 }
 
 .form form button .fail {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  top: -150px;
-  width: 80%;
-  left: 10%;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-}
-
-@media (max-width: 715px) {
-  .form form button .fail {
-    top: -80px;
-  }
-}
-
-@media (max-width: 715px) and (max-width: 414px) {
-  .form form button .fail {
-    width: 42%;
-    left: 31%;
-  }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 54px;
+  width: 100%;
 }
 
 .form form button .fail svg {
   width: 28px;
-  position: unset;
-  -webkit-animation: none;
-          animation: none;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 @media (max-width: 715px) {
@@ -246,144 +200,76 @@
 
 .form form button .fail p {
   display: unset;
-  position: unset;
+  color: #ffe474;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 .form form button:focus {
   outline: none;
 }
 
-.form form button.form-email__response p {
-  -webkit-animation-name: email-p-response;
-          animation-name: email-p-response;
+.form form button.form-email__response .form-response {
+  -webkit-animation-name: form-response;
+          animation-name: form-response;
 }
 
-.form form button.form-email__response svg {
-  -webkit-animation-name: email-svg-response;
-          animation-name: email-svg-response;
+.form form button.form-email__response-fail .form-response {
+  -webkit-animation-name: form-fail;
+          animation-name: form-fail;
 }
 
-.form form button.form-email__response-fail p {
-  -webkit-animation-name: email-p-fail;
-          animation-name: email-p-fail;
-}
-
-.form form button.form-email__response-fail .fail {
-  -webkit-animation-name: email-fail;
-          animation-name: email-fail;
-}
-
-.form p {
+.form .form__license {
   text-align: center;
   width: 38%;
-  font-size: 16px;
+  font-size: 0.7rem;
   font-weight: 300;
   letter-spacing: 0.065em;
   line-height: 174.19%;
 }
 
 @media (max-width: 1024px) {
-  .form p {
-    font-size: 10px;
+  .form .form__license {
     width: 45%;
   }
 }
 
 @media (max-width: 1024px) and (max-width: 414px) {
-  .form p {
+  .form .form__license {
     width: 100%;
   }
 }
 
-.form p a {
-  color: #FFE474;
+.form .form__license a {
+  color: #ffe474;
   text-decoration: underline;
 }
 
-@-webkit-keyframes email-svg-response {
-  30%, 70% {
-    bottom: 0;
+@-webkit-keyframes form-response {
+  30%,
+  70% {
+    top: 0;
   }
 }
 
-@keyframes email-svg-response {
-  30%, 70% {
-    bottom: 0;
+@keyframes form-response {
+  30%,
+  70% {
+    top: 0;
   }
 }
 
-@media (max-width: 715px) {
-  @-webkit-keyframes email-svg-response {
-    30%, 70% {
-      bottom: -5px;
-    }
-  }
-  @keyframes email-svg-response {
-    30%, 70% {
-      bottom: -5px;
-    }
+@-webkit-keyframes form-fail {
+  30%,
+  70% {
+    top: -400%;
   }
 }
 
-@-webkit-keyframes email-p-response {
-  30%, 70% {
-    top: -150px;
-  }
-}
-
-@keyframes email-p-response {
-  30%, 70% {
-    top: -150px;
-  }
-}
-
-@-webkit-keyframes email-p-fail {
-  30%, 70% {
-    top: 150px;
-  }
-}
-
-@keyframes email-p-fail {
-  30%, 70% {
-    top: 150px;
-  }
-}
-
-@-webkit-keyframes email-fail {
-  30%, 70% {
-    top: 20px;
-  }
-}
-
-@keyframes email-fail {
-  30%, 70% {
-    top: 20px;
-  }
-}
-
-@media (max-width: 1024px) {
-  @-webkit-keyframes email-fail {
-    30%, 70% {
-      top: 15px;
-    }
-  }
-  @keyframes email-fail {
-    30%, 70% {
-      top: 15px;
-    }
-  }
-}
-
-@media (max-width: 1024px) and (max-width: 715px) {
-  @-webkit-keyframes email-fail {
-    30%, 70% {
-      top: 6px;
-    }
-  }
-  @keyframes email-fail {
-    30%, 70% {
-      top: 6px;
-    }
+@keyframes form-fail {
+  30%,
+  70% {
+    top: -400%;
   }
 }
 /*# sourceMappingURL=form.css.map */

@@ -1,10 +1,10 @@
-@import 'var';
+@import "var";
 
 .form {
-    padding: 110px 0 200px 0;
+    padding: 50px 0 150px 0;
 
     @media (max-width: 715px) {
-        padding: 80px 0;
+        padding: 50px 0;
     }
 
     &__wrap {
@@ -14,35 +14,32 @@
 
     &__title {
         h5 {
+            font-size: $size-font-title-h2 * 0.6;
             margin-top: 10px;
-            font-size: 22px;
             font-weight: 300;
-            color: #F9F9F9;
-
-            @media (max-width: 1024px) {
-                font-size: 16px;
-
-                @media (max-width: 414px) {
-                    font-size: 10px;
-                }
-            }
+            color: #f9f9f9;
         }
     }
 
     form {
-        margin-top: 40px;
-        margin-bottom: 20px;
         position: relative;
-        width: 775px;
-        height: 95px;
+
         display: flex;
         align-items: center;
+        justify-content: space-between;
+
+        margin-top: 40px;
+        margin-bottom: 20px;
+        padding: 2px;
+
+        width: 670px;
+        height: 60px;
+
         background-color: rgba(76, 77, 82, 0.3);
         border: 1px solid rgba(255, 227, 116, 0.2);
 
         @media (max-width: 1024px) {
             width: 600px;
-            height: 80px;
 
             @media (max-width: 715px) {
                 position: unset;
@@ -55,28 +52,26 @@
         }
 
         input {
-            font-family: $fontFam;
-            font-size: 28px;
+            font-size: $size-font-base * 1.3;
             font-weight: 300;
             color: $mainClr;
-            width: 50%;
+
+            width: 67%;
             height: 100%;
-            padding-left: 30px;
+
+            padding-left: 15px;
+            padding-right: 15px;
             background: none;
             border: none;
 
-            @media (max-width: 1024px) {
-                font-size: 20px;
+            @media (max-width: 715px) {
+                width: 250px;
+                height: 40px;
 
-                @media (max-width: 715px) {
-                    width: 250px;
-                    height: 40px;
-                    margin-bottom: 20px;
-                    background-color: rgba(76, 77, 82, 0.3);
-                    border: 1px solid rgba(255, 227, 116, 0.2);
-                    padding: 0 10px;
-                    font-size: 16px;
-                }
+                margin-bottom: 20px;
+                padding: 0 10px;
+                background-color: rgba(76, 77, 82, 0.3);
+                border: 1px solid rgba(255, 227, 116, 0.2);
             }
 
             &:focus {
@@ -85,102 +80,83 @@
         }
 
         button {
-            position: absolute;
-            right: 4px;
-            height: 87px;
-            width: 323px;
+            position: relative;
+
+            height: 100%;
+            width: 220px;
+
             background-color: rgba(255, 227, 116, 0.2);
             border: none;
-            cursor: pointer;
-            overflow: hidden;
 
-            p {
-                // display: none;
+            overflow: hidden;
+            cursor: pointer;
+
+            .form-response {
                 position: absolute;
-                top: 21%;
-                left: 17%;
-                color: $mainClr;
-                font-size: 28px;
-                font-weight: 500;
-                font-family: $fontFam;
-                letter-spacing: 0.065em;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+                left: 0;
+                top: -200%;
+
+                width: 100%;
+                height: (60px - 6) * 5;
+
                 animation-duration: 5s;
                 animation-iteration-count: 1;
+            }
+
+            .default-text {
+                // display: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                height: 60px - 6;
+                width: 100%;
+
+                color: $mainClr;
+
+                font-size: $size-font-base * 1.3;
+                font-weight: 500;
+                letter-spacing: 0.065em;
 
                 @media (max-width: 1024px) {
-                    font-size: 25px;
                     font-weight: 400;
-
-                    @media (max-width: 715px) {
-                        font-size: 16px;
-                        top: 14%;
-                        left: 26%;
-
-                        @media (max-width: 414px) {
-                            left: 0;
-                        }
-                    }
                 }
             }
 
-            @media (max-width: 1024px) {
-                width: 268px;
-                height: 70px;
-
-                @media (max-width: 715px) {
-                    position: relative;
-                    right: unset;
-                    width: 250px;
-                    height: 40px;
-                }
+            @media (max-width: 715px) {
+                height: 40px;
             }
 
             svg {
-                position: absolute;
-                left: 37%;
                 width: 30%;
                 fill: $mainClr;
-                animation-duration: 5s;
-                animation-iteration-count: 1;
 
                 @media (max-width: 715px) {
-                    left: 40%;
                     width: 20%;
                 }
             }
 
             .success {
-                bottom: -150px;
-
-                @media (max-width: 715px) {
-                    bottom: -80px;
-                }
+                height: 60px - 6;
             }
 
             .fail {
-                position: absolute;
                 display: flex;
                 justify-content: center;
-                top: -150px;
-                width: 80%;
-                left: 10%;
-                animation-duration: 5s;
-                animation-iteration-count: 1;
+                align-items: center;
 
-                @media (max-width: 715px) {
-                    top: -80px;
-
-                    @media (max-width: 414px) {
-                        width: 42%;
-                        left: 31%;
-                    }
-                }
+                height: 60px - 6;
+                width: 100%;
 
                 svg {
                     width: 28px;
-                    position: unset;
-                    animation: none;
-                    margin-right: 20px;
+                    margin-right: 10px;
 
                     @media (max-width: 715px) {
                         width: 15px;
@@ -190,7 +166,9 @@
 
                 p {
                     display: unset;
-                    position: unset;
+                    color: $mainClr;
+                    font-size: $size-font-base * 1.3;
+                    font-weight: 500;
                 }
             }
 
@@ -200,36 +178,27 @@
         }
 
         button.form-email__response {
-            p {
-                animation-name: email-p-response;
-            }
-
-            svg {
-                animation-name: email-svg-response;
+            .form-response {
+                animation-name: form-response;
             }
         }
 
         button.form-email__response-fail {
-            p {
-                animation-name: email-p-fail;
-            }
-
-            .fail {
-                animation-name: email-fail;
+            .form-response {
+                animation-name: form-fail;
             }
         }
     }
 
-    p {
+    .form__license {
         text-align: center;
         width: 38%;
-        font-size: 16px;
+        font-size: $size-font-base-small;
         font-weight: 300;
         letter-spacing: 0.065em;
         line-height: 174.19%;
 
         @media (max-width: 1024px) {
-            font-size: 10px;
             width: 45%;
 
             @media (max-width: 414px) {
@@ -244,50 +213,34 @@
     }
 }
 
-@keyframes email-svg-response {
-    30%, 70% {
-        bottom: 0;
+@keyframes form-response {
+    30%,
+    70% {
+        top: 0;
     }
 }
 
-@media (max-width: 715px) {
-    @keyframes email-svg-response {
-        30%, 70% {
-            bottom: -5px;
-        }
+@keyframes form-fail {
+    30%,
+    70% {
+        top: -400%;
     }
 }
 
-@keyframes email-p-response {
-    30%, 70% {
-        top: -150px;
-    }
-}
+// @media (max-width: 1024px) {
+//     @keyframes form-fail {
+//         30%,
+//         70% {
+//             top: 15px;
+//         }
+//     }
 
-@keyframes email-p-fail {
-    30%, 70% {
-        top: 150px;
-    }
-}
-
-@keyframes email-fail {
-    30%, 70% {
-        top: 20px;
-    }
-}
-
-@media (max-width: 1024px) {
-    @keyframes email-fail {
-        30%, 70% {
-            top: 15px;
-        }
-    }
-
-    @media (max-width: 715px) {
-        @keyframes email-fail {
-            30%, 70% {
-                top: 6px;
-            }
-        }
-    }
-}
+//     @media (max-width: 715px) {
+//         @keyframes form-fail {
+//             30%,
+//             70% {
+//                 top: 6px;
+//             }
+//         }
+//     }
+// }

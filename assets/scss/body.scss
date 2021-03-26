@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
-@import 'var';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+@import "var";
 
 * {
     box-sizing: border-box;
@@ -30,14 +30,10 @@
 }
 
 body {
-    font-size: 28px;
+    font-size: $size-font-base;
     background-color: #202124;
     color: $txtClr;
     overflow-x: hidden;
-
-    @media (max-width: 1024px) {
-        font-size: 20px;
-    }
 }
 
 a {
@@ -53,22 +49,17 @@ input {
 
 button {
     border: none;
-    font-size: 28px;
+    font-size: $size-font-btn;
 }
 
 .title,
 .title h2 {
     text-align: center;
-    font-size: 50px;
+    font-size: $size-font-title-h2;
     font-weight: 500;
 
     @media (max-width: 1024px) {
-        font-size: 45px;
         font-weight: 400;
-
-        @media (max-width: 715px) {
-            font-size: 28px;
-        }
     }
 }
 
@@ -117,10 +108,9 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
-    width: 377px;
-    height: 81px;
-    border: 2px solid $mainClr;
+    width: 280px;
+    height: 60px;
+    border: 1px solid $mainClr;
     cursor: pointer;
 
     .button__wrap {
@@ -135,19 +125,15 @@ button {
 
     &:hover {
         .button__wrap {
-            width: 337px;
-            height: 121px;
+            width: 250px;
+            height: 80px;
             border-width: 2px;
         }
     }
 
     a {
         color: $mainClr;
-        font-size: 30px;
-
-        @media (max-width: 1024px) {
-            font-size: 25px;
-        }
+        font-size: 1.3rem;
     }
 }
 
@@ -202,18 +188,9 @@ button {
         }
 
         .advant__svg {
-            width: 70px;
-            height: 70px;
-            margin-right: 40px;
-
-            @media (max-width: 1500px) {
-                width: 40px;
-                height: 40px;
-
-                @media (max-width: 715px) {
-                    margin-right: 20px;
-                }
-            }
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
 
             svg {
                 height: 100%;
@@ -222,13 +199,8 @@ button {
         }
 
         p {
-            @media (max-width: 1500px) {
-                font-size: 20px;
-
-                @media (max-width: 715px) {
-                    font-size: 16px;
-                    max-width: 100%;
-                }
+            @media (max-width: 715px) {
+                max-width: 100%;
             }
         }
     }
@@ -271,7 +243,7 @@ button {
         width: 100%;
         justify-content: space-between;
 
-        @media (max-width:414px) {
+        @media (max-width: 414px) {
             align-items: center;
             justify-content: center;
             flex-direction: column;
@@ -326,33 +298,18 @@ button {
     }
 
     .advant__svg {
-        width: 90px;
-        height: 90px;
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
 
-        @media (max-width: 1200px) {
-            margin-right: 20px;
-            width: 70px;
-            height: 70px;
-
-            @media (max-width: 715px) {
-                width: 40px;
-                height: 40px;
-            }
+        @media (max-width: 715px) {
+            width: 40px;
+            height: 40px;
         }
 
         img {
-            width: 90px;
-            height: 90px;
-
-            @media (max-width: 1200px) {
-                width: 70px;
-                height: 70px;
-
-                @media (max-width: 715px) {
-                    width: 40px;
-                    height: 40px;
-                }
-            }
+            width: 100%;
+            height: 100%;
         }
     }
 
@@ -370,37 +327,27 @@ button {
         align-self: center;
         max-width: 100%;
         align-items: center;
-        margin-top: 30px;
+        margin-top: 20px;
 
         p {
             margin-right: 12px;
 
-            @media (max-width: 1500px) {
-                font-size: 25px;
+            @media (max-width: 715px) {
+                font-weight: 500;
 
-                @media (max-width: 715px) {
-                    font-size: 18px;
-                    font-weight: 500;
-
-                    @media (max-width: 568px) {
-                        display: none;
-                    }
+                @media (max-width: 568px) {
+                    display: none;
                 }
             }
         }
 
         .button {
-            width: 480px;
+            width: 340px;
             margin-top: 0;
-            border-width: 1px;
 
-            @media (max-width: 1500px) {
-                width: 390px;
-
-                @media (max-width: 715px) {
-                    width: 250px;
-                    height: 50px;
-                }
+            @media (max-width: 715px) {
+                width: 250px;
+                height: 50px;
             }
 
             .button__wrap {
@@ -420,40 +367,28 @@ button {
                 }
 
                 .button__wrap {
-                    width: 450px;
-                    height: 120px;
+                    width: 320px;
+                    height: 80px;
 
-                    @media (max-width: 1500px) {
-                        width: 372px;
-                        height: 100px;
+                    @media (max-width: 1200px) {
+                        width: 310px;
 
-                        @media (max-width: 1200px) {
-                            width: 310px;
-                            height: 100px;
-
-                            @media (max-width: 1024px) {
-                                width: 100%;
-                                height: 100%;
-                            }
+                        @media (max-width: 1024px) {
+                            width: 100%;
+                            height: 100%;
                         }
                     }
                 }
             }
 
             &__wrap {
-                border-width: 1px;
-
                 a {
                     text-transform: uppercase;
                     font-weight: 500;
                     text-align: center;
 
-                    @media (max-width: 1500px) {
-                        font-size: 25px;
-
-                        @media (max-width: 715px) {
-                            display: none;
-                        }
+                    @media (max-width: 715px) {
+                        display: none;
                     }
                 }
 
@@ -502,7 +437,7 @@ button {
     transition: 0.6s;
     position: relative;
 
-    &[data-show='false'] {
+    &[data-show="false"] {
         // display: none;
         opacity: 0;
         position: relative;
@@ -522,7 +457,7 @@ button {
         }
     }
 
-    &[data-show='true'] {
+    &[data-show="true"] {
         opacity: 0;
     }
 
@@ -573,7 +508,7 @@ button {
         font-weight: 300;
         letter-spacing: 0.065em;
         line-height: 174.19%;
-        color: #F9F9F9;
+        color: #f9f9f9;
 
         @media (max-width: 1024px) {
             font-size: 10px;

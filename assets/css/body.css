@@ -30,16 +30,10 @@
 }
 
 body {
-  font-size: 28px;
+  font-size: 1rem;
   background-color: #202124;
   color: white;
   overflow-x: hidden;
-}
-
-@media (max-width: 1024px) {
-  body {
-    font-size: 20px;
-  }
 }
 
 a {
@@ -55,28 +49,20 @@ input {
 
 button {
   border: none;
-  font-size: 28px;
+  font-size: 1.2rem;
 }
 
 .title,
 .title h2 {
   text-align: center;
-  font-size: 50px;
+  font-size: 2rem;
   font-weight: 500;
 }
 
 @media (max-width: 1024px) {
   .title,
   .title h2 {
-    font-size: 45px;
     font-weight: 400;
-  }
-}
-
-@media (max-width: 1024px) and (max-width: 715px) {
-  .title,
-  .title h2 {
-    font-size: 28px;
   }
 }
 
@@ -97,7 +83,7 @@ button {
   bottom: 5%;
   width: 50px;
   height: 70px;
-  color: #FFE474;
+  color: #ffe474;
   font-size: 22px;
   font-weight: 300;
   overflow: hidden;
@@ -144,10 +130,9 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 50px;
-  width: 377px;
-  height: 81px;
-  border: 2px solid #FFE474;
+  width: 280px;
+  height: 60px;
+  border: 1px solid #ffe474;
   cursor: pointer;
 }
 
@@ -165,24 +150,18 @@ button {
   height: 100%;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  border: 1px solid #FFE474;
+  border: 1px solid #ffe474;
 }
 
 .button:hover .button__wrap {
-  width: 337px;
-  height: 121px;
+  width: 250px;
+  height: 80px;
   border-width: 2px;
 }
 
 .button a {
-  color: #FFE474;
-  font-size: 30px;
-}
-
-@media (max-width: 1024px) {
-  .button a {
-    font-size: 25px;
-  }
+  color: #ffe474;
+  font-size: 1.3rem;
 }
 
 .bg-polygon {
@@ -256,22 +235,9 @@ button {
 }
 
 .advant__field .advant__svg {
-  width: 70px;
-  height: 70px;
-  margin-right: 40px;
-}
-
-@media (max-width: 1500px) {
-  .advant__field .advant__svg {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-@media (max-width: 1500px) and (max-width: 715px) {
-  .advant__field .advant__svg {
-    margin-right: 20px;
-  }
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
 }
 
 .advant__field .advant__svg svg {
@@ -279,15 +245,8 @@ button {
   width: auto;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 715px) {
   .advant__field p {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 1500px) and (max-width: 715px) {
-  .advant__field p {
-    font-size: 16px;
     max-width: 100%;
   }
 }
@@ -304,7 +263,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #FFE474;
+  color: #ffe474;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -441,19 +400,12 @@ button {
 }
 
 .advantage .advant__svg {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
 }
 
-@media (max-width: 1200px) {
-  .advantage .advant__svg {
-    margin-right: 20px;
-    width: 70px;
-    height: 70px;
-  }
-}
-
-@media (max-width: 1200px) and (max-width: 715px) {
+@media (max-width: 715px) {
   .advantage .advant__svg {
     width: 40px;
     height: 40px;
@@ -461,22 +413,8 @@ button {
 }
 
 .advantage .advant__svg img {
-  width: 90px;
-  height: 90px;
-}
-
-@media (max-width: 1200px) {
-  .advantage .advant__svg img {
-    width: 70px;
-    height: 70px;
-  }
-}
-
-@media (max-width: 1200px) and (max-width: 715px) {
-  .advantage .advant__svg img {
-    width: 40px;
-    height: 40px;
-  }
+  width: 100%;
+  height: 100%;
 }
 
 .advantage .advant__col {
@@ -500,45 +438,31 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .advantage .advant__button p {
   margin-right: 12px;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 715px) {
   .advantage .advant__button p {
-    font-size: 25px;
-  }
-}
-
-@media (max-width: 1500px) and (max-width: 715px) {
-  .advantage .advant__button p {
-    font-size: 18px;
     font-weight: 500;
   }
 }
 
-@media (max-width: 1500px) and (max-width: 715px) and (max-width: 568px) {
+@media (max-width: 715px) and (max-width: 568px) {
   .advantage .advant__button p {
     display: none;
   }
 }
 
 .advantage .advant__button .button {
-  width: 480px;
+  width: 340px;
   margin-top: 0;
-  border-width: 1px;
 }
 
-@media (max-width: 1500px) {
-  .advantage .advant__button .button {
-    width: 390px;
-  }
-}
-
-@media (max-width: 1500px) and (max-width: 715px) {
+@media (max-width: 715px) {
   .advantage .advant__button .button {
     width: 250px;
     height: 50px;
@@ -566,33 +490,21 @@ button {
 }
 
 .advantage .advant__button .button:hover .button__wrap {
-  width: 450px;
-  height: 120px;
+  width: 320px;
+  height: 80px;
 }
 
-@media (max-width: 1500px) {
-  .advantage .advant__button .button:hover .button__wrap {
-    width: 372px;
-    height: 100px;
-  }
-}
-
-@media (max-width: 1500px) and (max-width: 1200px) {
+@media (max-width: 1200px) {
   .advantage .advant__button .button:hover .button__wrap {
     width: 310px;
-    height: 100px;
   }
 }
 
-@media (max-width: 1500px) and (max-width: 1200px) and (max-width: 1024px) {
+@media (max-width: 1200px) and (max-width: 1024px) {
   .advantage .advant__button .button:hover .button__wrap {
     width: 100%;
     height: 100%;
   }
-}
-
-.advantage .advant__button .button__wrap {
-  border-width: 1px;
 }
 
 .advantage .advant__button .button__wrap a {
@@ -601,13 +513,7 @@ button {
   text-align: center;
 }
 
-@media (max-width: 1500px) {
-  .advantage .advant__button .button__wrap a {
-    font-size: 25px;
-  }
-}
-
-@media (max-width: 1500px) and (max-width: 715px) {
+@media (max-width: 715px) {
   .advantage .advant__button .button__wrap a {
     display: none;
   }
@@ -677,7 +583,7 @@ button {
   position: relative;
 }
 
-.big-form[data-show='false'] {
+.big-form[data-show="false"] {
   opacity: 0;
   position: relative;
   z-index: -1;
@@ -685,24 +591,24 @@ button {
 }
 
 @media (max-width: 1024px) {
-  .big-form[data-show='false'] {
+  .big-form[data-show="false"] {
     margin-top: -870px;
   }
 }
 
 @media (max-width: 1024px) and (max-width: 715px) {
-  .big-form[data-show='false'] {
+  .big-form[data-show="false"] {
     margin-top: -780px;
   }
 }
 
 @media (max-width: 1024px) and (max-width: 715px) and (max-width: 414px) {
-  .big-form[data-show='false'] {
+  .big-form[data-show="false"] {
     margin-top: -640px;
   }
 }
 
-.big-form[data-show='true'] {
+.big-form[data-show="true"] {
   opacity: 0;
 }
 
@@ -741,7 +647,7 @@ button {
 
 .big-form__title h3 {
   margin-top: 20px;
-  color: #FFE474;
+  color: #ffe474;
   font-size: 40px;
   font-weight: 400;
   max-width: 620px;
@@ -760,7 +666,7 @@ button {
 }
 
 .big-form span {
-  color: #FFE474;
+  color: #ffe474;
 }
 
 .big-form p {
@@ -773,7 +679,7 @@ button {
   font-weight: 300;
   letter-spacing: 0.065em;
   line-height: 174.19%;
-  color: #F9F9F9;
+  color: #f9f9f9;
 }
 
 @media (max-width: 1024px) {
@@ -784,7 +690,7 @@ button {
 }
 
 .big-form p a {
-  color: #FFE474;
+  color: #ffe474;
   text-decoration: underline;
 }
 
@@ -987,22 +893,22 @@ button {
 }
 
 .big-form form input::-webkit-input-placeholder {
-  color: #FFE474;
+  color: #ffe474;
   opacity: 0.63;
 }
 
 .big-form form input:-ms-input-placeholder {
-  color: #FFE474;
+  color: #ffe474;
   opacity: 0.63;
 }
 
 .big-form form input::-ms-input-placeholder {
-  color: #FFE474;
+  color: #ffe474;
   opacity: 0.63;
 }
 
 .big-form form input::placeholder {
-  color: #FFE474;
+  color: #ffe474;
   opacity: 0.63;
 }
 
@@ -1052,7 +958,7 @@ button {
   width: 100%;
   height: 100%;
   background: none;
-  color: #FFE474;
+  color: #ffe474;
   cursor: pointer;
 }
 
