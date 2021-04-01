@@ -1,6 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
 @import "var";
 
+:root {
+    --size-font-base: 1rem;
+    --size-font-btn: calc(var(--size-font-base) * 1.2);
+    --size-font-base-small: calc(var(--size-font-base) * 0.7);
+    --size-font-logo: calc(var(--size-font-base) * 1.4);
+    --size-font-title-h2: calc(var(--size-font-base) * 2);
+    --size-font-btn-link: calc(var(--size-font-base) * 1.3);
+
+    @media screen and (max-width: 1200px) {
+        --size-font-base: 0.8rem;
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -30,7 +43,7 @@
 }
 
 body {
-    font-size: $size-font-base;
+    font-size: var(--size-font-base);
     background-color: #202124;
     color: $txtClr;
     overflow-x: hidden;
@@ -44,18 +57,17 @@ a {
 input {
     padding-left: 10px;
     border: none;
-    font-size: 28px;
 }
 
 button {
     border: none;
-    font-size: $size-font-btn;
+    font-size: var(--size-font-btn);
 }
 
 .title,
 .title h2 {
     text-align: center;
-    font-size: $size-font-title-h2;
+    font-size: var(--size-font-title-h2);
     font-weight: 500;
 
     @media (max-width: 1024px) {
@@ -113,6 +125,11 @@ button {
     border: 1px solid $mainClr;
     cursor: pointer;
 
+    @media screen and (max-width: 1200px) {
+        width: 240px;
+        height: 50px;
+    }
+
     .button__wrap {
         display: flex;
         align-items: center;
@@ -128,12 +145,17 @@ button {
             width: 250px;
             height: 80px;
             border-width: 2px;
+
+            @media screen and (max-width: 1200px) {
+                width: 210px;
+                height: 70px;
+            }
         }
     }
 
     a {
         color: $mainClr;
-        font-size: 1.3rem;
+        font-size: calc(var(--size-font-base) * 1.3);
     }
 }
 
@@ -200,7 +222,7 @@ button {
 
         p {
             @media (max-width: 715px) {
-                max-width: 100%;
+                max-width: 80%;
             }
         }
     }
@@ -208,6 +230,7 @@ button {
     &__button {
         margin-top: 30px;
         max-width: 400px;
+
         a {
             display: flex;
             align-items: center;
@@ -231,6 +254,8 @@ button {
                     animation-name: advant-arrow;
                     animation-duration: 1.4s;
                     animation-iteration-count: infinite;
+                    margin-right: 10px;
+                    transform: scale(0.7);
                 }
             }
         }
@@ -332,7 +357,7 @@ button {
         p {
             margin-right: 12px;
 
-            @media (max-width: 715px) {
+            @media (max-width: 716px) {
                 font-weight: 500;
 
                 @media (max-width: 568px) {
@@ -345,9 +370,16 @@ button {
             width: 340px;
             margin-top: 0;
 
-            @media (max-width: 715px) {
-                width: 250px;
-                height: 50px;
+            @media (max-width: 1200px) {
+                width: 310px;
+
+                @media (max-width: 715px) {
+                    width: 250px;
+
+                    @media (max-width: 568px) {
+                        width: 200px;
+                    }
+                }
             }
 
             .button__wrap {
@@ -363,7 +395,7 @@ button {
 
             &:hover {
                 a {
-                    color: $txtClr;
+                    color: $mainClr;
                 }
 
                 .button__wrap {
@@ -371,7 +403,7 @@ button {
                     height: 80px;
 
                     @media (max-width: 1200px) {
-                        width: 310px;
+                        width: 280px;
 
                         @media (max-width: 1024px) {
                             width: 100%;
@@ -397,7 +429,6 @@ button {
 
                     @media (max-width: 715px) {
                         display: unset;
-                        font-size: 22px;
                         font-weight: 400;
                         text-transform: none;
                     }
@@ -409,8 +440,8 @@ button {
 
 @keyframes advantage-button {
     50% {
-        width: 372px;
-        height: 100px;
+        width: 270px;
+        height: 70px;
     }
 }
 
@@ -432,8 +463,17 @@ button {
     }
 }
 
+@media (max-width: 568px) {
+    @keyframes advantage-button {
+        50% {
+            width: 180px;
+            height: 72px;
+        }
+    }
+}
+
 .big-form {
-    padding: 100px 0 50px 0;
+    padding: 70px 0 50px 0;
     transition: 0.6s;
     position: relative;
 
@@ -442,16 +482,20 @@ button {
         opacity: 0;
         position: relative;
         z-index: -1;
-        margin-top: -1230px;
+        margin-top: -820px;
 
-        @media (max-width: 1024px) {
-            margin-top: -870px;
+        @media (max-width: 1200px) {
+            margin-top: -731px;
 
-            @media (max-width: 715px) {
-                margin-top: -780px;
+            @media (max-width: 1024px) {
+                margin-top: -701px;
 
-                @media (max-width: 414px) {
-                    margin-top: -640px;
+                @media (max-width: 715px) {
+                    margin-top: -751px;
+
+                    @media (max-width: 415px) {
+                        margin-top: -632px;
+                    }
                 }
             }
         }
@@ -468,7 +512,7 @@ button {
     &__wrap {
         flex-direction: column;
 
-        @media (max-width: 414px) {
+        @media (max-width: 415px) {
             max-width: 330px;
             width: 83%;
         }
@@ -482,17 +526,9 @@ button {
         h3 {
             margin-top: 20px;
             color: $mainClr;
-            font-size: 40px;
+            font-size: calc(var(--size-font-title-h2) * 0.8);
             font-weight: 400;
             max-width: 620px;
-
-            @media (max-width: 1024px) {
-                font-size: 30px;
-
-                @media (max-width: 715px) {
-                    font-size: 16px;
-                }
-            }
         }
     }
 
@@ -504,14 +540,12 @@ button {
         align-self: center;
         max-width: 370px;
         text-align: center;
-        font-size: 16px;
         font-weight: 300;
         letter-spacing: 0.065em;
         line-height: 174.19%;
         color: #f9f9f9;
 
         @media (max-width: 1024px) {
-            font-size: 10px;
             max-width: 300px;
         }
 
@@ -521,10 +555,14 @@ button {
         }
     }
 
+    .big-form__license {
+        font-size: var(--size-font-base-small);
+    }
+
     form {
         display: flex;
         flex-direction: column;
-        padding-top: 50px;
+        padding-top: 40px;
         padding-bottom: 20px;
 
         @media (max-width: 414px) {
@@ -532,50 +570,42 @@ button {
         }
 
         h6 {
-            font-size: 28px;
+            font-size: calc(var(--size-font-base-small));
             font-weight: 300;
-            margin-bottom: 45px;
+            margin-bottom: 20px;
 
             @media (max-width: 1024px) {
-                font-size: 16px;
                 margin-bottom: 25px;
 
-                @media (max-width: 414px) {
+                @media (max-width: 415px) {
                     display: flex;
-                    font-size: 10px;
                     align-items: center;
                 }
             }
 
             span {
-                font-size: 30px;
+                font-size: calc(var(--size-font-base-small) * 1.4);
 
                 @media (max-width: 1024px) {
-                    font-size: 25px;
                     margin-right: 5px;
 
                     @media (max-width: 414px) {
-                        font-size: 22px;
                         margin-right: 10px;
-                        line-height: 10px;
                     }
                 }
             }
         }
 
         p {
-            font-size: 28px;
             font-weight: 400;
             text-align: unset;
             align-self: unset;
 
             @media (max-width: 1024px) {
-                font-size: 20px;
                 font-weight: 300;
 
                 @media (max-width: 715px) {
                     display: none;
-                    font-size: 16px;
                 }
             }
         }
@@ -597,7 +627,7 @@ button {
                     justify-content: space-between;
                     align-items: center;
 
-                    @media (max-width: 414px) {
+                    @media (max-width: 415px) {
                         padding-bottom: 25px;
                     }
                 }
@@ -627,15 +657,14 @@ button {
 
         input {
             margin-top: 20px;
-            margin-bottom: 60px;
-            padding-left: 20px;
+            margin-bottom: 30px;
+            padding-left: 15px;
             width: 100%;
-            height: 90px;
+            height: 50px;
             background-color: rgba(255, 227, 116, 0.4);
             color: $txtClr;
 
             @media (max-width: 1024px) {
-                font-size: 16px;
                 height: 50px;
                 margin-top: 15px;
                 margin-bottom: 25px;
@@ -643,13 +672,11 @@ button {
                 @media (max-width: 715px) {
                     max-width: 220px;
                     width: 60%;
-                    font-size: 15px;
 
-                    @media (max-width: 414px) {
+                    @media (max-width: 415px) {
                         max-width: 176px;
                         height: 30px;
                         width: 60%;
-                        font-size: 15px;
                         font-weight: 300;
                         margin: 0;
                         padding-left: 10px;
@@ -669,19 +696,17 @@ button {
 
         .big-form__button {
             align-self: center;
-            width: 296px;
-            height: 90px;
+            width: 200px;
+            height: 60px;
             border-width: 1px;
             margin: 0;
 
             @media (max-width: 1024px) {
-                width: 240px;
-                height: 60px;
                 margin-top: 30px;
 
-                @media (max-width: 414px) {
-                    width: 190px;
-                    height: 50px;
+                @media (max-width: 415px) {
+                    width: 160px;
+                    height: 40px;
                 }
             }
 
@@ -695,15 +720,10 @@ button {
                 cursor: pointer;
 
                 @media (max-width: 1024px) {
-                    font-size: 25px;
                     animation-name: big-form-button;
                     animation-duration: 3s;
                     animation-iteration-count: infinite;
                     max-width: unset;
-
-                    @media (max-width: 414px) {
-                        font-size: 22px;
-                    }
                 }
             }
 
@@ -725,7 +745,6 @@ button {
     &__response {
         position: absolute;
         width: 40%;
-        height: 300px;
         left: 30%;
         top: 40%;
         display: none;
@@ -735,6 +754,7 @@ button {
 
         svg {
             width: 30%;
+            margin-bottom: 20px;
             fill: white;
             animation-name: big-form-response;
             animation-duration: 4s;
@@ -746,13 +766,11 @@ button {
         }
 
         p {
-            font-size: 30px;
             font-weight: 500;
             width: 65%;
             color: white;
 
             @media (max-width: 770px) {
-                font-size: 22px;
                 width: unset;
             }
         }
@@ -760,7 +778,6 @@ button {
         @media (max-width: 770px) {
             top: 45%;
             left: 20%;
-            height: 240px;
             width: 60%;
         }
     }
@@ -773,16 +790,16 @@ button {
 
 @keyframes big-form-button {
     50% {
-        width: 200px;
+        width: 150px;
         height: 90px;
     }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 415px) {
     @keyframes big-form-button {
         50% {
-            width: 157px;
-            height: 74px;
+            width: 130px;
+            height: 60px;
         }
     }
 }

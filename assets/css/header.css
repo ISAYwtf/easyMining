@@ -8,7 +8,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 7px 0;
-  font-size: 0.7rem;
+  font-size: var(--size-font-base-small);
   font-weight: 300;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -16,7 +16,7 @@
   border-bottom: 0.5px solid rgba(239, 219, 106, 0.2);
 }
 
-@media (max-width: 770px) {
+@media (max-width: 771px) {
   .header--up {
     display: none;
   }
@@ -32,7 +32,7 @@
   height: 20px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .header--up .wrap {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -81,7 +81,7 @@
   width: 100%;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
   .header--up__ico {
     height: 15px;
     width: 15px;
@@ -112,7 +112,7 @@
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   color: white;
-  font-size: 0.7rem;
+  font-size: var(--size-font-base-small);
   padding-left: 10px;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
@@ -248,7 +248,7 @@ header {
   z-index: 15;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  font-size: 1rem;
+  font-size: var(--size-font-base);
 }
 
 header .header--wrap {
@@ -265,7 +265,7 @@ header .header--wrap a {
   display: none;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 771px) {
   header .header--wrap {
     position: relative;
     display: none;
@@ -301,7 +301,7 @@ header .header--wrap a {
   }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 771px) {
   header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -335,7 +335,7 @@ header .header--right a {
   display: unset;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 771px) {
   header .header--left,
   header .header--right {
     display: none;
@@ -362,7 +362,7 @@ header .header--right a {
           align-items: center;
   color: #ffe474;
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: var(--size-font-logo);
 }
 
 .logo p {
@@ -375,8 +375,8 @@ header .header--right a {
 }
 
 .logo span {
-  height: 3.29rem;
-  font-size: 3.29rem;
+  height: calc(var(--size-font-logo) * 2.35);
+  font-size: calc(var(--size-font-logo) * 2.35);
   background: -webkit-gradient(linear, left top, left bottom, from(#ffd700), color-stop(53.13%, rgba(235, 229, 199, 0.95)), color-stop(99.48%, #ffd700));
   background: linear-gradient(to bottom, #ffd700 0%, rgba(235, 229, 199, 0.95) 53.13%, #ffd700 99.48%);
   -webkit-background-clip: text;
@@ -437,13 +437,12 @@ header a.logo {
 }
 
 .burger .burger__logo .logo {
-  font-size: 16px;
-  line-height: 16px;
+  font-size: calc(var(--size-font-logo) * 0.9);
 }
 
 .burger .burger__logo .logo span {
-  line-height: 30px;
-  font-size: 30px;
+  height: calc(var(--size-font-logo) * 1.8);
+  font-size: calc(var(--size-font-logo) * 1.8);
 }
 
 .burger__btn {
@@ -501,4 +500,3 @@ header .reverse {
     height: 0;
   }
 }
-/*# sourceMappingURL=header.css.map */

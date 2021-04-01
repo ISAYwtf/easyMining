@@ -23,7 +23,7 @@
 }
 
 .host__title {
-  color: #FFE474;
+  color: #ffe474;
 }
 
 .host__info {
@@ -116,7 +116,7 @@
 }
 
 .host__block h5 span {
-  color: #FFE474;
+  color: #ffe474;
   margin-right: 20px;
   font-size: 40px;
 }
@@ -131,7 +131,7 @@
   margin-top: 30px;
   margin-left: 105px;
   font-weight: 300;
-  color: #FFE474;
+  color: #ffe474;
 }
 
 @media (max-width: 1024px) {
@@ -183,4 +183,3 @@
 .bg-polygon-5 {
   top: 300%;
 }
-/*# sourceMappingURL=hosting.css.map */

@@ -1,4 +1,4 @@
-@import 'var';
+@import "var";
 
 .map {
     position: relative;
@@ -41,7 +41,14 @@
         bottom: 0;
         height: 340px;
         width: 100%;
-        background: linear-gradient(90deg, rgba(7, 7, 7, 0.6) 0%, rgba(8, 7, 7, 0.25618) 23.86%, rgba(8, 7, 7, 0) 46.16%, rgba(8, 8, 8, 0.285437) 76.76%, rgba(9, 8, 8, 0.6) 99.58%);
+        background: linear-gradient(
+            90deg,
+            rgba(7, 7, 7, 0.6) 0%,
+            rgba(8, 7, 7, 0.25618) 23.86%,
+            rgba(8, 7, 7, 0) 46.16%,
+            rgba(8, 8, 8, 0.285437) 76.76%,
+            rgba(9, 8, 8, 0.6) 99.58%
+        );
         @media (max-width: 1500px) {
             position: unset;
             background: none;

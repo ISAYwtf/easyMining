@@ -237,7 +237,7 @@
   margin-right: 20px;
 }
 
-.catalog__filter .filter__item .filter-item__val label input[type='checkbox'] {
+.catalog__filter .filter__item .filter-item__val label input[type="checkbox"] {
   display: none;
 }
 
@@ -305,7 +305,7 @@
 }
 
 .catalog__filter .filter__price .filter__input .noUi-connect {
-  background: #FFE474;
+  background: #ffe474;
 }
 
 .catalog__filter .filter__price .filter__input .noUi-handle {
@@ -318,7 +318,8 @@
   background-repeat: no-repeat;
 }
 
-.catalog__filter .filter__price .filter__input .noUi-handle:after, .catalog__filter .filter__price .filter__input .noUi-handle:before {
+.catalog__filter .filter__price .filter__input .noUi-handle:after,
+.catalog__filter .filter__price .filter__input .noUi-handle:before {
   display: none;
 }
 
@@ -386,8 +387,8 @@
   margin: 40px 0;
   width: 215px;
   height: 65px;
-  border: 1px solid #FFE474;
-  color: #FFE474;
+  border: 1px solid #ffe474;
+  color: #ffe474;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   font-size: 25px;
@@ -411,7 +412,7 @@
 }
 
 .catalog__filter .filter__buttons .filter__apply:hover {
-  background: #FFE474;
+  background: #ffe474;
   color: black;
 }
 
@@ -614,12 +615,12 @@
 }
 
 .catalog__goods .goods__wrap .goods__item b {
-  color: #FFE474;
+  color: #ffe474;
   margin-right: 10px;
 }
 
 .catalog__goods .goods__wrap .goods__item .good__price {
-  color: #FFE474;
+  color: #ffe474;
   font-weight: 500;
 }
 
@@ -728,7 +729,7 @@
 }
 
 .catalog__pagination .pagination__num span {
-  color: #FFE474;
+  color: #ffe474;
   opacity: 0.3;
   font-size: 28px;
   font-weight: 500;
@@ -804,7 +805,7 @@
   max-width: 1306px;
   width: 75%;
   left: 15.5%;
-  background-color: #8F824C;
+  background-color: #8f824c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -840,11 +841,11 @@
   }
 }
 
-.modal-good[data-show='false'] {
+.modal-good[data-show="false"] {
   display: none;
 }
 
-.modal-good[data-show='true'] {
+.modal-good[data-show="true"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -994,7 +995,7 @@
 .modal-good__specif .specif__price {
   margin-top: 100px;
   font-weight: 500;
-  color: #FFE474;
+  color: #ffe474;
 }
 
 @media (max-width: 770px) {
@@ -1028,7 +1029,7 @@
 }
 
 .modal-good__specif .specif__stock b {
-  color: #FFE474;
+  color: #ffe474;
 }
 
 @media (max-width: 568px) {
@@ -1052,7 +1053,7 @@
           align-items: center;
   font-weight: 500;
   background: none;
-  color: #FFE474;
+  color: #ffe474;
   cursor: pointer;
 }
 
@@ -1102,7 +1103,7 @@
   }
 }
 
-.modal-good__form[data-show='false'] {
+.modal-good__form[data-show="false"] {
   opacity: 0;
   margin-top: -710px;
   z-index: -1;
@@ -1111,31 +1112,31 @@
 }
 
 @media (max-width: 1024px) {
-  .modal-good__form[data-show='false'] {
+  .modal-good__form[data-show="false"] {
     margin-top: -678px;
   }
 }
 
 @media (max-width: 1024px) and (max-width: 770px) {
-  .modal-good__form[data-show='false'] {
+  .modal-good__form[data-show="false"] {
     margin-top: -657px;
   }
 }
 
 @media (max-width: 1024px) and (max-width: 770px) and (max-width: 715px) {
-  .modal-good__form[data-show='false'] {
+  .modal-good__form[data-show="false"] {
     margin-top: -788px;
   }
 }
 
 @media (max-width: 1024px) and (max-width: 770px) and (max-width: 715px) and (max-width: 568px) {
-  .modal-good__form[data-show='false'] {
+  .modal-good__form[data-show="false"] {
     margin-top: -777px;
   }
 }
 
 @media (max-width: 1024px) and (max-width: 770px) and (max-width: 715px) and (max-width: 568px) and (max-width: 414px) {
-  .modal-good__form[data-show='false'] {
+  .modal-good__form[data-show="false"] {
     margin-top: -650px;
   }
 }
@@ -1217,7 +1218,7 @@
   }
 }
 
-.modal-good__form form label input[type='text'] {
+.modal-good__form form label input[type="text"] {
   margin-top: 20px;
   background: #202124;
   width: 100%;
@@ -1228,14 +1229,14 @@
 }
 
 @media (max-width: 1200px) {
-  .modal-good__form form label input[type='text'] {
+  .modal-good__form form label input[type="text"] {
     height: 60px;
     padding: 0 20px;
   }
 }
 
 @media (max-width: 1200px) and (max-width: 414px) {
-  .modal-good__form form label input[type='text'] {
+  .modal-good__form form label input[type="text"] {
     margin-top: 10px;
     font-size: 16px;
     height: 50px;
@@ -1290,7 +1291,7 @@
   border-width: 1px;
   background: none;
   cursor: pointer;
-  color: #FFE474;
+  color: #ffe474;
 }
 
 @media (max-width: 1024px) {
@@ -1338,7 +1339,7 @@
 }
 
 .modal-good__form form .checkbox div b {
-  color: #FFE474;
+  color: #ffe474;
   opacity: 0;
   font-size: 40px;
   line-height: 20px;
@@ -1369,7 +1370,7 @@
 }
 
 .modal-good__form p a {
-  color: #FFE474;
+  color: #ffe474;
 }
 
 .modal-good__form .modal-form__response {
@@ -1515,4 +1516,3 @@
             transform: none;
   }
 }
-/*# sourceMappingURL=catalog.css.map */

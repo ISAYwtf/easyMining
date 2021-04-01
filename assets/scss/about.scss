@@ -1,4 +1,4 @@
-@import 'var';
+@import "var";
 
 .about {
     padding-top: 50px;
@@ -30,10 +30,10 @@
         width: 100%;
         background: rgba(196, 196, 196, 0.3);
 
-            @media (max-width: 414px) {
-                max-width: 319px;
-                align-self: center;
-            }
+        @media (max-width: 414px) {
+            max-width: 319px;
+            align-self: center;
+        }
 
         img {
             width: 100%;
@@ -81,7 +81,6 @@
     }
 
     &__title {
-
         @media (max-width: 1024px) {
             max-width: 678px;
         }
@@ -137,9 +136,9 @@
                 font-size: 16px;
                 font-weight: 300;
 
-            @media (max-width: 414px) {
-                font-size: 15px;
-            }
+                @media (max-width: 414px) {
+                    font-size: 15px;
+                }
             }
         }
     }

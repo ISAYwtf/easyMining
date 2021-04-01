@@ -2,11 +2,11 @@
 
 footer {
     padding: 20px 0;
-    font-size: $size-font-base-small * 1.1;
+    font-size: calc(var(--size-font-base-small) * 1.1);
 
     @media (max-width: 715px) {
         width: 100%;
-        padding: 50px 10px;
+        padding: 40px 10px;
     }
 }
 
@@ -117,7 +117,7 @@ footer {
                 padding-right: 5px;
                 background: none;
                 border: none;
-                font-size: $size-font-base-small;
+                font-size: var(--size-font-base-small);
                 color: $txtClr;
 
                 &::placeholder {
@@ -132,7 +132,7 @@ footer {
                 width: 26px;
                 height: 26px;
 
-                font-size: $size-font-base-small * 1.3;
+                font-size: calc(var(--size-font-base-small) * 1.3);
                 font-weight: 500;
 
                 cursor: pointer;
@@ -194,7 +194,7 @@ footer {
                     a {
                         max-width: 136px;
 
-                        @media (max-width: 390px) {
+                        @media (max-width: 415px) {
                             width: 100%;
                             margin-top: 10px;
                         }

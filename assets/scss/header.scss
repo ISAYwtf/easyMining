@@ -5,12 +5,12 @@
     display: flex;
     flex-direction: column;
     padding: 7px 0;
-    font-size: $size-font-base-small;
+    font-size: var(--size-font-base-small);
     font-weight: 300;
     align-items: center;
     border-bottom: 0.5px solid rgba(239, 219, 106, 0.2);
 
-    @media (max-width: 770px) {
+    @media (max-width: 771px) {
         display: none;
     }
 
@@ -20,7 +20,7 @@
         height: 20px;
         // padding: 15px 0;
 
-        @media (max-width: 1200px) {
+        @media (max-width: 1024px) {
             justify-content: space-between;
             max-width: 960px;
             width: 96%;
@@ -59,7 +59,7 @@
             width: 100%;
         }
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1024px) {
             height: 15px;
             width: 15px;
         }
@@ -84,7 +84,7 @@
             background-color: rgba(255, 255, 255, 0.2);
             border: none;
             color: $txtClr;
-            font-size: $size-font-base-small;
+            font-size: var(--size-font-base-small);
             padding-left: 10px;
             font-family: $fontFam;
             font-weight: 300;
@@ -207,7 +207,7 @@ header {
     background-color: $background;
     z-index: 15;
     transition: 0.2s;
-    font-size: $size-font-base;
+    font-size: var(--size-font-base);
 
     .header--wrap {
         justify-content: space-between;
@@ -218,7 +218,7 @@ header {
             display: none;
         }
 
-        @media (max-width: 770px) {
+        @media (max-width: 771px) {
             position: relative;
             display: none;
             flex-direction: column;
@@ -250,7 +250,7 @@ header {
         }
     }
 
-    @media (max-width: 770px) {
+    @media (max-width: 771px) {
         display: flex;
         flex-direction: column;
         height: 70px;
@@ -270,7 +270,7 @@ header .header--right {
         display: unset;
     }
 
-    @media (max-width: 770px) {
+    @media (max-width: 771px) {
         display: none;
     }
 }
@@ -288,7 +288,7 @@ header .header--right {
     align-items: center;
     color: $mainClr;
     font-weight: 500;
-    font-size: $size-font-logo;
+    font-size: var(--size-font-logo);
 
     p {
         margin: 0;
@@ -299,8 +299,8 @@ header .header--right {
     }
 
     span {
-        height: $size-font-logo * 2.35;
-        font-size: $size-font-logo * 2.35;
+        height: calc(var(--size-font-logo) * 2.35);
+        font-size: calc(var(--size-font-logo) * 2.35);
         background: $gradient;
         -webkit-background-clip: text;
         background-clip: text;
@@ -344,12 +344,11 @@ header a.logo {
         }
 
         .logo {
-            font-size: 16px;
-            line-height: 16px;
+            font-size: calc(var(--size-font-logo) * 0.9);
 
             span {
-                line-height: 30px;
-                font-size: 30px;
+                height: calc(var(--size-font-logo) * 1.8);
+                font-size: calc(var(--size-font-logo) * 1.8);
             }
         }
     }

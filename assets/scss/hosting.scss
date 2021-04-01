@@ -1,4 +1,4 @@
-@import 'var';
+@import "var";
 
 .host {
     padding-top: 100px;
@@ -26,15 +26,15 @@
         padding-bottom: 80px;
         // justify-content: center;
 
-            @media (max-width: 715px) {
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
+        @media (max-width: 715px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
-                @media (max-width: 414px) {
-                    padding-bottom: 20px;
-                }
+            @media (max-width: 414px) {
+                padding-bottom: 20px;
             }
+        }
     }
 
     &__txt {

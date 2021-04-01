@@ -81,8 +81,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   background-color: rgba(196, 196, 196, 0.3);
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   border-radius: 100%;
 }
 
@@ -110,7 +110,7 @@
   color: #ffe474;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 1.3rem;
+  font-size: calc(var(--size-font-base) * 1.3);
   font-weight: 500;
 }
 
@@ -242,4 +242,3 @@
     background-position: -1px;
   }
 }
-/*# sourceMappingURL=feedback-slider.css.map */
