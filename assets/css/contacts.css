@@ -22,17 +22,21 @@
   width: 100%;
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .map a {
-    font-size: 25px;
+    font-size: calc(var(--size-font-base) * 1.4);
+  }
+}
+
+@media screen and (max-width: 1200px) and (max-width: 1024px) {
+  .map a {
     font-weight: 400;
     max-width: 340px;
   }
 }
 
-@media (max-width: 1024px) and (max-width: 568px) {
+@media screen and (max-width: 1200px) and (max-width: 1024px) and (max-width: 568px) {
   .map a {
-    font-size: 22px;
     max-width: 275px;
   }
 }
@@ -41,11 +45,15 @@
   width: 100%;
 }
 
+.map .map__img img {
+  display: block;
+}
+
 .map__overlay {
   position: absolute;
   bottom: 0;
-  height: 340px;
   width: 100%;
+  padding: 20px 0;
   background: -webkit-gradient(linear, left top, right top, from(rgba(7, 7, 7, 0.6)), color-stop(23.86%, rgba(8, 7, 7, 0.25618)), color-stop(46.16%, rgba(8, 7, 7, 0)), color-stop(76.76%, rgba(8, 8, 8, 0.285437)), color-stop(99.58%, rgba(9, 8, 8, 0.6)));
   background: linear-gradient(90deg, rgba(7, 7, 7, 0.6) 0%, rgba(8, 7, 7, 0.25618) 23.86%, rgba(8, 7, 7, 0) 46.16%, rgba(8, 8, 8, 0.285437) 76.76%, rgba(9, 8, 8, 0.6) 99.58%);
 }
@@ -54,7 +62,6 @@
   .map__overlay {
     position: unset;
     background: none;
-    height: unset;
   }
 }
 
@@ -89,17 +96,22 @@
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 350px;
-  height: 220px;
+  height: 200px;
   margin-right: 200px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 @media (max-width: 1500px) {
   .map .overlay__col--contacts {
-    margin: 50px 0;
-    height: 200px;
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 1500px) and (max-width: 1024px) {
+  .map .overlay__col--contacts {
+    margin: 10px 0 30px;
   }
 }
 
@@ -124,15 +136,8 @@
 }
 
 .map .overlay__col--soc a {
-  width: 100px;
-  height: 100px;
-}
-
-@media (max-width: 568px) {
-  .map .overlay__col--soc a {
-    width: 50px;
-    height: 50px;
-  }
+  width: 50px;
+  height: 50px;
 }
 
 .map .overlay__col--soc a svg {

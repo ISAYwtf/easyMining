@@ -134,6 +134,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  max-width: 1190px;
 }
 
 @media (max-width: 715px) {
