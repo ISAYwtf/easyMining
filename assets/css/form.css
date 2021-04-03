@@ -210,13 +210,13 @@
   }
 }
 
-.form form button .fail svg {
+.form form button .fail img {
   width: 28px;
   margin-right: 10px;
 }
 
 @media (max-width: 716px) {
-  .form form button .fail svg {
+  .form form button .fail img {
     width: 15px;
   }
 }
@@ -268,28 +268,28 @@
   text-decoration: underline;
 }
 
-@-webkit-keyframes form-response {
-  30%,
-  70% {
-    top: 0;
-  }
-}
-
-@keyframes form-response {
-  30%,
-  70% {
-    top: 0;
-  }
-}
-
 @-webkit-keyframes form-fail {
+  30%,
+  70% {
+    top: 0;
+  }
+}
+
+@keyframes form-fail {
+  30%,
+  70% {
+    top: 0;
+  }
+}
+
+@-webkit-keyframes form-response {
   30%,
   70% {
     top: -400%;
   }
 }
 
-@keyframes form-fail {
+@keyframes form-response {
   30%,
   70% {
     top: -400%;

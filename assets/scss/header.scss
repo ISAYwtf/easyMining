@@ -54,7 +54,7 @@
         width: 20px;
         margin-right: 7px;
 
-        svg {
+        img {
             height: 100%;
             width: 100%;
         }
@@ -83,15 +83,12 @@
             height: 100%;
             background-color: rgba(255, 255, 255, 0.2);
             border: none;
+            border-radius: 3px;
             color: $txtClr;
             font-size: var(--size-font-base-small);
-            padding-left: 10px;
+            padding-left: 7px;
             font-family: $fontFam;
             font-weight: 300;
-
-            &:focus {
-                outline: none;
-            }
 
             &::placeholder {
                 color: $txtClr;
@@ -100,16 +97,12 @@
 
         button {
             position: absolute;
-            right: 10px;
+            right: 7px;
             height: 100%;
             background: transparent;
             border: none;
 
-            &:focus {
-                outline: none;
-            }
-
-            svg {
+            img {
                 width: 15px;
                 height: 100%;
             }

@@ -170,7 +170,7 @@
                     height: 40px;
                 }
 
-                svg {
+                img {
                     width: 28px;
                     margin-right: 10px;
 
@@ -228,34 +228,16 @@
     }
 }
 
-@keyframes form-response {
+@keyframes form-fail {
     30%,
     70% {
         top: 0;
     }
 }
 
-@keyframes form-fail {
+@keyframes form-response {
     30%,
     70% {
         top: -400%;
     }
 }
-
-// @media (max-width: 1024px) {
-//     @keyframes form-fail {
-//         30%,
-//         70% {
-//             top: 15px;
-//         }
-//     }
-
-//     @media (max-width: 715px) {
-//         @keyframes form-fail {
-//             30%,
-//             70% {
-//                 top: 6px;
-//             }
-//         }
-//     }
-// }

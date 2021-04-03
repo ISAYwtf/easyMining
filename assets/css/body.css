@@ -262,13 +262,13 @@ button {
   }
 }
 
-.advant__field .advant__svg {
+.advant__field .advant__img {
   width: 40px;
   height: 40px;
   margin-right: 20px;
 }
 
-.advant__field .advant__svg svg {
+.advant__field .advant__img img {
   height: 100%;
   width: auto;
 }
@@ -1044,7 +1044,7 @@ button {
           justify-content: space-between;
 }
 
-.big-form__response svg {
+.big-form__response img {
   width: 30%;
   margin-bottom: 20px;
   fill: white;
@@ -1057,7 +1057,7 @@ button {
 }
 
 @media (max-width: 770px) {
-  .big-form__response svg {
+  .big-form__response img {
     width: 50%;
   }
 }

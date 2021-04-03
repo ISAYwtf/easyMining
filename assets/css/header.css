@@ -76,7 +76,7 @@
   margin-right: 7px;
 }
 
-.header--up__ico svg {
+.header--up__ico img {
   height: 100%;
   width: 100%;
 }
@@ -111,15 +111,12 @@
   height: 100%;
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
+  border-radius: 3px;
   color: white;
   font-size: var(--size-font-base-small);
-  padding-left: 10px;
+  padding-left: 7px;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
-}
-
-.header--up__search input:focus {
-  outline: none;
 }
 
 .header--up__search input::-webkit-input-placeholder {
@@ -140,17 +137,13 @@
 
 .header--up__search button {
   position: absolute;
-  right: 10px;
+  right: 7px;
   height: 100%;
   background: transparent;
   border: none;
 }
 
-.header--up__search button:focus {
-  outline: none;
-}
-
-.header--up__search button svg {
+.header--up__search button img {
   width: 15px;
   height: 100%;
 }

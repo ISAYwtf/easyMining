@@ -62,11 +62,11 @@ const simpleForm = document.querySelector(".form").querySelector("form"),
 simpleForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    let formData = {
+    const formData = {
         email: simpleForm.elements.email.value,
     };
 
-    let request = new XMLHttpRequest();
+    const request = new XMLHttpRequest();
 
     request.addEventListener("load", () => {
         console.log(request.response);
