@@ -1,11 +1,5 @@
 .host {
-  padding-top: 100px;
-}
-
-@media (max-width: 1200px) {
-  .host {
-    padding-top: 50px;
-  }
+  padding-top: 40px;
 }
 
 .host__wrap {
@@ -99,32 +93,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 28px;
+  font-size: calc(var(--size-font-title-h2) * 0.7);
   font-weight: 400;
-}
-
-@media (max-width: 1024px) {
-  .host__block h5 {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 1024px) and (max-width: 414px) {
-  .host__block h5 {
-    font-size: 16px;
-  }
 }
 
 .host__block h5 span {
   color: #ffe474;
   margin-right: 20px;
-  font-size: 40px;
-}
-
-@media (max-width: 1024px) {
-  .host__block h5 span {
-    font-size: 25px;
-  }
+  font-size: var(--size-font-title-h2);
 }
 
 .host__block p {

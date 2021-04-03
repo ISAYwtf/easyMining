@@ -1,11 +1,7 @@
 @import "var";
 
 .host {
-    padding-top: 100px;
-
-    @media (max-width: 1200px) {
-        padding-top: 50px;
-    }
+    padding-top: 40px;
 
     &__wrap {
         flex-direction: column;
@@ -61,25 +57,13 @@
         h5 {
             display: flex;
             align-items: center;
-            font-size: 28px;
+            font-size: calc(var(--size-font-title-h2) * 0.7);
             font-weight: 400;
-
-            @media (max-width: 1024px) {
-                font-size: 20px;
-
-                @media (max-width: 414px) {
-                    font-size: 16px;
-                }
-            }
 
             span {
                 color: $mainClr;
                 margin-right: 20px;
-                font-size: 40px;
-
-                @media (max-width: 1024px) {
-                    font-size: 25px;
-                }
+                font-size: var(--size-font-title-h2);
             }
         }
 
