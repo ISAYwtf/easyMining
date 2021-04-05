@@ -90,8 +90,6 @@ function createPagination(count, place, startPage = 0) {
         }
         place.append(span);
     }
-
-    // place.firstChild.classList.add('pagination__active');
 }
 
 function togglePagination(prev, next) {
@@ -248,8 +246,7 @@ orderBtn.addEventListener('click', () => {
         form.style.marginTop = 'unset';
 
         setTimeout(() => form.setAttribute('data-show', 'true'), 250);
-        // setTimeout(() => form.style.opacity = '1', 400);
-        // form.setAttribute('data-show', 'true');
+
     } else if (form.getAttribute('data-show') === 'true') {
         form.setAttribute('data-show', 'false');
         orderBtn.children[1].style.transform = 'none';
@@ -317,7 +314,6 @@ document.addEventListener('click', (event) => {
     let target = event.srcElement,
         flag = false;
 
-    // for (let i = 0; i < target.length - 1; i++) {
         if (target.offsetParent != null) {
             if (target.isEqualNode(modal) || target.isEqualNode(modal.querySelector('.modal-good__form')) || target.offsetParent.isEqualNode(modal)
                 || target.offsetParent.isEqualNode(modal.querySelector('.modal-good__form'))) {
@@ -326,7 +322,6 @@ document.addEventListener('click', (event) => {
         } else {
             flag = true;
         }
-    // }
 
     if (modal.getAttribute('data-show') === 'true' && window.innerWidth > 1024) {
         if (!flag) {

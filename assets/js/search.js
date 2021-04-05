@@ -28,9 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
             a.querySelector('p').remove();
             a.querySelector('.item-info').append(a.querySelector('.good__price'));
             a.querySelector('.item-info').append(a.querySelector('.good__stock'));
-            // console.log(li);
         }
-        // console.log(goodsList);
 
         document.querySelector('.search-data').append(goodsList);
     }

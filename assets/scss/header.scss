@@ -4,7 +4,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    // height: 70px;
     padding: 15px 0;
     font-size: 20px;
     font-weight: 300;
@@ -131,17 +130,12 @@
     .search-data {
         position: absolute;
         top: 70px;
-        // width: 68%;
-        // min-height: 180px;
         height: 90vh;
-        // max-height: 600px;
         z-index: 16;
-        // transition: 0.4s;
 
         &[aria-expanded='false'] {
             z-index: -1;
             opacity: 0;
-            // height: 0;
         }
 
         ::-webkit-scrollbar {
@@ -152,17 +146,13 @@
             position: absolute;
             width: 500px;
             height: 100%;
-            // border: 1px solid rgba(255, 255, 255, 0.226);
             padding: 10px 10px;
-            // border-radius: 4px;
             right: 0;
             overflow-y: scroll;
-            // width: unset;
 
             a {
                 padding: 40px;
                 border: 1px solid rgba(255, 255, 255, 0.226);
-                // border-radius: 4px;
                 margin: 0 0 10px 0;
                 background: $background;
                 transition: 0.2s;
@@ -180,7 +170,6 @@
                 .goods__item {
                     display: flex;
                     align-items: center;
-                    // justify-content: space-between;
 
                     img {
                         width: 60px;
@@ -240,7 +229,6 @@ header {
             margin-top: -130px;
             padding-bottom: 10px;
             background: $background;
-            // border-bottom: 0.5px solid rgba(239, 219, 106, .2);
             z-index: -1;
             animation-duration: 0.4s;
             animation-iteration-count: infinite;
@@ -253,7 +241,6 @@ header {
                 font-size: 20px;
                 font-weight: 300;
                 border-bottom: 1px solid $background;
-                // width: 100%;
             }
 
             .logo {
@@ -394,8 +381,6 @@ header a.logo {
 }
 
 header .header--active {
-    // display: flex;
-    // margin-right: 0;
     animation-name: burger-active;
 }
 
